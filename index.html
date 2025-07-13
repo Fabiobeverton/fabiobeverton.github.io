@@ -30,6 +30,42 @@
       color: white;
       text-decoration: none;
       border-radius: 5px;
+    }from pathlib import Path
+
+# Conteúdo do index.html fornecido
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabio Everton | Secure SaaS & AI Architect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: white;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    a.button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
     }
     .tech-table {
       border-collapse: collapse;
@@ -111,4 +147,11 @@
   </div>
 </body>
 </html>
+"""
+
+# Salvar como arquivo HTML
+file_path = Path("/mnt/data/index.html")
+file_path.write_text(html_content)
+
+file_path.name
 
