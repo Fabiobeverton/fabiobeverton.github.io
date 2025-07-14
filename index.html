@@ -1,6 +1,4 @@
-from pathlib import Path
 
-html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,11 +160,8 @@ html_content = """
     </ul>
 
     <h2>📄 Project Docs & READMEs</h2>
-    <p>
+    <p style="text-align:center;">
       <a class="button" href="https://github.com/Fabiobeverton/everton-showcase" target="_blank">Everton Showcase</a>
-      <a class="button" href="https://github.com/Fabiobeverton/everton-showcase#brachat" target="_blank">BRACHAT Overview</a>
-      <a class="button" href="https://github.com/Fabiobeverton/everton-showcase#ezra" target="_blank">EZRA Overview</a>
-      <a class="button" href="https://github.com/Fabiobeverton/everton-showcase#ezra-orchestrator" target="_blank">Ezra Orchestrator</a>
     </p>
 
     <h2>👨‍👦 Family Collaboration</h2>
@@ -180,7 +175,9 @@ html_content = """
 </html>
 """
 
-file_path = Path("/mnt/data/index_tech_vibe.html")
+# Salvar como HTML
+file_path = Path("/mnt/data/index_everton_showcase_only.html")
 file_path.write_text(html_content)
 
 file_path.name
+
