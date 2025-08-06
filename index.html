@@ -14,139 +14,105 @@
     h1 {
       font-weight: 900;
     }
-    .project-button {
-      @apply border-2 border-purple-700 text-purple-800 px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg hover:bg-purple-100 transition duration-300 ease-in-out;
-    }
   </style>
 </head>
-
 <body class="text-gray-900 bg-gray-50">
-  <!-- TOPO -->
- <div class="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-48 mt-10 mb-12 text-left">
 
+  <main class="w-full max-w-screen-2xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 2xl:px-36">
 
-    
-    <!-- NOME DO PROFISSIONAL -->
-   <div class="text-center max-w-4xl mx-auto px-4 mt-12 mb-10">
-  <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-2 tracking-tight leading-tight">
-  Fábio Barbosa Everton
-</h1>
-
-  <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-snug">
-    AI Architect for Secure, Auditable & Compliant Systems — Built From First Principles
-  </h2>
-  <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-   "Designing modular AI pipelines with embedded governance and security — as part of my hands-on training toward AI systems architecture. Every capability is implemented and versioned in public code."
-  </p>
-
-    <!-- BOTÃO -->
-    <div class="mt-8">
-      <div class="relative group inline-block">
-        <a href="https://fabiobeverton.github.io/showcase/" target="_blank"
-           class="relative block text-center bg-white border-2 border-gray-800 text-gray-900 px-6 py-3 rounded-xl font-semibold shadow-md transition-all duration-300 ease-in-out overflow-hidden group-hover:shadow-lg group-hover:scale-[1.02] hover:bg-gray-100">
+    <!-- TOPO -->
+    <header class="text-left py-16">
+      <h1 class="text-5xl font-extrabold text-gray-800 mb-2 tracking-tight">Fábio Barbosa Everton</h1>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">AI Architect for Secure, Auditable & Compliant Systems — Built From First Principles</h2>
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+        Designing modular AI pipelines with embedded governance and security — as part of my hands-on training toward AI systems architecture. Every capability is implemented and versioned in public code.
+      </p>
+      <div class="mt-6">
+        <a href="https://fabiobeverton.github.io/showcase/" target="_blank" class="inline-block bg-white border-2 border-gray-800 text-gray-900 px-6 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300 ease-in-out">
           📂 Showcase
-          <span class="absolute top-0 left-[-75%] w-[50%] h-full bg-white opacity-10 transform rotate-12 group-hover:translate-x-[300%] transition-transform duration-700 ease-in-out pointer-events-none blur-sm"></span>
         </a>
       </div>
-    </div>
-  </div>
+    </header>
 
-  <!-- DESCRIÇÃO ESTRATÉGICA DAS ÁREAS DE ESTUDO -->
-  <section class="max-w-4xl mx-auto text-center mb-10 px-4">
-    <h2 class="text-xl md:text-2xl font-extrabold text-gray-800 mb-3">
-      🧭 Study Focus & Technical Domains
-    </h2>
-    <p class="text-gray-700 text-md md:text-lg leading-relaxed">
-      These are the strategic domains I'm actively mastering across AI, security, and compliance. Each section reflects practical capabilities, hands-on builds, and traceable implementations — not passive learning. The folders represent technical outcomes, not course logs.
-    </p>
-    <p class="text-sm text-yellow-700 italic mt-4">
-      ⚠️ This portfolio does not list certifications or course completions. It demonstrates evolving technical authority through versioned repositories, governance-mapped pipelines, and compliance-first design patterns.
-    </p>
-  </section>
+    <!-- ÁREAS DE ESTUDO -->
+    <section class="text-center mb-20">
+      <h2 class="text-2xl font-extrabold text-gray-800 mb-3">🧱 Study Focus & Technical Domains</h2>
+      <p class="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto">
+        These are the strategic domains I'm actively mastering across AI, security, and compliance. Each section reflects practical capabilities, hands-on builds, and traceable implementations — not passive learning. The folders represent technical outcomes, not course logs.
+      </p>
+      <p class="text-sm text-yellow-700 italic mt-4">
+        ⚠️ This portfolio does not list certifications or course completions. It demonstrates evolving technical authority through versioned repositories, governance-mapped pipelines, and compliance-first design patterns.
+      </p>
+    </section>
 
-  <!-- 🎓 Master’s Degree (in Progress) -->
-  <section class="max-w-4xl mx-auto text-center mt-12 mb-10 px-4">
-    <h2 class="text-xl md:text-2xl font-extrabold text-gray-800 mb-3">
-      🎓 Master’s in Financial Engineering — WorldQuant University
-    </h2>
-    <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-      Currently pursuing a Master of Science in Financial Engineering (2025–2027), focused on applied machine learning, econometrics, and quantitative modeling. The program is fully online, globally recognized, and tuition-free — built to simulate real-world financial problem solving across trading, portfolio risk, and algorithmic decision systems. Includes a capstone project and 20–25 hours of weekly commitment.
-    </p>
-  </section>
+    <!-- MESTRADO -->
+    <section class="text-center mb-20">
+      <h2 class="text-2xl font-extrabold text-gray-800 mb-3">🎓 Master’s in Financial Engineering — WorldQuant University</h2>
+      <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+        Currently pursuing a Master of Science in Financial Engineering (2025–2027), focused on applied machine learning, econometrics, and quantitative modeling. The program is fully online, globally recognized, and tuition-free — built to simulate real-world financial problem solving across trading, portfolio risk, and algorithmic decision systems.
+      </p>
+    </section>
 
-   
-<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-16 w-full max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+    <!-- BLOCO DE COMPETÊNCIAS -->
+    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-16 gap-x-12">
 
-  <!-- 🔧 Full-Stack Engineering & Infra -->
-  <div id="fullstack-engineering" class="col-span-1 w-full text-left">
+      <!-- 🔧 Full-Stack Engineering & Infra -->
+      <div id="fullstack-engineering" class="text-left">
+        <!-- Botão -->
+        <div class="relative group inline-block w-full mb-4">
+          <a href="#fullstack-engineering" class="relative block w-full text-center bg-white border-2 border-gray-800 text-gray-900 px-6 py-3 rounded-2xl font-semibold shadow transition-all duration-300 ease-in-out overflow-hidden group-hover:shadow-lg group-hover:scale-[1.02] hover:bg-gray-100">
+            🔧 Full-Stack Engineering & Infra
+            <span class="absolute top-0 left-[-75%] w-[50%] h-full bg-white opacity-10 transform rotate-12 group-hover:translate-x-[300%] transition-transform duration-700 ease-in-out pointer-events-none blur-sm"></span>
+          </a>
+        </div>
 
-    <!-- Botão de navegação -->
-    <div class="relative group inline-block w-full mb-3">
-      <a href="#fullstack-engineering" class="relative block w-full text-center bg-white border-2 border-gray-800 text-gray-900 px-6 py-3 rounded-2xl font-semibold shadow transition-all duration-300 ease-in-out overflow-hidden group-hover:shadow-lg group-hover:scale-[1.02] hover:bg-gray-100">
-        🔧 Full-Stack Engineering & Infra 
-        <span class="absolute top-0 left-[-75%] w-[50%] h-full bg-white opacity-10 transform rotate-12 group-hover:translate-x-[300%] transition-transform duration-700 ease-in-out pointer-events-none blur-sm"></span>
-      </a>
-    </div>
+        <!-- Título e descrição -->
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🔧 Full-Stack Engineering & Infra Premium</h3>
+        <p class="text-sm text-gray-700 leading-snug mb-3">
+          Delivered full-stack systems with versioned APIs, modular backends (FastAPI, Spring Boot), and composable frontends (Next.js). Enforced CI/CD security, observability (Prometheus, OpenTelemetry), and audit-first releases.
+        </p>
 
-    <!-- Descrição -->
-    <h3 class="text-left text-lg font-bold text-gray-900 mb-2">🔧 Full-Stack Engineering & Infra Premium</h3>
-    <p class="text-sm text-gray-700 leading-snug mb-2">
-      Delivered full-stack systems with versioned APIs, modular backends (FastAPI, Spring Boot), and composable frontends (Next.js). Enforced CI/CD security, observability (Prometheus, OpenTelemetry), and audit-first releases with per-service validation.
-    </p>
+        <!-- Skills -->
+        <h4 class="text-sm font-semibold text-gray-800 mb-1">📌 Skills</h4>
+        <ul class="list-disc list-inside space-y-0.5 text-sm text-gray-700">
+          <li>Next.js, FastAPI, Spring Boot, modular architecture, CI/CD</li>
+          <li>App Router, SWR, TailwindCSS, TypeScript strict mode</li>
+          <li>Versioned APIs, typed schemas, orchestrated migrations</li>
+          <li>Testing: contract, unit, E2E, load testing with coverage</li>
+          <li>CI/CD pipelines per service + GitHub Actions</li>
+          <li>Observability: Prometheus, Grafana, Loki, OTel</li>
+          <li>Database: Alembic, Liquibase/Flyway</li>
+          <li>Documentation, diagrams, versioned /docs</li>
+        </ul>
 
-    <!-- Skills -->
-    <h4 class="text-sm font-semibold text-gray-800 mb-1">📌 Skills</h4>
-    <ul class="list-disc list-inside ml-4 space-y-0.5 text-sm leading-snug text-left">
-      <li>Engineered full-stack systems with Next.js, FastAPI, Spring Boot, CI/CD pipelines</li>
-      <li>Built frontend apps with App Router, SWR, TailwindCSS, TypeScript strict mode</li>
-      <li>Developed scalable backends with FastAPI (Python) and Spring Boot (Java)</li>
-      <li>Versioned APIs with typed schemas, routes, migrations, and orchestration</li>
-      <li>Implemented contract, unit, E2E, and load testing with coverage thresholds</li>
-      <li>Deployed builds via GitHub Actions with changelog automation, rollback support</li>
-      <li>Structured CI/CD per service (frontend/backend) with caching and security scans</li>
-      <li>Enabled observability with Prometheus, Grafana, Loki, JSON-structured logs</li>
-      <li>Managed DB schemas via Alembic (Python) and Flyway (Java) in CI/CD</li>
-      <li>Documented systems via diagrams, guides, and versioned /docs specs</li>
-      <li>Enforced SLAs with secrets validation, post-deploy healthchecks</li>
-      <li>Practiced audit-first delivery with changelog traceability</li>
-      <li>Enhanced DX with linting, isolated environments, .env.example templates</li>
-    </ul>
+        <!-- Capabilities -->
+        <h4 class="mt-4 text-sm font-semibold text-gray-800 mb-1">⚙️ Core Capabilities — Advanced</h4>
+        <ul class="list-disc list-inside space-y-0.5 text-sm text-gray-700">
+          <li>TypeScript, Python, Java orchestration</li>
+          <li>Structured repos: agents/, pipelines/, services/...</li>
+          <li>Docker Compose with Redis, PostgreSQL</li>
+          <li>Multi-stage Dockerfiles (alpine/slim)</li>
+          <li>Playwright, Cypress, Pact, mocked APIs</li>
+          <li>Locust, K6, Artillery for load testing</li>
+          <li>Semantic release, branch protection, signed CI</li>
+          <li>Traceability: trace_id, OTel readiness</li>
+        </ul>
+      </div>
 
-    <!-- Core Capabilities -->
-    <h4 class="mt-4 text-sm font-semibold text-gray-800 mb-1">⚙️ Core Capabilities — Advanced</h4>
-    <ul class="list-disc list-inside ml-4 space-y-0.5 text-sm leading-snug text-left">
-      <li>Architected pipelines across TypeScript, Python, Java with seamless orchestration</li>
-      <li>Structured repos with agents/, pipelines/, services/, components/, migrations/</li>
-      <li>Implemented Docker Compose with Redis, PostgreSQL, multi-backend setup</li>
-      <li>Wrote reproducible Dockerfiles with alpine/slim base and multi-stage builds</li>
-      <li>Built Playwright and Cypress tests with Pact and mocked APIs</li>
-      <li>Performed load tests using Locust, K6, Artillery with concurrency simulation</li>
-      <li>Configured GitHub Actions with semantic release, conditional logic</li>
-      <li>Versioned infra and secrets with .env.example and preflight validation</li>
-      <li>Generated architecture diagrams using Mermaid, Draw.io, PlantUML</li>
-      <li>Validated post-deploy with /health, latency, TPS benchmarks</li>
-      <li>Applied codeowners, branch protection, signed CI/CD for production-readiness</li>
-      <li>Mapped observability with trace_id propagation and OTel readiness</li>
-      <li>Maintained test coverage 85%+ across ML and non-ML services</li>
-    </ul>
+    </section>
 
-  </div>
+    <footer class="mt-20 text-center">
+      <blockquote class="italic text-gray-600 border-l-4 border-blue-500 pl-4 text-md max-w-3xl mx-auto">
+        “Audit-first, AI-driven execution — traceable, secure, and built to scale.”
+      </blockquote>
+      <div class="mt-6 flex justify-center gap-6 text-blue-700">
+        <a href="https://www.linkedin.com/in/fabio-everton-3b62b1129" target="_blank" class="hover:underline font-medium">LinkedIn</a>
+        <a href="mailto:fabio@brachat.com.br" class="hover:underline font-medium">Email</a>
+      </div>
+    </footer>
 
-</section>
+  </main>
 
-
-</section>
-
-<footer class="mt-10 text-center">
-  <blockquote class="italic text-gray-600 border-l-4 border-blue-500 pl-4 text-md">
-    “Audit-first, AI-driven execution — traceable, secure, and built to scale.”
-  </blockquote>
-  <div class="mt-6 flex justify-center gap-6 text-blue-700">
-    <a href="https://www.linkedin.com/in/fabio-everton-3b62b1129" target="_blank" class="hover:underline font-medium">LinkedIn</a>
-    <a href="mailto:fabio@brachat.com.br" class="hover:underline font-medium">Email</a>
-  </div>
-</footer>
-
-</div>
 </body>
 </html>
+
