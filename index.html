@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      background-color: #0c1021; /* azul petróleo */
+      background-color: #0c1021;
       color: #f0f0f0;
       line-height: 1.6;
     }
@@ -74,6 +74,85 @@
       text-align: justify;
       max-width: 800px;
       margin: 0 auto;
+    }
+
+    .custom-button-wrapper {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .custom-button {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(to right, #0e7490, #1e3a8a);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 1.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      overflow: hidden;
+    }
+
+    .custom-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .custom-button .shine {
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: white;
+      opacity: 0.1;
+      transform: rotate(12deg);
+      filter: blur(4px);
+      pointer-events: none;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .custom-button:hover .shine {
+      transform: translateX(300%) rotate(12deg);
+    }
+
+    footer.minimal-footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0c1021;
+      color: #ccc;
+      margin-top: 4rem;
+      border-top: 1px solid #333;
+    }
+
+    .footer-button-group {
+      margin-bottom: 1rem;
+    }
+
+    .footer-btn {
+      display: inline-block;
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 0.4rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .footer-btn:hover {
+      background-color: #0e7490;
+    }
+
+    .footer-bottom {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
@@ -517,17 +596,14 @@
   </main>
 
 <footer class="minimal-footer">
-  <div class="footer-button-group">
-    <a href="mailto:fabio@brachat.com.br" class="footer-btn">📧 Email</a>
-    <a href="https://github.com/Fabiobeverton" target="_blank" class="footer-btn">🐱 GitHub</a>
-    <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" class="footer-btn">💼 LinkedIn</a>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2025 Fabio Barbosa Everton. All rights reserved.
-  </div>
-</footer>
-
-
-
+    <div class="footer-button-group">
+      <a href="mailto:fabio@brachat.com.br" class="footer-btn">📧 Email</a>
+      <a href="https://github.com/Fabiobeverton" target="_blank" class="footer-btn">🐱 GitHub</a>
+      <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" class="footer-btn">💼 LinkedIn</a>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Fabio Barbosa Everton. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
