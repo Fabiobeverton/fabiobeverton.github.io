@@ -120,20 +120,23 @@
             font-weight: 700;
         }
 
+        /* Novo estilo para a lista de habilidades */
         .skill-category ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            font-size: 0.9rem;
-            color: var(--secondary-text-color);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .skill-category li {
             background-color: #2a3045;
             padding: 0.4rem 0.8rem;
             border-radius: 20px;
-            margin: 0.5rem 0.25rem 0 0;
-            display: inline-block;
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            white-space: nowrap;
         }
 
         .project {
@@ -290,31 +293,68 @@
                 <div class="skill-category">
                     <h3>AI Governance & Compliance</h3>
                     <ul>
-                        <li>ISO/IEC 42001</li><li>NIST RMF</li><li>AI Act</li><li>GDPR/LGPD</li><li>Policy-as-Code</li><li>OPA/Rego</li><li>Kyverno</li><li>Model Cards</li><li>AIBOM</li>
+                        <li>ISO/IEC 42001</li>
+                        <li>NIST RMF</li>
+                        <li>AI Act</li>
+                        <li>GDPR/LGPD</li>
+                        <li>Policy-as-Code</li>
+                        <li>OPA/Rego</li>
+                        <li>Kyverno</li>
+                        <li>Model Cards</li>
+                        <li>AIBOM</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>DevSecOps & Security</h3>
                     <ul>
-                        <li>OWASP Top 10 for LLMs</li><li>SLSA 3+</li><li>SBOM</li><li>Semgrep</li><li>Trivy</li><li>Falco</li><li>eBPF</li><li>Zero Trust</li><li>PQC</li><li>Vault</li>
+                        <li>OWASP Top 10 for LLMs</li>
+                        <li>SLSA 3+</li>
+                        <li>SBOM</li>
+                        <li>Semgrep</li>
+                        <li>Trivy</li>
+                        <li>Falco</li>
+                        <li>eBPF</li>
+                        <li>Zero Trust</li>
+                        <li>PQC</li>
+                        <li>Vault</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Software Engineering</h3>
                     <ul>
-                        <li>Python (FastAPI)</li><li>Next.js</li><li>Java (Spring Boot)</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>GitOps</li><li>PostgreSQL</li><li>Alembic</li><li>Prometheus</li>
+                        <li>Python (FastAPI)</li>
+                        <li>Next.js</li>
+                        <li>Java (Spring Boot)</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Terraform</li>
+                        <li>GitOps</li>
+                        <li>PostgreSQL</li>
+                        <li>Alembic</li>
+                        <li>Prometheus</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>LLMs & Machine Learning</h3>
                     <ul>
-                        <li>RAG (LangChain)</li><li>Prompt Engineering</li><li>Fine-tuning</li><li>SHAP</li><li>LIME</li><li>MLflow</li><li>PyTorch</li>
+                        <li>RAG (LangChain)</li>
+                        <li>Prompt Engineering</li>
+                        <li>Fine-tuning</li>
+                        <li>SHAP</li>
+                        <li>LIME</li>
+                        <li>MLflow</li>
+                        <li>PyTorch</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Advanced Domains</h3>
                     <ul>
-                        <li>Autonomous Systems</li><li>Hostile AI Defense</li><li>Bioinformatics</li><li>Neurotechnology</li><li>Quantum ML</li><li>XAI</li>
+                        <li>Autonomous Systems</li>
+                        <li>Hostile AI Defense</li>
+                        <li>Bioinformatics</li>
+                        <li>Neurotechnology</li>
+                        <li>Quantum ML</li>
+                        <li>XAI</li>
                     </ul>
                 </div>
             </div>
