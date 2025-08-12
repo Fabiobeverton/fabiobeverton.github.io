@@ -1,729 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fabio Everton | AI Architect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: #0c1021;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábio Barbosa Everton | AI Governance Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0c1021;
+            --text-color: #f0f0f0;
+            --secondary-text-color: #a0a0a0;
+            --accent-color: #0066cc;
+            --highlight-color: #0099ff;
+            --dark-blue: #1e3a8a;
+            --light-yellow: #facc15;
+            --font-family: 'Lato', sans-serif;
+        }
 
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
+        body {
+            margin: 0;
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-    header {
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-    }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 900;
-      margin-bottom: 0.5rem;
-      color: #e0e0e0;
-    }
+        header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            border-bottom: 2px solid #2a3045;
+            margin-bottom: 3rem;
+        }
 
-    header h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #cccccc;
-      margin-bottom: 1rem;
-    }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
 
-    header p {
-      font-size: 1rem;
-      color: #b0b0b0;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify;
-    }
+        header h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary-text-color);
+            margin-bottom: 1rem;
+        }
 
-    section {
-      margin-bottom: 3rem;
-    }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+        }
 
-    section h2 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: #f5f5f5;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+        .contact-info a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
 
-    section p {
-      font-size: 1rem;
-      color: #d0d0d0;
-      max-width: 800px;
-      margin: 0 auto 1rem;
-      text-align: justify;
-    }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
 
-    .note {
-      color: #facc15;
-      font-size: 0.9rem;
-      font-style: italic;
-      text-align: justify;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-   .custom-button-wrapper {
-  text-align: center;
-  margin-top: 2rem; /* adiciona espaço acima do botão */
-}
+        .summary p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
 
-.custom-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #0066cc, #1e3a8a);
-  color: white;
-  font-weight: 700;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-}
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
 
-.custom-button:hover {
-  background: linear-gradient(135deg, #1e3a8a, #0066cc);
-  transform: translateY(-2px);
-}
+        .skill-category {
+            background-color: #1a1f33;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
 
+        .skill-category h3 {
+            font-size: 1.2rem;
+            color: var(--highlight-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
 
-    .custom-button .shine {
-      position: absolute;
-      top: 0;
-      left: -75%;
-      width: 50%;
-      height: 100%;
-      background: white;
-      opacity: 0.1;
-      transform: rotate(12deg);
-      filter: blur(4px);
-      pointer-events: none;
-      transition: transform 0.7s ease-in-out;
-    }
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+        }
 
-    .custom-button:hover .shine {
-      transform: translateX(300%) rotate(12deg);
-    }
+        .skill-category li {
+            background-color: #2a3045;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            margin: 0.5rem 0.25rem 0 0;
+            display: inline-block;
+        }
 
-    footer.minimal-footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #0c1021;
-      color: #ccc;
-      margin-top: 4rem;
-      border-top: 1px solid #333;
-    }
+        .project {
+            background-color: #1a1f33;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+            border: 1px solid #2a3045;
+        }
+        
+        .project h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
 
-    .footer-button-group {
-      margin-bottom: 1rem;
-    }
+        .project h3 a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
 
-    .footer-btn {
-      display: inline-block;
-      background-color: #1e3a8a;
-      color: #fff;
-      padding: 0.4rem 1rem;
-      margin: 0 0.5rem;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: bold;
-      transition: background-color 0.3s ease-in-out;
-    }
+        .project h3 a:hover {
+            color: var(--highlight-color);
+        }
 
-    .footer-btn:hover {
-      background-color: #0e7490;
-    }
+        .project p.description {
+            font-size: 1rem;
+            color: var(--secondary-text-color);
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
 
-    .footer-bottom {
-      font-size: 0.85rem;
-      color: #aaa;
-      margin-top: 0.5rem;
-    }
-  </style>
+        .project ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .project ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 20px;
+            font-size: 1rem;
+            color: var(--secondary-text-color);
+            text-align: justify;
+        }
+
+        .project ul li::before {
+            content: '✓';
+            color: var(--highlight-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .education {
+            text-align: center;
+        }
+
+        .education h3 {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 0.5rem 0;
+        }
+
+        .education p {
+            font-size: 1rem;
+            color: var(--secondary-text-color);
+        }
+        
+        footer.minimal-footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 2px solid #2a3045;
+        }
+
+        .footer-button-group {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-btn {
+            display: inline-block;
+            background-color: #1e3a8a;
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+        }
+
+        .footer-btn:hover {
+            background-color: #0e7490;
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header h2 {
+                font-size: 1.2rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Fábio Barbosa Everton</h1>
-      <h2>AI Governance Engineering Learner — Secure, Auditable & Governance-Driven AI Systems</h2>
-      <p>
-        I’m currently studying how to architect secure and auditable AI systems from the ground up — covering software infrastructure, governance-first design, LLM workflows, DevSecOps, data compliance, full-stack development, and advanced domains such as NeuroAI and Quantum AI. This site reflects my hands-on learning journey, where every explored capability is eventually versioned and documented in public repositories.
-      </p>
-    </header>
-
-    <section>
-      <h2>🎓 MSc in Financial Engineering — WorldQuant University</h2>
-      <p>
-        I’m currently a Master’s student in the MSc in Financial Engineering at WorldQuant University — a globally accredited program focused on applied machine learning, econometrics, and quantitative modeling.
-      </p>
-    </section>
-
-    <section>
-      <h2>🧱 Study Focus & Technical Domains</h2>
-      <p>
-        Below are the domains that structure my current study path. Each area is explored through hands-on builds and public documentation — not passive learning. Skills are added only after being tested and versioned through reproducible, auditable projects on GitHub.
-      </p>
-      <p class="note">
-        ⚠️ This portfolio does not list certifications or course completions. It reflects evolving technical authority through transparent public repositories mapped to governance, compliance, and security-first design.
-      </p>
-    </section>
-<div class="custom-button-wrapper">
-  <a href="#fullstack-engineering" class="custom-button">
-    🚀 Full-Stack Projects
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-gray-200 text-base leading-relaxed text-justify mb-4">
-  Delivered full-stack systems with versioned APIs, modular backends (FastAPI, Spring Boot), and composable frontends (Next.js). Enforced CI/CD security, observability (Prometheus, OpenTelemetry), and audit-first releases with per-service validation.
-</p>
-
-<ul class="list-disc list-inside ml-6 text-gray-300 text-justify space-y-1 text-sm">
-  <li>Engineered full-stack systems using Next.js, FastAPI, and Spring Boot with modular architecture and CI/CD pipelines</li>
-  <li>Built composable frontend applications using App Router, SWR, TailwindCSS, and TypeScript strict mode</li>
-  <li>Developed scalable backends with Python (FastAPI + AI agents) and Java (Spring Boot), fully containerized and observable</li>
-  <li>Versioned API infrastructure with structured routes, typed schemas, migrations, and multi-service orchestration</li>
-  <li>Implemented contract, unit, integration, E2E, and load testing across all services with coverage thresholds enforced</li>
-  <li>Deployed versioned builds via GitHub Actions with changelog automation, image hashing, and rollback validation</li>
-  <li>Structured CI/CD pipelines per service (frontend, backend-python, backend-java) with caching and security scans</li>
-  <li>Enabled operational observability with Prometheus, Grafana, Loki, and JSON-structured trace logs across services</li>
-  <li>Managed database schemas with Alembic (Python) and Liquibase/Flyway (Java), integrated with CI/CD</li>
-  <li>Documented systems with architecture diagrams, usage guides, and API specs versioned under /docs</li>
-  <li>Maintained production-readiness through deployment checklists, secrets validation, and automated post-deploy healthchecks</li>
-  <li>Practiced audit-first delivery with per-release validation, changelog traceability, and enforcement of technical SLAs</li>
-  <li>Optimized developer experience with strict linting, isolated environments, and .env.example configuration templates</li>
-</ul>
-
-<h3 class="text-lg font-semibold text-white mt-8 mb-2">⚙️ Core Capabilities — Advanced</h3>
-
-<ul class="list-disc list-inside ml-6 text-gray-300 text-justify space-y-1 text-sm">
-  <li>Architected full-stack pipelines across three languages (TypeScript, Python, Java) with seamless orchestration</li>
-  <li>Structured repositories with modular folders: agents/, pipelines/, services/, components/, migrations/</li>
-  <li>Implemented Docker Compose with Redis, PostgreSQL, multi-backend coordination, and .env compatibility</li>
-  <li>Created reproducible Dockerfiles for each stack using alpine/slim images and multi-stage builds</li>
-  <li>Engineered Playwright and Cypress E2E tests with Pact contract validations and mocked APIs</li>
-  <li>Performed load testing using Locust, K6, and Artillery with custom thresholds and concurrency simulation</li>
-  <li>Configured GitHub Actions with semantic versioning, release metadata, and conditional execution logic</li>
-  <li>Versioned infrastructure scripts and secrets with .env.example, preflight validators, and rollback support</li>
-  <li>Generated architecture diagrams via Mermaid, Draw.io, and PlantUML for open documentation pipelines</li>
-  <li>Orchestrated post-deployment validation with automatic /health, latency, and token-per-second benchmarks</li>
-  <li>Established production checklist enforcement via codeowners, protected branches, and signed CI/CD flows</li>
-  <li>Mapped service observability with trace_id propagation, structured logs, and OpenTelemetry readiness</li>
-  <li>Integrated structured testing across ML and non-ML services with 85%+ enforced coverage and traceable failures</li>
-</ul>
-
-
- 
-<div class="custom-button-wrapper mt-10">
-  <a href="#security-devsecops" class="custom-button">
-    🔐 Security & DevSecOps
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-gray-200 text-base leading-relaxed text-justify mb-4">
-  Engineered end-to-end security for GenAI pipelines, with hardened MLOps, automated scans, adversarial testing, and cryptographic provenance. Applied OWASP, NIST, ISO, and Zero Trust frameworks to secure LLMs, APIs, and multi-agent systems in production.
-</p>
-
-<ul class="list-disc list-inside ml-6 text-gray-300 text-justify space-y-1 text-sm">
-  <ul>
-  <li>Implemented secure and traceable CI/CD pipelines with CRIT#/ADV# tagging and GitHub Advanced Security</li>
-  <li>Integrated SBOM generation (Syft, CycloneDX) to ensure supply chain visibility</li>
-  <li>Enforced Zero Trust principles with granular IAM and continuous authentication via OIDC</li>
-  <li>Automated security policies using OPA + Rego and configured incident response runbooks</li>
-  <li>Enabled Kubernetes-native deployments with Helm, Argo CD, sealed secrets, and RBAC testing</li>
-  <li>Applied CIS benchmarks and runtime scanning using Kubescape, kube-bench, and kube-hunter</li>
-  <li>Deployed hardened containers with enforced Security Context (non-root, read-only, no privilege escalation)</li>
-  <li>Applied lateral movement prevention with mTLS, Istio, and Calico service mesh policies</li>
-  <li>Hardened APIs via Kong API Gateway, AWS WAF, and rate limiting</li>
-  <li>Secured headers with Helmet.js and enforced strict CORS policies</li>
-  <li>Logged prompt-level LLM interactions with hash validation and tenant-specific audit trails</li>
-  <li>Detected prompt injection and jailbreak vectors using Gandalf and AdvBench</li>
-  <li>Applied SLSA 3+ provenance attestations, SBOM verification, and model signing</li>
-  <li>Deployed honeypots and behavior-driven endpoint surveillance for LLMs</li>
-  <li>Integrated security scoring via Rebuff, LangKit, and prompt sanitizers</li>
-</ul>
-
-<h2>⚙️ Core Capabilities — Advanced</h2>
-
-<ul>
-  <li>Modeled adversarial threats using Microsoft Threat Modeling Tool, STRIDE, and ThreatSpec</li>
-  <li>Applied policy-as-code with Kyverno and OPA Gatekeeper for real-time enforcement</li>
-  <li>Encrypted AI pipelines and secrets using HashiCorp Vault and Sealed Secrets</li>
-  <li>Enforced mutual TLS and token-based access for API endpoints</li>
-  <li>Hardened web UIs with CSP, HSTS, and referrer policies</li>
-  <li>Monitored traffic and anomalies via Falco, eBPF, and Datadog telemetry</li>
-  <li>Deployed Terraform Cloud with GitOps workflows and Rego policy validation</li>
-  <li>Simulated post-quantum attack scenarios with chaos engineering aligned to NIST PQC</li>
-  <li>Integrated Elastic/Wazuh SIEMs with anomaly detection in inference logs</li>
-  <li>Applied OWASP Top 10 for LLMs (LLM01–LLM10) with LangChain Audit and OPA + Rego validation</li>
-  <li>Architected Microsoft Threat Matrix-aligned defenses for GenAI environments</li>
-  <li>Automated scans in CI/CD using GitHub Actions, Semgrep, Trivy, and Checkov</li>
-  <li>Managed CodeQL and Dependabot pipelines with GitHub Advanced Security</li>
-  <li>Integrated Post-Quantum Cryptography in model inference workflows</li>
-  <li>Built Zero Trust architectures for LLM API gateways and sandbox environments</li>
-  <li>Aligned SSDLC processes with OWASP SAMM and GitHub security policies</li>
-  <li>Delivered container runtime security with Falco, Sysdig, and Aqua Security</li>
-  <li>Applied CIEM principles with Ermetic and Sonrai for cloud access governance</li>
-  <li>Enforced IAM/SSO policies using Okta, Azure AD, and Auth0 with MFA</li>
-  <li>Hardened K8s cluster RBAC and benchmark compliance with kube-bench and Kubescape</li>
-  <li>Executed automated threat detection through Threat Dragon and Rego alerting</li>
-  <li>Validated backups with SHA-based restore integrity checks and disaster recovery testing</li>
-</ul>
-
-<h2>🔐 Security & DevSecOps — Multimodal & Advanced Injection Defenses</h2>
-
-<ul>
-  <li>Implement advanced filtering and semantic validation on audio-to-text pipelines using Whisper and Vocode, preventing covert voice-command injections in AI systems</li>
-  <li>Deploy OCR-powered inspection frameworks (e.g., Tesseract, LangChain Visual Pipeline) to detect and block hidden malicious instructions embedded in visual inputs</li>
-  <li>Integrate specialized steganography scanners (StegExpose, Base64 Validator) to identify and neutralize covert data channels used for malicious prompt injections</li>
-  <li>Apply sophisticated NLP models to analyze and flag manipulative, coercive, or authority-abusive prompts, enabling human-in-the-loop enforcement and automatic rejection of social prompt attacks</li>
-  <li>Enforce Unicode normalization (NFC/NFKC) and post-decoding filters to prevent encoding-based evasions such as homoglyphs, rot13, and other obfuscation techniques targeting prompt sanitization</li>
-</ul>
-
- 
-<div class="custom-button-wrapper mt-10">
-  <a href="#governance-compliance" class="custom-button">
-    🧭 Governance & Compliance
-    <span class="shine"></span>
-  </a>
-</div>
-
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Designed traceable AI governance workflows aligned with GDPR, ISO/IEC 42001, and NIST RMF. Operationalized compliance using policy-as-code, explainability registries, lifecycle oversight, and sandbox validations for high-risk systems under AI Act mandates.
-</p>
-
-<ul class="list-disc list-inside ml-6 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Designed AI compliance systems aligned with GDPR and ISO/IEC 42001</li>
-  <li>Conducted technical audits following ISO/IEC 42001 and 27701</li>
-  <li>Mapped AI risks using NIST AI RMF and SP 800-53 control families</li>
-  <li>Integrated advanced governance frameworks for AI accountability</li>
-  <li>Applied COBIT 2019 and ITIL 4 to orchestrate AI governance workflows</li>
-  <li>Benchmarked AI governance policies against Oxford, GovAI, and GPAI models</li>
-  <li>Evaluated regulatory strategy using academic-grade frameworks (AI Now, Ada Lovelace Institute)</li>
-  <li>Implemented AI Act Article 9–29 traceability protocols and classification by risk level</li>
-  <li>Modeled lifecycle oversight under sandbox scenarios (FCA, CNIL, EU pilot)</li>
-  <li>Documented governance alignment using explainability-linked model registries</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-6 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Automated AI use case registries under ISO/IEC 42001 and AI Act Annex V</li>
-  <li>Generated auditable data flow maps with PII/SPI classification and retention policies</li>
-  <li>Applied policy-as-code enforcement using OPA/Rego with GitOps for compliance drift</li>
-  <li>Simulated impact of high-risk AI systems under ISO/IEC 23894 risk analysis flows</li>
-  <li>Operationalized accountability using Model Cards, Data Cards, and FactSheets</li>
-  <li>Integrated automated scoring using NIST RMF 2.0 and Explainability Quant Index (EQI)</li>
-  <li>Built dashboards for AI compliance status with anomaly detection and alert routing</li>
-  <li>Mapped AI system boundaries, lifecycle phases, and stakeholder accountability</li>
-  <li>Engineered cross-framework checklists covering ISO, NIST, GDPR, and AI Act obligations</li>
-  <li>Created auditable simulation workflows for pre-launch AI governance validation</li>
-</ul>
-
-
-<div class="custom-button-wrapper mt-10">
-  <a href="https://github.com/Fabiobeverton/Fabiobeverton-ai-compliance-learning-journey/tree/main/LLMs%2C%20LangChain%20%26%20RAG%20Engineering" class="custom-button">
-    🧠 LLMs, LangChain & RAG
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Built modular LLM pipelines with LangChain, RAG, and agentic workflows. Integrated multi-source retrieval, fallback strategies, and observability tooling to ensure traceable, scalable, and failure-resilient inference across enterprise-grade deployments.
-</p>
-
-<ul class="list-disc list-inside ml-6 text-sm text-gray-300 text-justify space-y-1">
-  <li>Designed LLM workflow automations across enterprise-grade pipelines</li>
-  <li>Deployed LangChain stacks on Firebase and Vercel with scalable inference routing</li>
-  <li>Engineered RAG pipelines for multi-source document ingestion and contextual retrieval</li>
-  <li>Engineered prompt strategies using structured LLM design patterns and instruction tuning</li>
-  <li>Validated prompt effectiveness through advanced analytics and trace-based logging</li>
-  <li>Applied retrieval strategies for multi-document pipelines using vector and keyword fusion</li>
-  <li>Implemented query-aware chunking and dynamic prompt construction with context filtering</li>
-  <li>Designed fallback mechanisms for LLM failures using structured retry and confidence thresholds</li>
-  <li>Integrated human-in-the-loop feedback for response ranking and output validation</li>
-  <li>Built prototype pipelines with multimodal RAG (text + image + tables) for document fusion</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-6 text-sm text-gray-300 text-justify space-y-1">
-  <li>Developed reactive and memory-persistent agents using LangGraph and multi-turn logic</li>
-  <li>Implemented modular RAG pipelines using FAISS, Qdrant, and Weaviate with vector schema evolution</li>
-  <li>Benchmarked LLM responses using RAGAS, LLM-as-a-Judge, and custom scoring heuristics</li>
-  <li>Logged and traced LLM chains using LangSmith with integrated observability middleware</li>
-  <li>Executed prompt unit tests with Promptfoo, PromptLayer, and guardrails enforcement</li>
-  <li>Orchestrated hybrid retrieval with rerankers, semantic scoring, and metadata filters</li>
-  <li>Versioned prompts, chains, and agent states via GitOps workflows with full trace replay</li>
-  <li>Evaluated explainability metrics in RAG outputs and annotated evidence provenance</li>
-  <li>Instrumented runtime defenses using Rebuff, LangKit, and output sanitization middleware</li>
-  <li>Simulated input fuzzing and adversarial queries to test LLM chain resilience</li>
-</ul>
-
-
- <div class="custom-button-wrapper mt-10">
-  <a href="#" class="custom-button">
-    ⚖️ Ethics, Fairness & Explainability
-    <span class="shine"></span>
-  </a>
-</div>
-
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Embedded ethical risk analysis and fairness audits into AI pipelines using industry-grade XAI tools. Applied explainability, bias mitigation, and post-deployment accountability using SHAP, LIME, counterfactuals, and international standards like ISO 24028 and IEEE 7000.
-</p>
-
-<ul class="list-disc list-inside ml-6 text-sm text-gray-300 text-justify space-y-1">
-  <li>Practiced model explainability using industry-grade XAI toolkits</li>
-  <li>Explored responsible AI governance across multi-stakeholder frameworks</li>
-  <li>Studied ethical AI frameworks including FCA, ISO 24028, OECD, UNESCO</li>
-  <li>Engaged in AI safety and alignment strategies for real-world deployment</li>
-  <li>Documented ethical insights and technical audits in open-access scientific platforms</li>
-  <li>Connected explainability constraints to model lifecycle decisions and risk mapping</li>
-  <li>Applied ethical risk classification using AI Act + ISO 23894 integrated standards</li>
-  <li>Simulated post-deploy ethical failure scenarios with mitigation scoring</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-6 text-sm text-gray-300 text-justify space-y-1">
-  <li>Implemented SHAP, LIME, and Integrated Gradients for black-box model explainability</li>
-  <li>Integrated What-If Tool, Google PAIR, and IBM AI Explainability 360 into pipelines</li>
-  <li>Audited inference outputs using Model Cards, Data Sheets for Datasets, and FactSheets</li>
-  <li>Logged model decisions using event sourcing with versioned justification chains</li>
-  <li>Conducted fairness audits using Fairlearn, Aequitas, and subgroup discrepancy metrics</li>
-  <li>Applied bias mitigation through adversarial debiasing, reweighting, and counterfactual examples</li>
-  <li>Simulated ethical dilemmas using scenario-based copilot agents with human feedback loops</li>
-  <li>Mapped ethical risks using IEEE 7000, ISO 24028, and OECD AI Principles traceability</li>
-  <li>Established automated ethical review pipelines with pre-commit hooks and codeowners</li>
-  <li>Designed protocols for bias flagging, decision override, and stakeholder review approval chains</li>
-  <li>Applied causal inference techniques for explainability using DoWhy and EconML</li>
-  <li>Operationalized post-deployment fairness monitoring across model drift boundaries</li>
-</ul>
-
-<div class="custom-button-wrapper mt-10">
-  <a href="#executive-strategy-product" class="custom-button">
-    💼 Executive Strategy & Product
-    <span class="shine"></span>
-  </a>
-</div>
-
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Translated GenAI capabilities into actionable business value using frameworks like Gartner, ISO 42001, and the AI Act. Designed product strategies, licensing models, and compliance-first roadmaps for AI services with traceability, auditability, and ROI clarity.
-</p>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Formulated enterprise AI strategies using industry-standard frameworks (Gartner, McKinsey, BCG)</li>
-  <li>Developed product roadmaps translating LLM capabilities into usable, regulated features</li>
-  <li>Mapped KPIs and business impact across AI-driven deployments with measurable ROI</li>
-  <li>Built go-to-market strategies for AI-first offerings under regulatory constraints (AI Act, GDPR)</li>
-  <li>Defined licensing tiers for AI models based on inference cost, explainability, and auditability</li>
-  <li>Designed commercial models for SaaS, API-first, and hybrid open-weight offerings</li>
-  <li>Positioned technical differentiators (traceability, fairness, compliance) as monetizable features</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">⚙️ Core Capabilities — Advanced</h4>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Structured AI product portfolios using technology readiness levels and compliance maturity</li>
-  <li>Led cross-functional squads using hybrid Agile/Lean delivery models tailored for GenAI products</li>
-  <li>Embedded regulatory compliance, traceability, and chain of custody into product governance models</li>
-  <li>Orchestrated startup advisory using investor-facing pitch decks focused on AI readiness and defensibility</li>
-  <li>Connected AI risk and governance frameworks (ISO 42001, NIST RMF) to business value delivery</li>
-  <li>Instituted ethical oversight boards and AI risk councils with policy-as-code enforcement</li>
-  <li>Prioritized AI product decisions through design thinking, risk-mapping, and validation workshops</li>
-  <li>Developed pricing strategies aligned with model performance, regulatory exposure, and inference throughput</li>
-  <li>Built audit-backed release workflows for continuous deployment of compliant AI models</li>
-</ul>
-
-<div class="custom-button-wrapper">
-  <a href="#quantum-ai" class="custom-button">
-    📉 Quantum & Scientific AI
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Prototyped hybrid QML systems using Qiskit, PennyLane, and TensorFlow Quantum. Simulated domain-specific quantum circuits, benchmarked classical parity, and documented reproducible scientific pipelines for finance, NLP, and optimization use cases.
-</p>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-   <li>Applied QML techniques using Qiskit, PennyLane, and custom quantum circuit libraries</li>
-    <li>Explored TensorFlow Quantum and hybrid quantum–classical circuit architectures</li>
-    <li>Built reproducible QML notebooks using industry-grade scientific workflows</li>
-    <li>Prototyped quantum-enhanced models in finance, NLP, and optimization tasks</li>
-    <li>Simulated domain-specific QML solutions with classical parity benchmarks</li>
-    <li>Documented QML experiments with reproducibility metadata and environment pinning</li>
-    <li>Implemented Quantum Key Distribution (QKD) using BB84, E91, and advanced protocols</li>
-    <li>Designed fault-tolerant quantum networks for secure quantum state transmission</li>
-    <li>Applied Post-Quantum Cryptography (PQC) in hybrid classical–quantum pipelines</li>
-    <li>Developed quantum-safe APIs for integration with AI and blockchain systems</li>
-    <li>Prototyped quantum-enhanced AI agents for distributed search and optimization</li>
-    <li>Built Quantum Federated Learning experiments with differential privacy</li>
-    <li>Published versioned quantum pipelines with audit-grade scientific documentation</li>
-  </ul>
-
-  <!-- Core Capabilities — Advanced -->
-  <h3>⚙️ Core Capabilities — Advanced</h3>
-  <ul>
-    <li>Executed quantum computing workflows in controlled simulation environments with reproducible seeds</li>
-    <li>Built hybrid QML architectures using VQE, QNNs, and TensorFlow Quantum integrated with Keras</li>
-    <li>Ran quantum inference workloads via Qiskit Runtime with fidelity measurement instrumentation</li>
-    <li>Benchmarked quantum expressivity against classical ML baselines across multiple dataset types</li>
-    <li>Tested circuit fidelity, decoherence impact, and entanglement statistics under noise models</li>
-    <li>Integrated noise and decoherence simulation specifically for mission-critical quantum systems</li>
-    <li>Modeled quantum attacks on classical cryptography and evaluated mitigation strategies</li>
-    <li>Applied next-generation Quantum Error Correction (QEC) targeting emerging hardware architectures</li>
-    <li>Visualized quantum states and parameter shifts with Bloch spheres and circuit analyzers</li>
-    <li>Authored arXiv-ready scientific notebooks with Jupyter Book and LaTeX integration</li>
-    <li>Simulated quantum pipelines with domain-specific applications and practical constraints</li>
-    <li>Published comparative reports on QML feasibility versus classical pipelines for early-stage deployment</li>
-  </ul>
-
-<div class="custom-button-wrapper">
-  <a href="#finance-ai" class="custom-button">
-    💹 Finance & Applied AI
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Built AI pipelines for financial forecasting, risk modeling, and compliance analytics. Applied interpretable ML to simulate trading strategies, stress scenarios, and audit-ready insights under MiFID II, SR11-7, and ISO 24028 governance frameworks.
-</p>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Explored AI-driven financial forecasting techniques and quant modeling frameworks</li>
-  <li>Built predictive pipelines for revenue modeling using interpretable machine learning</li>
-  <li>Practiced risk quantification using VaR, volatility modeling, and PCA for scenario analysis</li>
-  <li>Simulated high-risk events with AI inference throttling under stress testing protocols</li>
-  <li>Integrated financial regulation constraints into model behavior (SR11-7, MiFID II)</li>
-  <li>Benchmarked forecast drift against market volatility windows and anomaly indicators</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Modeled time series with Prophet, ARIMA, and XGBoost for short and long-term forecasting</li>
-  <li>Explained predictive outputs with SHAP, LIME, and counterfactual analysis under financial audit conditions</li>
-  <li>Built financial dashboards with interpretable audit trails, alerts, and compliance metadata</li>
-  <li>Simulated quantitative trading strategies with Backtrader, CVaR optimization, and market constraints</li>
-  <li>Applied Black-Litterman model, efficient frontier, and MPT for dynamic asset allocation</li>
-  <li>Audited fairness and structural drift across market regimes using changepoint detection and reweighting</li>
-  <li>Implemented ISO 24028 explainability standards and SR11-7 traceability flows into pipeline logs</li>
-  <li>Engineered post-deployment compliance checkpoints for auditability and output justification</li>
-  <li>Modeled financial inference with risk-aware constraints using conditional logic on confidence intervals</li>
-  <li>Connected model-driven forecasts to decision governance and investment oversight protocols</li>
-</ul>
-
-<div class="custom-button-wrapper">
-  <a href="#ai-model-training" class="custom-button">
-    🧠 AI Model Training & Custom ML Systems
-    <span class="shine"></span>
-  </a>
-</div>
-
-
-<p class="text-sm text-gray-200 leading-snug text-justify mb-4">
-  Trained, optimized, and deployed custom AI models using TensorFlow, PyTorch, and Keras. Integrated versioned training pipelines, embedded explainability components, and enforced model compliance via MLflow, CI/CD, and telemetry-based health monitoring.
-</p>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Trained custom AI models using TensorFlow, PyTorch, and Keras (from scratch and via LoRA/QLoRA fine-tuning)</li>
-    <li>Developed end-to-end ML pipelines for supervised, unsupervised, and semi-supervised learning</li>
-    <li>Integrated classical ML (scikit-learn, XGBoost) with deep learning for hybrid inference pipelines</li>
-    <li>Optimized models for latency, throughput, memory footprint, and energy efficiency</li>
-    <li>Deployed inference APIs using FastAPI, TorchServe, and Dockerized environments</li>
-    <li>Designed modular training pipelines with PyTorch Lightning and Keras functional API</li>
-    <li>Managed model lifecycle with MLflow, DVC, and GitOps-based experiment tracking</li>
-    <li>Embedded XAI components directly into training loops using SHAP, LIME, and Grad-CAM</li>
-    <li>Monitored drift and triggered automated retraining based on model health thresholds</li>
-    <li>Connected model evaluation with compliance metrics and explainability audits</li>
-    <li>Designed AI marketplaces with models and agents offered as licensed services</li>
-    <li>Integrated AI API monetization with usage-based, latency-based, and quality-based billing</li>
-    <li>Built multi-agent ecosystems with internal economies and programmable market rules</li>
-    <li>Implemented compliance-aware product analytics with regulatory metric tracking</li>
-    <li>Developed AI Product Playbooks for regulated industries (healthcare, defense, finance)</li>
-    <li>Modeled tokenomics for AI in decentralized intelligent-agent networks</li>
-    <li>Built AI-driven decision platforms for mission-critical business operations</li>
-    <li>Applied product design of experiments (DoE) to AI feature optimization</li>
-    <li>Created AI Service-Level Agreements (SLAs) with performance and explainability guarantees</li>
-    <li>Linked AI risk mapping directly to pricing and licensing strategies</li>
-  </ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-   <li>Built custom CNNs, RNNs, and Transformer architectures for real-world ML problems</li>
-    <li>Applied transfer learning using ResNet, BERT, ViT, and EfficientNet across domain-specific datasets</li>
-    <li>Developed custom training loops with callbacks, schedulers, and mixed-precision training</li>
-    <li>Implemented stratified validation, K-fold cross-validation, and class imbalance strategies</li>
-    <li>Optimized hyperparameters using Optuna, Ray Tune, Hyperopt, and KerasTuner</li>
-    <li>Augmented training with adversarial robustness and synthetic data generation (e.g., Albumentations)</li>
-    <li>Exported models to ONNX, CoreML, and TensorFlow Lite for edge/mobile deployment</li>
-    <li>Integrated telemetry (Prometheus/Grafana) for live model metrics and health indicators</li>
-    <li>Automated pipelines using GitHub Actions with CI/CD for versioned model deployment</li>
-    <li>Ran stress tests and rollback simulations in staging environments for ML reliability</li>
-    <li>Simulated reward tuning using PPO and TRL for RLHF-style supervised fine-tuning</li>
-    <li>Architected multi-agent AI systems with contract-based API orchestration and automated settlements</li>
-    <li>Implemented regulatory-compliant data pipelines with automated audit trails and real-time reporting</li>
-    <li>Modeled economic incentives for decentralized AI marketplaces with algorithmic price discovery</li>
-    <li>Engineered feature experimentation frameworks with statistical power analysis for AI-driven products</li>
-    <li>Linked AI governance metrics to dynamic SLA enforcement and adaptive pricing tiers</li>
-    <li>Conducted resilience simulations for AI marketplaces under adversarial market and data conditions</li>
-  </ul>
-
- <div class="custom-button-wrapper mb-3">
-  <a href="#neurotechnology-ai" class="custom-button">
-    🧠 Neurotechnology & AI Applied
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-sm text-gray-200 leading-snug mb-4 text-justify">
-  Integrated human-computer interaction pipelines for brain-inspired AI systems. Simulated real-time mental state classification, neuro-symbolic processing, and neuroethics enforcement using structured logging and consent-aware data pipelines.
-</p>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Built cognitive interface prototypes using OpenBCI, Muse SDK, and Python pipelines</li>
-    <li>Simulated real-time EEG decoding for cognitive state recognition and feedback loops</li>
-    <li>Applied neuro-symbolic modeling for interpretable BCI-to-AI communication pathways</li>
-    <li>Designed ethical consent workflows with timestamped logging and user override</li>
-    <li>Structured brain-computer interaction protocols for reproducible cognitive tasks</li>
-    <li>Integrated Explainable AI into neurofeedback pipelines for transparent interaction</li>
-    <li>Built noninvasive high-resolution BCIs using fNIRS, ultrasound neuroimaging, and simulated optogenetics</li>
-    <li>Designed bidirectional brain–AI interfaces with safe neural stimulation constraints</li>
-    <li>Integrated emotional and cognitive decoding for real-time adaptive AI systems</li>
-    <li>Developed multimodal neurofeedback pipelines across vision, audio, and haptics</li>
-    <li>Applied neuro-symbols for interpretable reasoning in hybrid neuro-symbolic systems</li>
-    <li>Created consent-aware BCI frameworks with auditable neural-signal usage</li>
-    <li>Tested mental state transfer experiments mediated by AI under safety gates</li>
-    <li>Implemented security protocols against neuro-hacking and cognitive manipulation</li>
-    <li>Mapped neural correlates of creativity and decision-making for collaborative AI</li>
-    <li>Published high-resolution BCI–AI benchmarks and datasets with rigorous documentation</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Built BCI simulators using OpenBCI + Python with OSC and real-time feedback routing</li>
-    <li>Applied MNE-Python, NeuroKit, and SciPy for EEG signal preprocessing and feature extraction</li>
-    <li>Modeled explainability flows from EEG state transitions to downstream ML decisions</li>
-    <li>Created consent-bound logging frameworks with explainable override protocols</li>
-    <li>Tested mental state interfaces in user-controlled simulations under neuroethical safeguards</li>
-    <li>Mapped neuro-governance to AI policy enforcement via traceable audit chains</li>
-    <li>Engineered high-resolution signal fusion pipelines (EEG + fNIRS + ultrasound) with time-locked synchronization</li>
-    <li>Implemented closed-loop, bidirectional BCI control with safety envelopes and stimulation-threshold governance</li>
-    <li>Deployed real-time affective and cognitive decoders with drift monitoring and human-in-the-loop review</li>
-    <li>Hardened BCI stacks with threat models against neuro-hacking, data poisoning, and covert cognitive influence</li>
-    <li>Operationalized consent-aware data lifecycles with cryptographic provenance and audit-grade telemetry</li>
-    <li>Standardized benchmark protocols and dataset cards for reproducible BCI–AI training and evaluation</li>
-  </ul>
-
-
-  <div class="custom-button-wrapper mb-3">
-  <a href="#ai-trends-skills" class="custom-button">
-    🚀 AI Trends — Autonomous, Evolving & Multi-Domain Systems
-    <span class="shine"></span>
-  </a>
-</div>
-
-<p class="text-sm text-gray-200 leading-snug mb-4 text-justify">
-  Unified, production-grade skill set spanning autonomous physical agents, self-evolving models, hostile-AI defense, bioinformatics for longevity, and decentralized multi-AI governance. Build it, ship it, audit it.
-</p>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <!-- Autonomous AI & Physical Agents -->
-  <li>Designed humanoid robots and autonomous drones integrated with LLM agents and multimodal perception</li>
-  <li>Integrated ROS2, MoveIt, SLAM, and actuator control with real-time AI decision-making</li>
-  <li>Implemented physical-safety and cyberdefense protocols for real-world autonomous agents</li>
-  <li>Developed physics-based simulation tests using Isaac Sim, Gazebo, and Webots</li>
-  <li>Created human–AI control interfaces for supervised operation of mission-critical robots</li>
-
-  <!-- Self-Evolving AI & Continuous Learning Security -->
-  <li>Engineered real-time self-updating AI via Lifelong Learning architectures</li>
-  <li>Applied meta-learning and MAML in safety-critical environments</li>
-  <li>Developed safeguards against malicious drift in self-evolving models</li>
-  <li>Built continuous validation pipelines with formal verification and behavioral auditing</li>
-  <li>Integrated secure federated learning for decentralized AI evolution</li>
-
-  <!-- AI Red Teaming & Defense -->
-  <li>Simulated adversarial engagements between hostile and defensive AIs in controlled environments</li>
-  <li>Applied adversarial training to harden systems against input/model manipulation</li>
-  <li>Implemented AI Red Teaming frameworks aligned to MITRE ATLAS</li>
-  <li>Integrated malicious-behavior detection into autonomous agents</li>
-  <li>Designed containment protocols for potentially compromised AI</li>
-
-  <!-- Bioinformatics & AI for Longevity -->
-  <li>Integrated genomic, proteomic, and multi-omic datasets into AI pipelines for personalized healthcare</li>
-  <li>Applied predictive models for aging and chronic-disease progression</li>
-  <li>Developed therapy-discovery frameworks using generative AI and molecular simulators</li>
-  <li>Built auditable precision-medicine pipelines integrating clinical data and biomarkers</li>
-  <li>Applied causal modeling to longevity factors across diverse populations</li>
-
-  <!-- Multi-AI Economy & Governance -->
-  <li>Modeled multi-agent autonomous ecosystems with embedded market rules</li>
-  <li>Developed pricing and licensing systems for AI services</li>
-  <li>Simulated AI–AI economic interactions using MARL</li>
-  <li>Applied programmatic governance and policy-as-code to autonomous ecosystems</li>
-  <li>Integrated tokenomics and blockchain for decentralized AI coordination</li>
-</ul>
-
-<h4 class="mt-6 mb-4 text-center text-purple-300 text-lg font-black tracking-wide uppercase">
-  ⚙️ Core Capabilities — Advanced
-</h4>
-
-<ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-300 text-justify">
-  <li>Implemented ROS2, MoveIt, Isaac Sim, PX4 with AI-driven physical control systems</li>
-  <li>Built continuous-learning pipelines using Avalanche with formal verification (TLA+)</li>
-  <li>Applied adversarial-robustness techniques using CleverHans, ART, and proactive defenses</li>
-  <li>Engineered bioinformatics workflows with AlphaFold, DeepChem, and multi-omics via Scanpy</li>
-  <li>Simulated multi-AI economies using PettingZoo, ABIDES, and tokenomics frameworks via Ocean Protocol</li>
-</ul>
-
-</section>
-
-
-  </main>
-
-<footer class="minimal-footer">
-    <div class="footer-button-group">
-      <a href="mailto:fabio@brachat.com.br" class="footer-btn">📧 Email</a>
-      <a href="https://github.com/Fabiobeverton" target="_blank" class="footer-btn">🐱 GitHub</a>
-      <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" class="footer-btn">💼 LinkedIn</a>
+    <div class="container">
+        <header>
+            <h1>Fábio Barbosa Everton</h1>
+            <h2>AI Governance & DevSecOps Engineer</h2>
+            <div class="contact-info">
+                <span>[Seu Telefone]</span> |
+                <a href="mailto:[Seu Email]">[Seu Email]</a> |
+                <a href="[Seu LinkedIn]">LinkedIn</a> |
+                <a href="[Seu GitHub]">GitHub</a>
+            </div>
+        </header>
+
+        <section class="summary">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>AI Governance and <b>DevSecOps Engineer</b> with expertise in architecting secure, auditable, and regulated AI platforms. A specialist in <b>Policy-as-Code (OPA/Rego)</b>, hardened CI/CD pipelines, and compliance with frameworks like <b>ISO/IEC 42001</b> and the <b>AI Act</b>. Proven ability to translate complex regulatory requirements into scalable and traceable production systems, ensuring innovation is safe and ethical by design.</p>
+        </section>
+
+        <section class="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>AI Governance & Compliance</h3>
+                    <ul>
+                        <li>ISO/IEC 42001</li><li>NIST RMF</li><li>AI Act</li><li>GDPR/LGPD</li><li>Policy-as-Code</li><li>OPA/Rego</li><li>Kyverno</li><li>Model Cards</li><li>AIBOM</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>DevSecOps & Security</h3>
+                    <ul>
+                        <li>OWASP Top 10 for LLMs</li><li>SLSA 3+</li><li>SBOM</li><li>Semgrep</li><li>Trivy</li><li>Falco</li><li>eBPF</li><li>Zero Trust</li><li>PQC</li><li>Vault</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Software Engineering</h3>
+                    <ul>
+                        <li>Python (FastAPI)</li><li>Next.js</li><li>Java (Spring Boot)</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>GitOps</li><li>PostgreSQL</li><li>Alembic</li><li>Prometheus</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>LLMs & Machine Learning</h3>
+                    <ul>
+                        <li>RAG (LangChain)</li><li>Prompt Engineering</li><li>Fine-tuning</li><li>SHAP</li><li>LIME</li><li>MLflow</li><li>PyTorch</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Advanced Domains</h3>
+                    <ul>
+                        <li>Autonomous Systems</li><li>Hostile AI Defense</li><li>Bioinformatics</li><li>Neurotechnology</li><li>Quantum ML</li><li>XAI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2 class="section-title">Applied Projects & Experience</h2>
+            <div class="project">
+                <h3><a href="[YOUR_GITHUB_REPO_URL]">AI Governance Platform (Brachat Project)</a></h3>
+                <p class="description">Architected a secure and auditable AI platform, demonstrating the ability to build cutting-edge systems with full traceability and regulatory compliance.</p>
+                <ul>
+                    <li>Architected a <b>full-stack</b> platform (Next.js, FastAPI) with CI/CD pipelines using GitHub Actions, ensuring <b>full traceability of the model lifecycle</b>.</li>
+                    <li>Operationalized <b>Policy-as-Code (OPA/Rego)</b> to enforce security policies, <b>significantly reducing compliance deviations</b> and audit time (metrics available in logs).</li>
+                    <li>Built GenAI <b>DevSecOps pipelines</b>, including prompt injection tests and defenses for <b>OWASP Top 10 for LLMs</b> and automated <b>SBOM (Syft)</b>, enhancing supply chain security.</li>
+                    <li>Developed an auditable framework with <b>Model Cards</b> and <b>FactSheets</b> that demonstrates compliance with <b>ISO/IEC 42001</b> and the <b>AI Act</b>, enabling external audits in sandboxes.</li>
+                    <li>Implemented security protocols for <b>multimodal defenses</b>, inspecting and neutralizing covert injection attacks in audio (Whisper) and images (OCR).</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3><a href="[YOUR_ML_REPO_URL]">Advanced Machine Learning Systems</a></h3>
+                <p class="description">Projects focused on model architecture, optimization, and lifecycle governance in production pipelines.</p>
+                <ul>
+                    <li>Trained <b>TensorFlow</b> and <b>PyTorch</b> models optimized for latency and throughput, managing the lifecycle with <b>MLflow</b> and <b>GitOps</b>.</li>
+                    <li>Applied <b>XAI (SHAP, LIME)</b> to embed explainability directly into training pipelines, ensuring auditability and compliance from the start.</li>
+                    <li>Developed <b>multi-agent AI systems</b> with internal economies and programmatic governance, simulating complex scenarios for business decision platforms.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>Master of Science in Financial Engineering</h3>
+                <p><i>WorldQuant University</i></p>
+                <p>Focus on Applied Machine Learning, Econometrics, and Quantitative Modeling.</p>
+            </div>
+        </section>
     </div>
-    <div class="footer-bottom">
-      &copy; 2025 Fabio Barbosa Everton. All rights reserved.
-    </div>
-  </footer>
+
+    <footer class="minimal-footer">
+        <div class="footer-button-group">
+            <a href="mailto:fabio@brachat.com.br" class="footer-btn">📧 Email</a>
+            <a href="https://github.com/Fabiobeverton" target="_blank" class="footer-btn">🐱 GitHub</a>
+            <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" class="footer-btn">💼 LinkedIn</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Fabio Barbosa Everton. All rights reserved.
+        </div>
+    </footer>
 </body>
 </html>
