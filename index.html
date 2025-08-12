@@ -146,23 +146,29 @@
             margin-bottom: 2.5rem;
             border: 1px solid #2a3045;
         }
+
+        /* Estilo do botão de projeto */
+        .project-button-wrapper {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
         
-        .project h3 {
-            font-size: 1.4rem;
+        .project-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--dark-blue));
+            color: var(--text-color);
             font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .project h3 a {
-            color: var(--text-color);
+            font-size: 1.2rem;
+            border-radius: 30px;
             text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
         }
-
-        .project h3 a:hover {
-            color: var(--highlight-color);
+        
+        .project-button:hover {
+            background: linear-gradient(135deg, var(--dark-blue), var(--accent-color));
+            transform: translateY(-2px);
         }
 
         .project p.description {
@@ -363,7 +369,9 @@
         <section class="projects">
             <h2 class="section-title">Applied Projects & Experience</h2>
             <div class="project">
-                <h3><a href="[YOUR_GITHUB_REPO_URL]">AI Governance Platform (Brachat Project)</a></h3>
+                <div class="project-button-wrapper">
+                    <a href="[YOUR_GITHUB_REPO_URL]" class="project-button">AI Governance Platform (Brachat Project)</a>
+                </div>
                 <p class="description">Architected a secure and auditable AI platform, demonstrating the ability to build cutting-edge systems with full traceability and regulatory compliance.</p>
                 <ul>
                     <li>Architected a <b>full-stack</b> platform (Next.js, FastAPI) with CI/CD pipelines using GitHub Actions, ensuring <b>full traceability of the model lifecycle</b>.</li>
