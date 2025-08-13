@@ -186,6 +186,16 @@
             margin-bottom: 1.5rem;
             text-align: justify;
         }
+        
+        .project-category-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--highlight-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2a3045;
+            padding-bottom: 0.5rem;
+        }
 
         .project ul {
             list-style-type: none;
@@ -380,7 +390,7 @@
 
             <h3 class="subsection-title">2. Workflow & Governance: Security, DevSecOps & Compliance</h3>
             <div class="project">
-                <p class="description">Established hardened CI/CD pipelines and compliance frameworks, translating regulatory requirements into robust, automated security protocols. </p>
+                <p class="description">Established hardened CI/CD pipelines and compliance frameworks, translating regulatory requirements into robust, automated security protocols.</p>
                 <ul>
                     <li>Built GenAI <b>DevSecOps pipelines</b>, including prompt injection tests and defenses for <b>OWASP Top 10 for LLMs</b> and automated <b>SBOM (Syft)</b>, enhancing supply chain security.</li>
                     <li>Developed an auditable framework with <b>Model Cards</b> and <b>FactSheets</b> that demonstrates compliance with <b>ISO/IEC 42001</b> and the <b>AI Act</b>.</li>
@@ -388,17 +398,29 @@
                 </ul>
             </div>
 
-            <h3 class="subsection-title">3. Product Development: LLMs, ML & Custom AI Systems</h3>
+            <h3 class="subsection-title">3. Product Development: Building Applied AI Systems</h3>
             <div class="project">
-                <p class="description">Applied advanced machine learning techniques and architectural design to build scalable and explainable AI-driven products.</p>
+                <h4 class="project-category-title">LLMs, LangChain & RAG</h4>
+                <p class="description">Applied advanced techniques for large language models to build intelligent systems with enhanced contextual understanding.</p>
+                <ul>
+                    <li>Developed RAG pipelines with LangChain to create AI applications capable of grounding responses in real-time data, ensuring accuracy and reducing hallucinations.</li>
+                    <li>Implemented advanced prompt engineering strategies to optimize model performance and security.</li>
+                </ul>
+                <h4 class="project-category-title">AI Model Training & Custom ML Systems</h4>
+                <p class="description">Engineered and managed the full lifecycle of custom machine learning models for production environments.</p>
                 <ul>
                     <li>Trained <b>TensorFlow</b> and <b>PyTorch</b> models optimized for latency and throughput, managing the lifecycle with <b>MLflow</b> and <b>GitOps</b>.</li>
                     <li>Applied <b>XAI (SHAP, LIME)</b> to embed explainability directly into training pipelines, ensuring auditability and compliance from the start.</li>
+                </ul>
+                <h4 class="project-category-title">Finance & Applied AI</h4>
+                <p class="description">Developed multi-agent AI systems to model complex financial scenarios and enhance strategic decision-making.</p>
+                <ul>
                     <li>Developed <b>multi-agent AI systems</b> with internal economies and programmatic governance, simulating complex scenarios for business decision platforms.</li>
+                    <li>Applied AI to financial data to build predictive models for market trends and risk assessment.</li>
                 </ul>
             </div>
 
-            <h3 class="subsection-title">4. Advanced Research & Trends: Quantum & Scientific AI</h3>
+            <h3 class="subsection-title">4. Advanced Research & Trends: Quantum, Scientific & Neuro-AI</h3>
             <div class="project">
                 <div class="project-button-wrapper">
                     <a href="https://github.com/Fabiobeverton" class="project-button">Exploration of Quantum ML</a>
