@@ -1,292 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fábio Barbosa Everton | AI Governance Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg-color:#0c1021;
-      --panel:#11152a;
-      --panel-2:#1a1f33;
-      --border:#2a3045;
-      --text:#f0f0f0;
-      --muted:#a0a0a0;
-      --accent:#0066cc;
-      --accent-2:#0099ff;
-      --brand:#1e3a8a;
-      --ok:#22c55e;
-      --chip:#2a3045;
-      --font:'Lato',sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fábio Barbosa Everton | AI Governance & DevSecOps Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230099ff'%3E%3Cpath d='M12 2C8.686 2 6 4.686 6 8a5.952 5.952 0 0 0 1.5 3.99A5.952 5.952 0 0 0 6 16a5.952 5.952 0 0 0-1.5 3.99A2 2 0 0 0 4.5 22h15a2 2 0 0 0-1.5-2.01A5.952 5.952 0 0 0 18 16a5.952 5.952 0 0 0 1.5-3.99A5.952 5.952 0 0 0 18 8c0-3.314-2.686-6-6-6zm0 14a4 4 0 0 1 4 4h-8a4 4 0 0 1 4-4z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <style>
+        :root {
+            --bg-color: #0c1021;
+            --panel: #11152a;
+            --panel-2: #1a1f33;
+            --border: #2a3045;
+            --text: #f0f0f0;
+            --muted: #a0a0a0;
+            --accent: #0066cc;
+            --accent-2: #0099ff;
+            --brand: #1e3a8a;
+            --ok: #22c55e;
+            --chip: #2a3045;
+            --font-lato: 'Lato', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:var(--font);
-      background:var(--bg-color);
-      color:var(--text);
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
+        /* General styles */
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: var(--font-lato);
+            background: var(--bg-color);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        h1, h2, h3, h4 { font-family: var(--font-lato); }
 
-    .container{max-width:1100px;margin:0 auto;padding:2rem}
+        /* Header & Contact */
+        .profile-header {
+            text-align: center;
+            padding: 4rem 1rem 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            border-radius: 16px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), transparent);
+            border: 1px solid var(--border);
+        }
+        .profile-header h1 { font-size: 3.2rem; font-weight: 900; margin: 0 0 0.4rem; }
+        .profile-header h2 { font-size: 1.35rem; font-weight: 700; color: var(--muted); margin: 0 0 1rem; }
+        .contact-info { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; color: var(--muted); }
+        .contact-info a { color: var(--accent-2); text-decoration: none; transition: color 0.3s ease; }
+        .contact-info a:hover { color: var(--accent); }
 
-    header{
-      text-align:center;
-      padding:4rem 1rem 2.25rem;
-      border-bottom:2px solid var(--border);
-      margin-bottom:3rem;
-      background:linear-gradient(180deg, rgba(0,0,0,0.15), transparent);
-      border-radius:16px;
-    }
-    header h1{font-size:3rem;font-weight:900;margin:0 0 .4rem}
-    header h2{font-size:1.25rem;font-weight:700;color:var(--muted);margin:0 0 .8rem}
-    .contact-info{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;color:var(--muted)}
-    .contact-info a{color:var(--accent-2);text-decoration:none}
-    .contact-info a:hover{color:var(--accent)}
+        /* Section Title */
+        .section-title {
+            font-size: 2rem; font-weight: 900; text-align: center; margin: 0 0 2rem; position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: ""; width: 90px; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; border-radius: 6px;
+        }
 
-    .section-title{
-      font-size:1.9rem;font-weight:900;text-align:center;margin:0 0 2rem;position:relative;
-    }
-    .section-title::after{
-      content:"";width:90px;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      position:absolute;left:50%;transform:translateX(-50%);bottom:-10px;border-radius:6px;
-    }
+        /* Professional Summary */
+        .summary-panel {
+            background: var(--panel); border: 1px solid var(--border); padding: 2.5rem; border-radius: 14px;
+            margin-bottom: 3rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .summary-panel p { font-size: 1.1rem; color: var(--text); margin: 0; text-align: justify; }
+        .highlight { font-weight: 700; color: var(--accent-2); }
+        .badge-link {
+            display: inline-block; padding: 0.65rem 1.25rem; border-radius: 999px; text-decoration: none;
+            background: linear-gradient(90deg, var(--accent), var(--brand));
+            color: #fff; font-weight: 800; letter-spacing: 0.2px; font-size: 0.95rem;
+            margin-top: 2rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+        .badge-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
 
-    .summary{background:var(--panel);border:1px solid var(--border);padding:2rem;border-radius:14px;margin-bottom:2.25rem}
-    .summary p{font-size:1.08rem;color:var(--text);margin:.25rem 0 0;text-align:justify}
+        /* Technical Skills & Product Skills */
+        .skills-grid, .product-grid {
+            display: grid; gap: 1.5rem; margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .skill-card, .product-card {
+            background: var(--panel-2); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover, .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+        .skill-card h3, .product-card h4 {
+            margin: 0 0 1rem; font-size: 1.2rem; text-align: center; font-weight: 700;
+            color: var(--accent-2);
+        }
+        .chip {
+            display: inline-block; background: #242a41; color: var(--muted);
+            padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.85rem;
+            margin: 0.25rem; font-family: var(--font-mono);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .chip:hover {
+            background: var(--accent); color: var(--text);
+        }
+        .skill-list {
+            display: flex; flex-wrap: wrap; justify-content: center; margin: 0; padding: 0;
+        }
+        .product-card p { font-size: 0.95rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+        .bullet-list { list-style: none; margin: 0; padding: 0; }
+        .bullet-list li {
+            position: relative; padding-left: 28px; margin: 0.6rem 0; color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .bullet-list li::before {
+            content: "✓"; color: var(--ok); font-weight: 700;
+            position: absolute; left: 0;
+        }
+        
+        /* Research & Education */
+        .research-grid {
+            display: grid; gap: 1.5rem; margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+        .research-card h4 { color: #8ab4ff; }
+        .education-panel {
+            background: var(--panel); border: 1px solid var(--border); padding: 2rem; border-radius: 14px;
+            text-align: center; margin-top: 3rem;
+        }
+        .education-panel h3 { font-size: 1.5rem; margin: 0; }
+        .education-panel p { font-size: 1rem; margin: 0.5rem 0 0; color: var(--muted); }
+        .education-panel em { color: var(--accent-2); }
 
-    /* chips */
-    .chip{display:inline-block;background:var(--chip);color:var(--muted);padding:.35rem .7rem;border-radius:999px;font-size:.85rem;margin:.25rem}
+        /* Footer */
+        .footer-minimal {
+            text-align: center; padding: 2rem 1rem; margin-top: 3rem;
+            border-top: 2px solid var(--border); color: var(--muted);
+        }
+        .footer-button-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .footer-btn {
+            display: flex; align-items: center; justify-content: center;
+            background: var(--brand); color: #fff; padding: 0.7rem 1.4rem; border-radius: 999px;
+            text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .footer-btn svg { width: 1.1em; height: 1.1em; margin-right: 8px; fill: currentColor; }
+        .footer-btn:hover { background: var(--accent-2); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
 
-    /* skills */
-    .skills-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:1.25rem;
-    }
-    .skill-card{
-      background:var(--panel-2);border:1px solid var(--border);border-radius:16px;padding:1.25rem 1.25rem 1rem;
-      box-shadow:0 6px 16px rgba(0,0,0,.15);
-    }
-    .skill-card h3{margin:.2rem 0 1rem;font-size:1.1rem;color:var(--accent-2);text-align:center}
-    .skill-list{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:0}
-    .skill-list .chip{background:#242a41}
-
-    /* product skills */
-    .product-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem;margin-top:1rem;
-    }
-    .product-card{
-      background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:1.25rem 1.25rem 1rem;
-    }
-    .product-card h4{margin:.2rem 0 .75rem;color:var(--accent-2);font-size:1.05rem}
-    .product-card p{margin:.25rem 0 .75rem;color:var(--muted)}
-    .bullet{list-style:none;margin:0;padding:0}
-    .bullet li{position:relative;padding-left:22px;margin:.5rem 0;color:var(--muted)}
-    .bullet li::before{content:"✓";color:var(--accent-2);position:absolute;left:0}
-
-    .anchor{
-      margin:1.75rem 0 0;text-align:center;color:var(--muted);
-    }
-    .anchor .badge{
-      display:inline-block;padding:.55rem 1rem;border-radius:999px;
-      background:linear-gradient(90deg,var(--accent),var(--brand));
-      color:#fff;font-weight:800;letter-spacing:.2px;box-shadow:0 6px 18px rgba(0,0,0,.2);
-    }
-
-    /* research */
-    .research{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.25rem}
-    .research .product-card h4{color:#8ab4ff}
-
-    /* education */
-    .education{background:var(--panel);border:1px solid var(--border);padding:1.5rem;border-radius:14px;text-align:center}
-
-    footer.minimal-footer{
-      text-align:center;padding:2rem 1rem;margin-top:3rem;border-top:2px solid var(--border);color:var(--muted)
-    }
-    .footer-button-group{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem}
-    .footer-btn{
-      display:inline-block;background:var(--brand);color:#fff;padding:.6rem 1.1rem;border-radius:999px;
-      text-decoration:none;font-weight:700;font-size:.92rem;transition:.25s;
-    }
-    .footer-btn:hover{background:#0e7490;transform:translateY(-2px)}
-
-    /* responsive */
-    @media (max-width:768px){
-      header{padding:2.5rem 1rem 1.5rem}
-      header h1{font-size:2.25rem}
-      header h2{font-size:1.05rem}
-      .section-title{font-size:1.5rem}
-    }
-  </style>
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-header { padding: 2.5rem 1rem 1.5rem; }
+            .profile-header h1 { font-size: 2.2rem; }
+            .profile-header h2 { font-size: 1.1rem; }
+            .section-title { font-size: 1.6rem; }
+            .container { padding: 1.5rem 1rem; }
+            .summary-panel, .education-panel { padding: 1.5rem; }
+            .badge-link { font-size: 0.85rem; padding: 0.6rem 1rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Fábio Barbosa Everton</h1>
-      <h2>AI Governance & DevSecOps Engineer • Creator of brachat_Saas_</h2>
-      <div class="contact-info">
-        <span>+55 61 99913-6880</span> |
-        <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a> |
-        <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer">LinkedIn</a> |
-        <a href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </header>
+    <div class="container">
+        <header class="profile-header">
+            <h1>Fábio Barbosa Everton</h1>
+            <h2>AI Governance & DevSecOps Engineer</h2>
+            <div class="contact-info">
+                <span>+55 61 99913-6880</span> |
+                <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a> |
+                <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer">LinkedIn</a> |
+                <a href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+        </header>
 
-    <section class="summary">
-      <h2 class="section-title">Professional Summary</h2>
-      <p>
-        AI Governance and <b>DevSecOps Engineer</b> focused on architecting secure, auditable, and regulation‑compliant AI systems.
-        Specialist in <b>Policy‑as‑Code (OPA/Rego, Kyverno)</b>, SLSA‑grade CI/CD, and compliance automation (ISO/IEC 42001, AI Act, GDPR/LGPD).
-        Experienced in embedding <b>traceability, explainability, and security</b> directly into LLM, RAG, and multi‑agent pipelines.
-      </p>
-      <div class="anchor">
-        All solutions are demonstrated in the flagship platform:<br/>
-        <span class="badge">brachat_Saas_ — premium AI auditing suite</span>
-      </div>
-    </section>
+        <main>
+            <section class="summary-panel">
+                <h2 class="section-title">Professional Summary</h2>
+                <p>
+                    AI Governance and <b class="highlight">DevSecOps Engineer</b> specializing in architecting secure, auditable, and
+                    regulation-compliant AI systems. Experienced in embedding <b class="highlight">traceability, explainability, and security</b>
+                    directly into LLM, RAG, and multi-agent pipelines using Policy-as-Code (OPA/Rego, Kyverno),
+                    SLSA-grade CI/CD, and compliance automation (ISO/IEC 42001, AI Act, GDPR/LGPD).
+                </p>
+                <div style="text-align:center; margin-top: 1.5rem;">
+                    <a href="https://brachat.com.br" class="badge-link" target="_blank" rel="noreferrer">
+                        Demonstrated on brachat_Saas_ – a premium AI auditing suite
+                    </a>
+                </div>
+            </section>
 
-    <section class="skills">
-      <h2 class="section-title">Technical Skills</h2>
+            <section>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>AI Governance & Compliance</h3>
+                        <div class="skill-list">
+                            <span class="chip">ISO/IEC 42001</span><span class="chip">NIST RMF</span><span class="chip">AI Act</span>
+                            <span class="chip">GDPR/LGPD</span><span class="chip">Policy-as-Code</span><span class="chip">OPA/Rego</span>
+                            <span class="chip">Kyverno</span><span class="chip">Model Cards</span><span class="chip">AIBOM</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>DevSecOps & Security</h3>
+                        <div class="skill-list">
+                            <span class="chip">OWASP Top 10 for LLMs</span><span class="chip">SLSA 3+</span><span class="chip">SBOM</span>
+                            <span class="chip">Semgrep</span><span class="chip">Trivy</span><span class="chip">Falco</span>
+                            <span class="chip">eBPF</span><span class="chip">Zero Trust</span><span class="chip">Vault</span>
+                            <span class="chip">PQC</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Software Engineering</h3>
+                        <div class="skill-list">
+                            <span class="chip">Python (FastAPI)</span><span class="chip">Next.js</span><span class="chip">Java (Spring Boot)</span>
+                            <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span>
+                            <span class="chip">GitOps</span><span class="chip">PostgreSQL</span><span class="chip">Alembic</span>
+                            <span class="chip">Prometheus</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>LLMs & Machine Learning</h3>
+                        <div class="skill-list">
+                            <span class="chip">RAG (LangChain)</span><span class="chip">Prompt Engineering</span><span class="chip">Fine-tuning</span>
+                            <span class="chip">MLflow</span><span class="chip">PyTorch</span><span class="chip">SHAP</span><span class="chip">LIME</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>AI Governance & Compliance</h3>
-          <div class="skill-list">
-            <span class="chip">ISO/IEC 42001</span><span class="chip">NIST RMF</span><span class="chip">AI Act</span>
-            <span class="chip">GDPR/LGPD</span><span class="chip">Policy‑as‑Code</span><span class="chip">OPA/Rego</span>
-            <span class="chip">Kyverno</span><span class="chip">Model Cards</span><span class="chip">AIBOM</span>
-          </div>
-        </div>
+            <section style="margin-top: 3rem;">
+                <h2 class="section-title">Product-Led AI Governance Capabilities</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h4>LLM & AI Systems Auditing</h4>
+                        <p>Auditing for LLMs and general AI systems.</p>
+                        <ul class="bullet-list">
+                            <li>Prompt tracing & output logging</li>
+                            <li>Model watermarking</li>
+                            <li>Explainability and risk tagging</li>
+                            <li>Standards: ISO/IEC 42001, AI Act, OWASP LLM</li>
+                        </ul>
+                    </div>
+                    <div class="product-card">
+                        <h4>Fine-Tuning Oversight & Legal Traceability</h4>
+                        <p>End-to-end traceability for fine-tuning and retraining.</p>
+                        <ul class="bullet-list">
+                            <li>Metadata capture & checkpoint versioning</li>
+                            <li>Reproducibility enforcement</li>
+                            <li>Compliance: AI Act, ISO 23894, GDPR/LGPD</li>
+                        </ul>
+                    </div>
+                    <div class="product-card">
+                        <h4>RAG & Agentic Pipeline Auditing</h4>
+                        <p>Auditing for RAG and multi-agent systems.</p>
+                        <ul class="bullet-list">
+                            <li>LangChain, CrewAI, LangSmith</li>
+                            <li>Source/context lineage & chain logs</li>
+                            <li>Vector DBs: Chroma, Pinecone, Weaviate</li>
+                        </ul>
+                    </div>
+                    <div class="product-card">
+                        <h4>AI for Financial Modeling (Quant Audit)</h4>
+                        <p>Interpretable ML for forecasting & risk.</p>
+                        <ul class="bullet-list">
+                            <li>Explainability & fairness metrics</li>
+                            <li>MiFID II, SR11-7, ISO 24028 alignment</li>
+                        </ul>
+                    </div>
+                    <div class="product-card">
+                        <h4>Game AI Agent Auditing</h4>
+                        <p>Audit-ready toolkit for simulated agents.</p>
+                        <ul class="bullet-list">
+                            <li>Behavior & decision timelines</li>
+                            <li>XAI overlays: SHAP, LIME, Captum</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <div class="skill-card">
-          <h3>DevSecOps & Security</h3>
-          <div class="skill-list">
-            <span class="chip">OWASP Top 10 for LLMs</span><span class="chip">SLSA 3+</span><span class="chip">SBOM</span>
-            <span class="chip">Semgrep</span><span class="chip">Trivy</span><span class="chip">Falco</span>
-            <span class="chip">eBPF</span><span class="chip">Zero Trust</span><span class="chip">PQC</span>
-            <span class="chip">Vault</span>
-          </div>
-        </div>
+            <section style="margin-top: 3rem;">
+                <h2 class="section-title">🧠 Research & Advanced Topics</h2>
+                <div class="research-grid">
+                    <div class="product-card">
+                        <h4 class="research-card">Quantum & Scientific AI</h4>
+                        <ul class="bullet-list">
+                            <li>Quantum ML with Qiskit & Pennylane</li>
+                            <li>Hybrid quantum-classical prototypes</li>
+                            <li>Post-quantum cryptography use cases</li>
+                        </ul>
+                    </div>
+                    <div class="product-card">
+                        <h4 class="research-card">AI Safety & Adversarial Defense</h4>
+                        <ul class="bullet-list">
+                            <li>Consent tracing & override logic</li>
+                            <li>Adversarial robustness & deception detection</li>
+                            <li>Safety for autonomous/agentic systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <div class="skill-card">
-          <h3>Software Engineering</h3>
-          <div class="skill-list">
-            <span class="chip">Python (FastAPI)</span><span class="chip">Next.js</span><span class="chip">Java (Spring Boot)</span>
-            <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span>
-            <span class="chip">GitOps</span><span class="chip">PostgreSQL</span><span class="chip">Alembic</span>
-            <span class="chip">Prometheus</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h3>LLMs & Machine Learning</h3>
-          <div class="skill-list">
-            <span class="chip">RAG (LangChain)</span><span class="chip">Prompt Engineering</span><span class="chip">Fine‑tuning</span>
-            <span class="chip">MLflow</span><span class="chip">PyTorch</span><span class="chip">SHAP</span><span class="chip">LIME</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects">
-      <h2 class="section-title">Product‑Led AI Governance Skills (Designed & In Progress)</h2>
-
-      <div class="product-grid">
-        <div class="product-card">
-          <h4>LLM & AI Systems Auditing</h4>
-          <p>Auditing for LLMs and general AI systems.</p>
-          <ul class="bullet">
-            <li>Prompt tracing & output logging</li>
-            <li>Model watermarking</li>
-            <li>Explainability and risk tagging</li>
-            <li>Standards: ISO/IEC 42001, AI Act, OWASP LLM</li>
-          </ul>
-        </div>
-
-        <div class="product-card">
-          <h4>Fine‑Tuning Oversight & Legal Traceability</h4>
-          <p>End‑to‑end traceability for fine‑tuning and retraining.</p>
-          <ul class="bullet">
-            <li>Metadata capture & checkpoint versioning</li>
-            <li>Reproducibility enforcement</li>
-            <li>Compliance: AI Act, ISO 23894, GDPR/LGPD</li>
-          </ul>
-        </div>
-
-        <div class="product-card">
-          <h4>RAG & Agentic Pipeline Auditing</h4>
-          <p>Auditing for RAG and multi‑agent systems.</p>
-          <ul class="bullet">
-            <li>LangChain, CrewAI, LangSmith</li>
-            <li>Source/context lineage & chain logs</li>
-            <li>Vector DBs: Chroma, Pinecone, Weaviate</li>
-          </ul>
-        </div>
-
-        <div class="product-card">
-          <h4>AI for Financial Modeling (Quant Audit)</h4>
-          <p>Interpretable ML for forecasting & risk.</p>
-          <ul class="bullet">
-            <li>Explainability & fairness metrics</li>
-            <li>MiFID II, SR11‑7, ISO 24028 alignment</li>
-          </ul>
-        </div>
-
-        <div class="product-card">
-          <h4>Game AI Agent Auditing</h4>
-          <p>Audit‑ready toolkit for simulated agents.</p>
-          <ul class="bullet">
-            <li>Behavior & decision timelines</li>
-            <li>XAI overlays: SHAP, LIME, Captum</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects">
-      <h2 class="section-title">🧠 Research & Advanced Topics</h2>
-      <div class="research">
-        <div class="product-card">
-          <h4>Quantum & Scientific AI</h4>
-          <ul class="bullet">
-            <li>Quantum ML with Qiskit & Pennylane</li>
-            <li>Hybrid quantum‑classical prototypes</li>
-            <li>Post‑quantum cryptography use cases</li>
-          </ul>
-        </div>
-        <div class="product-card">
-          <h4>Neuro‑symbolic & Hostile AI Defense</h4>
-          <ul class="bullet">
-            <li>Consent tracing & override logic</li>
-            <li>Adversarial robustness & deception detection</li>
-            <li>Safety for autonomous/agentic systems</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="education">
-      <h2 class="section-title">Education</h2>
-      <h3>Master of Science in Financial Engineering (In Progress)</h3>
-      <p><em>WorldQuant University</em></p>
-      <p>Focus: Applied Machine Learning, Econometrics, and Quantitative Modeling</p>
-    </section>
-  </div>
-
-  <footer class="minimal-footer">
-    <div class="footer-button-group">
-      <a class="footer-btn" href="mailto:fabio@brachat.com.br">📧 Email</a>
-      <a class="footer-btn" href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer">🐱 GitHub</a>
-      <a class="footer-btn" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer">💼 LinkedIn</a>
+            <section class="education-panel">
+                <h2 class="section-title">Education</h2>
+                <h3>Master of Science in Financial Engineering <br/>(Expected 2026)</h3>
+                <p><em>WorldQuant University</em></p>
+                <p>Focus: Applied Machine Learning, Econometrics, and Quantitative Modeling</p>
+            </section>
+        </main>
     </div>
-    <div class="footer-bottom">
-      © 2025 Fábio Barbosa Everton. All rights reserved.
-    </div>
-  </footer>
+
+    <footer class="footer-minimal">
+        <div class="footer-button-group">
+            <a class="footer-btn" href="mailto:fabio@brachat.com.br" aria-label="Send an email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.223V6h16zM4 18V9.755l7.927 6.177L12 16.03l.073-.098L20 9.755V18H4z"></path></svg>
+                Email
+            </a>
+            <a class="footer-btn" href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer" aria-label="Go to GitHub profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.304.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.61.8.576 4.765-1.589 8.204-6.086 8.204-11.387C24 5.373 18.627 0 12 0z"></path></svg>
+                GitHub
+            </a>
+            <a class="footer-btn" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer" aria-label="Go to LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                LinkedIn
+            </a>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Fábio Barbosa Everton. All rights reserved.
+        </div>
+    </footer>
 </body>
 </html>
-
 
