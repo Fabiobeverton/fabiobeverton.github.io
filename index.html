@@ -1,468 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fábio Barbosa Everton | AI Governance Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0c1021;
-            --text-color: #f0f0f0;
-            --secondary-text-color: #a0a0a0;
-            --accent-color: #0066cc;
-            --highlight-color: #0099ff;
-            --dark-blue: #1e3a8a;
-            --light-yellow: #facc15;
-            --font-family: 'Lato', sans-serif;
-        }
-
-        body {
-            margin: 0;
-            font-family: var(--font-family);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            padding: 4rem 1rem 2rem;
-            border-bottom: 2px solid #2a3045;
-            margin-bottom: 3rem;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        header h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--secondary-text-color);
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--secondary-text-color);
-        }
-
-        .contact-info a {
-            color: var(--highlight-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-color);
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-color);
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent-color);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .subsection-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--highlight-color);
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .summary p {
-            font-size: 1.1rem;
-            color: var(--text-color);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: justify;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background-color: #1a1f33;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .skill-category h3 {
-            font-size: 1.2rem;
-            color: var(--highlight-color);
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .skill-category ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .skill-category li {
-            background-color: #2a3045;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--secondary-text-color);
-            white-space: nowrap;
-        }
-
-        .project {
-            background-color: #1a1f33;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-            border: 1px solid #2a3045;
-        }
-
-        .project-button-wrapper {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-button {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background: linear-gradient(135deg, var(--accent-color), var(--dark-blue));
-            color: var(--text-color);
-            font-weight: 700;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .project-button:hover {
-            background: linear-gradient(135deg, var(--dark-blue), var(--accent-color));
-            transform: translateY(-2px);
-        }
-
-        .project p.description {
-            font-size: 1rem;
-            color: var(--secondary-text-color);
-            margin-top: 0.5rem;
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-        
-        .project-category-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--highlight-color);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #2a3045;
-            padding-bottom: 0.5rem;
-        }
-
-        .project ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .project ul li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 20px;
-            font-size: 1rem;
-            color: var(--secondary-text-color);
-            text-align: justify;
-        }
-
-        .project ul li::before {
-            content: '✓';
-            color: var(--highlight-color);
-            position: absolute;
-            left: 0;
-        }
-
-        .education {
-            text-align: center;
-        }
-
-        .education h3 {
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin: 0.5rem 0;
-        }
-
-        .education p {
-            font-size: 1rem;
-            color: var(--secondary-text-color);
-        }
-
-        footer.minimal-footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-            border-top: 2px solid #2a3045;
-        }
-
-        .footer-button-group {
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-btn {
-            display: inline-block;
-            background-color: #1e3a8a;
-            color: #fff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
-        }
-
-        .footer-btn:hover {
-            background-color: #0e7490;
-            transform: translateY(-2px);
-        }
-
-        .footer-bottom {
-            font-size: 0.85rem;
-            color: #aaa;
-            margin-top: 1rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                padding: 2rem 1rem;
-            }
-            header h1 {
-                font-size: 2.2rem;
-            }
-            header h2 {
-                font-size: 1.2rem;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+  <!-- [Unchanged Head Section from Your HTML] -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Fábio Barbosa Everton</h1>
-            <h2>AI Governance & DevSecOps Engineer</h2>
-            <div class="contact-info">
-                <span>55 61 99913-6880</span> |
-                <a href="mailto:Fabio@brachat.com.br">Fabio@brachat.com.br</a> |
-                <a href="https://linkedin.com/in/fabio-everton-3b62b1129/">LinkedIn</a> |
-                <a href="https://github.com/Fabiobeverton">GitHub</a>
-            </div>
-        </header>
-
-        <section class="summary">
-            <h2 class="section-title">Professional Summary</h2>
-            <p>AI Governance and <b>DevSecOps Engineer</b> with expertise in architecting secure, auditable, and regulated AI platforms. A specialist in <b>Policy-as-Code (OPA/Rego)</b>, hardened CI/CD pipelines, and compliance with frameworks like <b>ISO/IEC 42001</b> and the <b>AI Act</b>. Proven ability to translate complex regulatory requirements into scalable and traceable production systems, ensuring innovation is safe and ethical by design.</p>
-        </section>
-
-        <section class="skills">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>AI Governance & Compliance</h3>
-                    <ul>
-                        <li>ISO/IEC 42001</li>
-                        <li>NIST RMF</li>
-                        <li>AI Act</li>
-                        <li>GDPR/LGPD</li>
-                        <li>Policy-as-Code</li>
-                        <li>OPA/Rego</li>
-                        <li>Kyverno</li>
-                        <li>Model Cards</li>
-                        <li>AIBOM</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>DevSecOps & Security</h3>
-                    <ul>
-                        <li>OWASP Top 10 for LLMs</li>
-                        <li>SLSA 3+</li>
-                        <li>SBOM</li>
-                        <li>Semgrep</li>
-                        <li>Trivy</li>
-                        <li>Falco</li>
-                        <li>eBPF</li>
-                        <li>Zero Trust</li>
-                        <li>PQC</li>
-                        <li>Vault</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Software Engineering</h3>
-                    <ul>
-                        <li>Python (FastAPI)</li>
-                        <li>Next.js</li>
-                        <li>Java (Spring Boot)</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>Terraform</li>
-                        <li>GitOps</li>
-                        <li>PostgreSQL</li>
-                        <li>Alembic</li>
-                        <li>Prometheus</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>LLMs & Machine Learning</h3>
-                    <ul>
-                        <li>RAG (LangChain)</li>
-                        <li>Prompt Engineering</li>
-                        <li>Fine-tuning</li>
-                        <li>SHAP</li>
-                        <li>LIME</li>
-                        <li>MLflow</li>
-                        <li>PyTorch</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects">
-            <h2 class="section-title">Featured Projects</h2>
-
-            <h3 class="subsection-title">1. Infrastructure: Full-Stack Projects</h3>
-            <div class="project">
-                <div class="project-button-wrapper">
-                    <a href="https://github.com/Fabiobeverton" class="project-button">AI Governance Platform (Brachat Project)</a>
-                </div>
-                <p class="description">Architected a secure and auditable AI platform, demonstrating the ability to build cutting-edge systems with full traceability and regulatory compliance.</p>
-                <ul>
-                    <li>Architected a <b>full-stack</b> platform (Next.js, FastAPI) with CI/CD pipelines using GitHub Actions, ensuring <b>full traceability of the model lifecycle</b>.</li>
-                    <li>Operationalized <b>Policy-as-Code (OPA/Rego)</b> to enforce security policies, <b>significantly reducing compliance deviations</b> and audit time (metrics available in logs).</li>
-                </ul>
-            </div>
-
-            <h3 class="subsection-title">2. Workflow & Governance: Security, DevSecOps & Compliance</h3>
-            <div class="project">
-                <p class="description">Established hardened CI/CD pipelines and compliance frameworks, translating regulatory requirements into robust, automated security protocols.</p>
-                <ul>
-                    <li>Built GenAI <b>DevSecOps pipelines</b>, including prompt injection tests and defenses for <b>OWASP Top 10 for LLMs</b> and automated <b>SBOM (Syft)</b>, enhancing supply chain security.</li>
-                    <li>Developed an auditable framework with <b>Model Cards</b> and <b>FactSheets</b> that demonstrates compliance with <b>ISO/IEC 42001</b> and the <b>AI Act</b>.</li>
-                    <li>Implemented security protocols for <b>multimodal defenses</b>, inspecting and neutralizing covert injection attacks in audio (Whisper) and images (OCR).</li>
-                </ul>
-            </div>
-
-            <h3 class="subsection-title">3. Product Development: Building Applied AI Systems</h3>
-            <div class="project">
-                <h4 class="project-category-title">LLMs, LangChain & RAG</h4>
-                <p class="description">Applied advanced techniques for large language models to build intelligent systems with enhanced contextual understanding.</p>
-                <ul>
-                    <li>Developed RAG pipelines with LangChain to create AI applications capable of grounding responses in real-time data, ensuring accuracy and reducing hallucinations.</li>
-                    <li>Implemented advanced prompt engineering strategies to optimize model performance and security.</li>
-                </ul>
-                <h4 class="project-category-title">AI Model Training & Custom ML Systems</h4>
-                <p class="description">Engineered and managed the full lifecycle of custom machine learning models for production environments.</p>
-                <ul>
-                    <li>Trained <b>TensorFlow</b> and <b>PyTorch</b> models optimized for latency and throughput, managing the lifecycle with <b>MLflow</b> and <b>GitOps</b>.</li>
-                    <li>Applied <b>XAI (SHAP, LIME)</b> to embed explainability directly into training pipelines, ensuring auditability and compliance from the start.</li>
-                </ul>
-                <h4 class="project-category-title">Finance & Applied AI</h4>
-                <p class="description">Developed multi-agent AI systems to model complex financial scenarios and enhance strategic decision-making.</p>
-                <ul>
-                    <li>Developed <b>multi-agent AI systems</b> with internal economies and programmatic governance, simulating complex scenarios for business decision platforms.</li>
-                    <li>Applied AI to financial data to build predictive models for market trends and risk assessment.</li>
-                </ul>
-            </div>
-
-            <h3 class="subsection-title">4. Advanced Research & Trends: Quantum, Scientific & Neuro-AI</h3>
-            <div class="project">
-                <div class="project-button-wrapper">
-                    <a href="https://github.com/Fabiobeverton" class="project-button">Exploration of Quantum ML</a>
-                </div>
-                <p class="description">Study and implementation of Machine Learning algorithms based on quantum computing principles.</p>
-                <ul>
-                    <li>Implemented quantum classification and optimization models using libraries like **Qiskit** and **Pennylane**.</li>
-                    <li>Evaluated the potential and challenges of applying QML to security and post-quantum cryptography scenarios.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <div class="project-button-wrapper">
-                    <a href="https://github.com/Fabiobeverton" class="project-button">Autonomous Systems and Hostile AI Defense</a>
-                </div>
-                <p class="description">Research on defense against adversarial attacks and ensuring security in autonomous AI systems.</p>
-                <ul>
-                    <li>Developed prototypes of autonomous navigation systems with defenses against fake data injection and sensory deception attacks.</li>
-                    <li>Explored methods for detecting and mitigating adversarial attacks to ensure the robustness of critical systems.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="education">
-            <h2 class="section-title">Education</h2>
-            <div class="education-item">
-                <h3>Master of Science in Financial Engineering (In progress)</h3>
-                <p><i>WorldQuant University</i></p>
-                <p>Focus on Applied Machine Learning, Econometrics, and Quantitative Modeling.</p>
-                <p>Expected to graduate: [Your Graduation Date]</p>
-            </div>
-        </section>
+<div class="container">
+  <header>
+    <h1>Fábio Barbosa Everton</h1>
+    <h2>AI Governance & DevSecOps Engineer</h2>
+    <div class="contact-info">
+      <span>+55 61 99913-6880</span> |
+      <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a> |
+      <a href="https://linkedin.com/in/fabio-everton-3b62b1129/">LinkedIn</a> |
+      <a href="https://github.com/Fabiobeverton">GitHub</a>
     </div>
+  </header>
 
-    <footer class="minimal-footer">
-        <div class="footer-button-group">
-            <a href="mailto:Fabio@brachat.com.br" class="footer-btn">📧 Email</a>
-            <a href="https://github.com/Fabiobeverton" target="_blank" class="footer-btn">🐱 GitHub</a>
-            <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" class="footer-btn">💼 LinkedIn</a>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2025 Fabio Barbosa Everton. All rights reserved.
-        </div>
-    </footer>
+  <section class="summary">
+    <h2 class="section-title">Professional Summary</h2>
+    <p>AI Governance and <b>DevSecOps Engineer</b> specializing in secure, auditable, and regulation-ready AI systems. Proven track record in building policy-driven infrastructures with <b>Policy-as-Code (OPA/Rego)</b>, hardened CI/CD pipelines, and compliance automation for ISO/IEC 42001 and the AI Act. Architect and lead developer of the <b>Brachat_SaaS</b> platform, a premium AI compliance suite demonstrating advanced governance capabilities across LLMs, RAG pipelines, and agentic systems.</p>
+  </section>
+
+  <section class="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>AI Governance & Compliance</h3>
+        <ul>
+          <li>ISO/IEC 42001</li>
+          <li>NIST RMF</li>
+          <li>AI Act</li>
+          <li>GDPR/LGPD</li>
+          <li>Policy-as-Code</li>
+          <li>OPA/Rego</li>
+          <li>Kyverno</li>
+          <li>Model Cards</li>
+          <li>AIBOM</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>DevSecOps & Security</h3>
+        <ul>
+          <li>OWASP Top 10 for LLMs</li>
+          <li>SLSA 3+</li>
+          <li>SBOM</li>
+          <li>Semgrep</li>
+          <li>Trivy</li>
+          <li>Falco</li>
+          <li>eBPF</li>
+          <li>Zero Trust</li>
+          <li>PQC</li>
+          <li>Vault</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Software Engineering</h3>
+        <ul>
+          <li>Python (FastAPI)</li>
+          <li>Next.js</li>
+          <li>Java (Spring Boot)</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>Terraform</li>
+          <li>GitOps</li>
+          <li>PostgreSQL</li>
+          <li>Alembic</li>
+          <li>Prometheus</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>LLMs & Machine Learning</h3>
+        <ul>
+          <li>RAG (LangChain)</li>
+          <li>Prompt Engineering</li>
+          <li>Fine-tuning</li>
+          <li>SHAP</li>
+          <li>LIME</li>
+          <li>MLflow</li>
+          <li>PyTorch</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2 class="section-title">Product-Led AI Governance Skills</h2>
+
+    <div class="project">
+      <h4 class="project-category-title">Governance & Compliance</h4>
+      <ul>
+        <li>LLM & AI System Auditing — Prompt tracing, model watermarking, explainability logging</li>
+        <li>Fine-tuning Oversight & Legal Traceability — Logging training metadata and checkpoints aligned to the AI Act</li>
+      </ul>
+
+      <h4 class="project-category-title">AI Engineering & Pipelines</h4>
+      <ul>
+        <li>RAG & Agentic Pipeline Auditing — LangChain, CrewAI, LangSmith with vector stores (Chroma, Pinecone, Weaviate)</li>
+        <li>Quantitative AI for Finance — Interpretable ML with audit trails under MiFID II, SR11-7</li>
+      </ul>
+
+      <h4 class="project-category-title">Explainability & Observability</h4>
+      <ul>
+        <li>Game AI Agent Auditing — Multi-agent explainability using SHAP, LIME, Captum with behavior and decision logs</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2 class="section-title">🧠 Research & Advanced Topics</h2>
+
+    <div class="project">
+      <h4 class="project-category-title">Quantum & Scientific AI</h4>
+      <ul>
+        <li>Quantum ML with Qiskit & Pennylane, exploring post-quantum cryptography</li>
+        <li>Prototype pipelines integrating quantum and classical models for sensitive systems</li>
+      </ul>
+
+      <h4 class="project-category-title">Neuro-symbolic & Hostile AI Defense</h4>
+      <ul>
+        <li>Designed neuro-symbolic inference layers for override logic in autonomous agents</li>
+        <li>Simulated adversarial robustness tests and deception detection scenarios</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-item">
+      <h3>Master of Science in Financial Engineering (in progress)</h3>
+      <p><i>WorldQuant University</i></p>
+      <p>Focus: Applied Machine Learning, Econometrics, and Quantitative Modeling</p>
+    </div>
+  </section>
+</div>
+<footer class="minimal-footer">
+  <div class="footer-button-group">
+    <a href="mailto:fabio@brachat.com.br" class="footer-btn">📧 Email</a>
+    <a href="https://github.com/Fabiobeverton" class="footer-btn" target="_blank">🐱 GitHub</a>
+    <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" class="footer-btn" target="_blank">💼 LinkedIn</a>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Fábio Barbosa Everton. All rights reserved.
+  </div>
+</footer>
 </body>
 </html>
+
