@@ -120,7 +120,7 @@
             content: "✓"; color: var(--ok); font-weight: 700;
             position: absolute; left: 0;
         }
-        
+
         /* Research & Education */
         .research-grid {
             display: grid; gap: 1.5rem; margin-top: 1.5rem;
@@ -177,56 +177,15 @@
 
         <main>
             <section class="summary-panel">
-                <h2 class="section-title">Professional Summary</h2>
+                <h2 class="section-title">Resumo Profissional</h2>
                 <p>
-                    AI Governance and <b class="highlight">DevSecOps Engineer</b> specializing in architecting secure, auditable, and
-                    regulation-compliant AI systems. Experienced in embedding <b class="highlight">traceability, explainability, and security</b>
-                    directly into LLM, RAG, and multi-agent pipelines using Policy-as-Code (OPA/Rego, Kyverno),
-                    SLSA-grade CI/CD, and compliance automation (ISO/IEC 42001, AI Act, GDPR/LGPD).
+                    Engenheiro de AI Governance & DevSecOps com foco em arquitetar sistemas de IA seguros e em conformidade com as normas regulatórias mais atuais. Minha especialidade é integrar **rastreabilidade, explicabilidade e segurança** em pipelines de LLM e RAG. Utilizo **Policy-as-Code (OPA/Rego)** e automação para garantir a aderência a padrões como **ISO/IEC 42001, AI Act, GDPR/LGPD** e outros frameworks de governança aplicáveis.
                 </p>
                 <div style="text-align:center; margin-top: 1.5rem;">
-                    <a href="https://brachat.com.br" class="badge-link" target="_blank" rel="noreferrer">
-                        Demonstrated on brachat_Saas_ – a premium AI auditing suite
+                    <h4 style="margin: 0 0 0.5rem; color: var(--accent-2);">Portfólio em Destaque:</h4>
+                    <a href="https://brachat_Saas_.com" class="badge-link" target="_blank" rel="noreferrer">
+                        brachat_SaaS_: Uma suíte de auditoria de IA premium
                     </a>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>AI Governance & Compliance</h3>
-                        <div class="skill-list">
-                            <span class="chip">ISO/IEC 42001</span><span class="chip">NIST RMF</span><span class="chip">AI Act</span>
-                            <span class="chip">GDPR/LGPD</span><span class="chip">Policy-as-Code</span><span class="chip">OPA/Rego</span>
-                            <span class="chip">Kyverno</span><span class="chip">Model Cards</span><span class="chip">AIBOM</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <h3>DevSecOps & Security</h3>
-                        <div class="skill-list">
-                            <span class="chip">OWASP Top 10 for LLMs</span><span class="chip">SLSA 3+</span><span class="chip">SBOM</span>
-                            <span class="chip">Semgrep</span><span class="chip">Trivy</span><span class="chip">Falco</span>
-                            <span class="chip">eBPF</span><span class="chip">Zero Trust</span><span class="chip">Vault</span>
-                            <span class="chip">PQC</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <h3>Software Engineering</h3>
-                        <div class="skill-list">
-                            <span class="chip">Python (FastAPI)</span><span class="chip">Next.js</span><span class="chip">Java (Spring Boot)</span>
-                            <span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span>
-                            <span class="chip">GitOps</span><span class="chip">PostgreSQL</span><span class="chip">Alembic</span>
-                            <span class="chip">Prometheus</span>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <h3>LLMs & Machine Learning</h3>
-                        <div class="skill-list">
-                            <span class="chip">RAG (LangChain)</span><span class="chip">Prompt Engineering</span><span class="chip">Fine-tuning</span>
-                            <span class="chip">MLflow</span><span class="chip">PyTorch</span><span class="chip">SHAP</span><span class="chip">LIME</span>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -234,47 +193,57 @@
                 <h2 class="section-title">Product-Led AI Governance Capabilities</h2>
                 <div class="product-grid">
                     <div class="product-card">
-                        <h4>LLM & AI Systems Auditing</h4>
-                        <p>Auditing for LLMs and general AI systems.</p>
+                        <h4>🚀 Projetos Full-Stack</h4>
+                        <p>Engenharia de sistemas full-stack usando **Next.js, FastAPI, Spring Boot** e **CI/CD**. Criação de frontends com App Router, SWR e **TypeScript**, e backends escaláveis com **Python e Java**.</p>
                         <ul class="bullet-list">
-                            <li>Prompt tracing & output logging</li>
-                            <li>Model watermarking</li>
-                            <li>Explainability and risk tagging</li>
-                            <li>Standards: ISO/IEC 42001, AI Act, OWASP LLM</li>
+                            <li>**Pipelines:** Estruturação de **repositórios modulares**, **Docker Compose** e **Dockerfiles multi-stage**.</li>
+                            <li>**Testes:** Implementação de testes de contrato, unitários, integração, **E2E (Playwright, Cypress)** e **carga (Locust, K6)**.</li>
+                            <li>**Infra:** Orquestração de **CI/CD (GitHub Actions)**, observabilidade com **Prometheus e Grafana**, e gerenciamento de schemas (**Alembic, Liquibase**).</li>
                         </ul>
                     </div>
                     <div class="product-card">
-                        <h4>Fine-Tuning Oversight & Legal Traceability</h4>
-                        <p>End-to-end traceability for fine-tuning and retraining.</p>
+                        <h4>🔐 Segurança & DevSecOps</h4>
+                        <p>Engenharia de segurança ponta a ponta para pipelines de **GenAI**. Aplicação de **OWASP, NIST, ISO e Zero Trust**.</p>
                         <ul class="bullet-list">
-                            <li>Metadata capture & checkpoint versioning</li>
-                            <li>Reproducibility enforcement</li>
-                            <li>Compliance: AI Act, ISO 23894, GDPR/LGPD</li>
+                            <li>**Segurança de IA:** Modelagem de ameaças (Microsoft Threat Matrix), scans automatizados (**Semgrep, Trivy, Checkov**) e defesa contra **prompt injection**.</li>
+                            <li>**Infraestrutura Segura:** Governança de IA com **policy-as-code (Rego)**, criptografia com **HashiCorp Vault** e monitoramento com **Falco e eBPF**.</li>
+                            <li>**Conformidade:** Mapeamento de controles **NIST 800-53** e **ISO/IEC 42001**. Implementação de **SBOM** e **SLSA 3+**.</li>
                         </ul>
                     </div>
                     <div class="product-card">
-                        <h4>RAG & Agentic Pipeline Auditing</h4>
-                        <p>Auditing for RAG and multi-agent systems.</p>
+                        <h4>🧭 Governança & Conformidade</h4>
+                        <p>Desenvolvimento de **fluxos de governança de IA** alinhados com **GDPR, ISO/IEC 42001 e NIST RMF**.</p>
                         <ul class="bullet-list">
-                            <li>LangChain, CrewAI, LangSmith</li>
-                            <li>Source/context lineage & chain logs</li>
-                            <li>Vector DBs: Chroma, Pinecone, Weaviate</li>
+                            <li>**Governança de IA:** Geração de mapas de fluxo de dados, aplicação de **policy-as-code** com **OPA/Rego** e automação de registros de casos de uso de IA.</li>
+                            <li>**Avaliação de Risco:** Simulação de sistemas de alto risco e operacionalização de responsabilidade com **Model Cards e FactSheets**.</li>
+                            <li>**Auditoria:** Criação de checklists cross-framework para auditoria (**ISO, NIST, GDPR, AI Act**) e painéis de status de conformidade.</li>
                         </ul>
                     </div>
                     <div class="product-card">
-                        <h4>AI for Financial Modeling (Quant Audit)</h4>
-                        <p>Interpretable ML for forecasting & risk.</p>
+                        <h4>🧠 LLMs, LangChain & RAG</h4>
+                        <p>Criação de pipelines de **LLM modulares** com **LangChain, RAG e agentes**. Implementação de estratégias de recuperação e mecanismos de fallback.</p>
                         <ul class="bullet-list">
-                            <li>Explainability & fairness metrics</li>
-                            <li>MiFID II, SR11-7, ISO 24028 alignment</li>
+                            <li>**Arquitetura:** Agentes com **LangGraph**, pipelines **RAG modulares (FAISS, Qdrant)** com recuperação híbrida e rerankers.</li>
+                            <li>**Avaliação:** Benchmarking com **RAGAS** e **LLM-as-a-Judge**, testes de prompts com **Promptfoo** e guardrails.</li>
+                            <li>**Operações:** **Observabilidade e rastreamento** com **LangSmith**, versionamento de prompts via **GitOps** e defesas em tempo de execução.</li>
                         </ul>
                     </div>
                     <div class="product-card">
-                        <h4>Game AI Agent Auditing</h4>
-                        <p>Audit-ready toolkit for simulated agents.</p>
+                        <h4>⚖️ Ética, Justiça & Explicabilidade</h4>
+                        <p>Aplicação de **análise de risco ético e auditorias de justiça** em pipelines de IA.</p>
                         <ul class="bullet-list">
-                            <li>Behavior & decision timelines</li>
-                            <li>XAI overlays: SHAP, LIME, Captum</li>
+                            <li>**XAI (Explainable AI):** Implementação de **SHAP, LIME e Integrated Gradients**.</li>
+                            <li>**Avaliação de Viés:** Auditorias de justiça com **Fairlearn e Aequitas**, mitigação de viés e event sourcing para justificação de decisões.</li>
+                            <li>**Padrões:** Mapeamento de riscos éticos via **IEEE 7000, ISO 24028 e OECD AI Principles**.</li>
+                        </ul>
+                    </div>
+                    <div class="product-card">
+                        <h4>💼 Estratégia Executiva & Produto</h4>
+                        <p>Tradução de **GenAI em valor de negócio** usando frameworks como **Gartner e ISO 42001**.</p>
+                        <ul class="bullet-list">
+                            <li>**Estratégia:** Definição de **roadmaps de produto**, KPIs, ROI e estratégias de go-to-market.</li>
+                            <li>**Governança de Produto:** Liderança de squads **Agile/Lean** e integração de conformidade e rastreabilidade nos modelos de governança.</li>
+                            <li>**Precificação:** Desenvolvimento de modelos de licenciamento e precificação baseados em desempenho e exposição regulatória.</li>
                         </ul>
                     </div>
                 </div>
@@ -284,29 +253,14 @@
                 <h2 class="section-title">🧠 Research & Advanced Topics</h2>
                 <div class="research-grid">
                     <div class="product-card">
-                        <h4 class="research-card">Quantum & Scientific AI</h4>
-                        <ul class="bullet-list">
-                            <li>Quantum ML with Qiskit & Pennylane</li>
-                            <li>Hybrid quantum-classical prototypes</li>
-                            <li>Post-quantum cryptography use cases</li>
-                        </ul>
+                        <h4>Quantum & Scientific AI</h4>
+                        <p>Prototipagem de sistemas **QML híbridos** com **Qiskit e PennyLane**. Exploração de modelos quânticos-clássicos para finanças, PNL e otimização, com foco em casos de uso de **criptografia pós-quântica**.</p>
                     </div>
                     <div class="product-card">
-                        <h4 class="research-card">AI Safety & Adversarial Defense</h4>
-                        <ul class="bullet-list">
-                            <li>Consent tracing & override logic</li>
-                            <li>Adversarial robustness & deception detection</li>
-                            <li>Safety for autonomous/agentic systems</li>
-                        </ul>
+                        <h4>AI Safety & Adversarial Defense</h4>
+                        <p>Especialização em segurança e defesa para sistemas de IA. Desenvolvimento de lógica de rastreabilidade de consentimento e anulação. Análise de **robustez adversarial** e detecção de engano. Engenharia de segurança para sistemas autônomos e de agentes.</p>
                     </div>
                 </div>
-            </section>
-
-            <section class="education-panel">
-                <h2 class="section-title">Education</h2>
-                <h3>Master of Science in Financial Engineering <br/>(Expected 2026)</h3>
-                <p><em>WorldQuant University</em></p>
-                <p>Focus: Applied Machine Learning, Econometrics, and Quantitative Modeling</p>
             </section>
         </main>
     </div>
@@ -332,4 +286,3 @@
     </footer>
 </body>
 </html>
-
