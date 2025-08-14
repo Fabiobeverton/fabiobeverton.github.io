@@ -7,121 +7,160 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230099ff'%3E%3Cpath d='M12 2C8.686 2 6 4.686 6 8a5.952 5.952 0 0 0 1.5 3.99A5.952 5.952 0 0 0 6 16a5.952 5.952 0 0 0-1.5 3.99A2 2 0 0 0 4.5 22h15a2 2 0 0 0-1.5-2.01A5.952 5.952 0 0 0 18 16a5.952 5.952 0 0 0 1.5-3.99A5.952 5.952 0 0 0 18 8c0-3.314-2.686-6-6-6zm0 14a4 4 0 0 1 4 4h-8a4 4 0 0 1 4-4z'/%3E%3C/svg%3E" type="image/svg+xml">
     <style>
-        /* styles unchanged */
+        :root {
+            --bg-color: #0c1021;
+            --panel: #11152a;
+            --panel-2: #1a1f33;
+            --border: #2a3045;
+            --text: #f0f0f0;
+            --muted: #a0a0a0;
+            --accent: #0066cc;
+            --accent-2: #0099ff;
+            --brand: #1e3a8a;
+            --ok: #22c55e;
+            --chip: #2a3045;
+            --font-lato: 'Lato', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
+
+        /* General styles */
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: var(--font-lato);
+            background: var(--bg-color);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        h1, h2, h3, h4 { font-family: var(--font-lato); }
+
+        /* Header & Contact */
+        .profile-header {
+            text-align: center;
+            padding: 4rem 1rem 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            border-radius: 16px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), transparent);
+            border: 1px solid var(--border);
+        }
+        .profile-header h1 { font-size: 3.2rem; font-weight: 900; margin: 0 0 0.4rem; }
+        .profile-header h2 { font-size: 1.35rem; font-weight: 700; color: var(--muted); margin: 0 0 1rem; }
+        .contact-info { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; color: var(--muted); }
+        .contact-info a { color: var(--accent-2); text-decoration: none; transition: color 0.3s ease; }
+        .contact-info a:hover { color: var(--accent); }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2rem; font-weight: 900; text-align: center; margin: 0 0 2rem; position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: ""; width: 90px; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; border-radius: 6px;
+        }
+
+        /* Professional Summary */
+        .summary-panel {
+            background: var(--panel); border: 1px solid var(--border); padding: 2.5rem; border-radius: 14px;
+            margin-bottom: 3rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .summary-panel p { font-size: 1.1rem; color: var(--text); margin: 0; text-align: justify; }
+        .highlight { font-weight: 700; color: var(--accent-2); }
+        .badge-link {
+            display: inline-block; padding: 0.65rem 1.25rem; border-radius: 999px; text-decoration: none;
+            background: linear-gradient(90deg, var(--accent), var(--brand));
+            color: #fff; font-weight: 800; letter-spacing: 0.2px; font-size: 0.95rem;
+            margin-top: 2rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+        .badge-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
+
+        /* Technical Skills & Product Skills */
+        .skills-grid, .product-grid {
+            display: grid; gap: 1.5rem; margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .skill-card, .product-card {
+            background: var(--panel-2); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover, .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+        .skill-card h3, .product-card h4 {
+            margin: 0 0 1rem; font-size: 1.2rem; text-align: center; font-weight: 700;
+            color: var(--accent-2);
+        }
+        .chip {
+            display: inline-block; background: #242a41; color: var(--muted);
+            padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.85rem;
+            margin: 0.25rem; font-family: var(--font-mono);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .chip:hover {
+            background: var(--accent); color: var(--text);
+        }
+        .skill-list {
+            display: flex; flex-wrap: wrap; justify-content: center; margin: 0; padding: 0;
+        }
+        .product-card p { font-size: 0.95rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+        .bullet-list { list-style: none; margin: 0; padding: 0; }
+        .bullet-list li {
+            position: relative; padding-left: 28px; margin: 0.6rem 0; color: var(--muted);
+            font-size: 0.95rem;
+        }
+        .bullet-list li::before {
+            content: "✓"; color: var(--ok); font-weight: 700;
+            position: absolute; left: 0;
+        }
+
+        /* Research & Education */
+        .research-grid {
+            display: grid; gap: 1.5rem; margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+        .research-card h4 { color: #8ab4ff; }
+        .education-panel {
+            background: var(--panel); border: 1px solid var(--border); padding: 2rem; border-radius: 14px;
+            text-align: center; margin-top: 3rem;
+        }
+        .education-panel h3 { font-size: 1.5rem; margin: 0; }
+        .education-panel p { font-size: 1rem; margin: 0.5rem 0 0; color: var(--muted); }
+        .education-panel em { color: var(--accent-2); }
+
+        /* Footer */
+        .footer-minimal {
+            text-align: center; padding: 2rem 1rem; margin-top: 3rem;
+            border-top: 2px solid var(--border); color: var(--muted);
+        }
+        .footer-button-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .footer-btn {
+            display: flex; align-items: center; justify-content: center;
+            background: var(--brand); color: #fff; padding: 0.7rem 1.4rem; border-radius: 999px;
+            text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .footer-btn svg { width: 1.1em; height: 1.1em; margin-right: 8px; fill: currentColor; }
+        .footer-btn:hover { background: var(--accent-2); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-header { padding: 2.5rem 1rem 1.5rem; }
+            .profile-header h1 { font-size: 2.2rem; }
+            .profile-header h2 { font-size: 1.1rem; }
+            .section-title { font-size: 1.6rem; }
+            .container { padding: 1.5rem 1rem; }
+            .summary-panel, .education-panel { padding: 1.5rem; }
+            .badge-link { font-size: 0.85rem; padding: 0.6rem 1rem; }
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header class="profile-header">
-            <h1>Fábio Barbosa Everton</h1>
-            <h2>AI Governance & DevSecOps Engineer</h2>
-            <div class="contact-info">
-                <span>+55 61 99913-6880</span> |
-                <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a> |
-                <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer">LinkedIn</a> |
-                <a href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer">GitHub</a>
-            </div>
-        </header>
-
-        <main>
-            <section class="summary-panel">
-                <h2 class="section-title">Professional Summary</h2>
-                <p>
-                    AI Governance & DevSecOps Engineer focused on architecting secure AI systems in compliance with the most up-to-date regulatory standards. My expertise lies in integrating <strong>traceability, explainability, and security</strong> into LLM and RAG pipelines. I leverage <strong>Policy-as-Code (OPA/Rego)</strong> and automation to ensure adherence to standards such as <strong>ISO/IEC 42001, AI Act, GDPR/LGPD</strong> and other applicable governance frameworks.
-                </p>
-                <div style="text-align:center; margin-top: 1.5rem;">
-                    <h4 style="margin: 0 0 0.5rem; color: var(--accent-2);">Featured Portfolio:</h4>
-                    <a href="https://brachat_Saas_.com" class="badge-link" target="_blank" rel="noreferrer">
-                        Brachat_SaaS: An AI auditing suite
-                    </a>
-                </div>
-            </section>
-
-            <section style="margin-top: 3rem;">
-                <h2 class="section-title">Product-Led AI Governance Capabilities</h2>
-
-                <div class="product-grid">
-
-                    <div class="product-card">
-                        <h4>🚀 Full-Stack AI Engineering</h4>
-                        <p>Architected full-stack systems with <strong>Next.js, FastAPI, and Spring Boot</strong>, leveraging <strong>CI/CD, Docker, and Kubernetes</strong>. Implemented end-to-end testing with <strong>Playwright/Cypress</strong> and observability using <strong>Prometheus/Grafana</strong> for scalable, production-grade applications.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>🔐 DevSecOps & AI Security</h4>
-                        <p>Engineered secure <strong>GenAI pipelines</strong> aligned with <strong>OWASP, NIST, ISO, and Zero Trust</strong>. Automated security scans with <strong>Semgrep, Trivy, Checkov</strong>, and governed infrastructure using <strong>policy-as-code (OPA/Rego)</strong> and <strong>HashiCorp Vault</strong>.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>🧭 AI Governance & Compliance</h4>
-                        <p>Designed traceable governance workflows compliant with <strong>ISO/IEC 42001, AI Act, and NIST RMF</strong>. Operationalized compliance using automated registries, <strong>Model Cards</strong>, and cross-framework checklists with <strong>policy-as-code</strong> enforcement.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>🧠 LLMs, LangChain & RAG</h4>
-                        <p>Built modular <strong>LLM pipelines</strong> using <strong>LangChain/LangGraph</strong> with advanced <strong>RAG</strong>. Implemented hybrid retrieval, agentic workflows, and observability with <strong>LangSmith</strong>. Benchmarked performance with <strong>RAGAS</strong> and conducted prompt testing with <strong>Promptfoo</strong>.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>⚖️ Ethics, Fairness & Explainability</h4>
-                        <p>Embedded ethical risk analysis and fairness audits into AI pipelines using <strong>XAI</strong> tools like <strong>SHAP and LIME</strong>. Mapped ethical risks to international standards (<strong>ISO 24028, IEEE 7000</strong>) and conducted fairness audits with <strong>Fairlearn</strong>.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>💼 Executive Strategy & Product</h4>
-                        <p>Translated <strong>GenAI capabilities into business value</strong> using frameworks like <strong>Gartner, McKinsey, and ISO 42001</strong>. Designed <strong>go-to-market strategies</strong>, product roadmaps, and commercial models with a focus on compliance and ROI clarity.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>💹 Finance & Applied AI</h4>
-                        <p>Built AI pipelines for financial forecasting and risk modeling, integrating interpretable ML for audit-ready insights. Simulated trading strategies and applied governance frameworks (<strong>MiFID II, SR11-7</strong>) to model behavior and compliance.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>🧠 AI Model Training & Custom ML</h4>
-                        <p>Trained and deployed custom AI/ML models with <strong>TensorFlow/PyTorch</strong>. Managed model lifecycle with <strong>MLflow/DVC</strong>, automated pipelines with <strong>GitHub Actions</strong>, and optimized for latency and efficiency.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>🧠 Neurotechnology & AI Applied</h4>
-                        <p>Integrated human-computer interaction pipelines for brain-inspired AI systems. Simulated real-time mental state classification, neuro-symbolic processing, and neuroethics enforcement using structured logging and consent-aware data pipelines.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>🎮 AI Auditing for Games</h4>
-                        <p>Engineered end-to-end integrity and compliance pipelines for AI-powered game systems. Designed real-time anti-cheat detection, matchmaking fairness audits, and content moderation with structured logging, explainable decisions, and compliance-ready evidence trails.</p>
-                    </div>
-
-                    <div class="product-card">
-                        <h4>⚙️ Quantum & Scientific AI</h4>
-                        <p>Prototyped <strong>hybrid QML</strong> systems with <strong>Qiskit/PennyLane</strong> and documented reproducible scientific pipelines for finance, NLP, and optimization use cases. Applied error mitigation strategies and benchmarked quantum expressivity against classical ML baselines.</p>
-                    </div>
-
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <footer class="footer-minimal">
-        <div class="footer-button-group">
-            <a class="footer-btn" href="mailto:fabio@brachat.com.br" aria-label="Send an email">
-                <!-- SVG unchanged -->
-                Email
-            </a>
-            <a class="footer-btn" href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer" aria-label="Go to GitHub profile">
-                <!-- SVG unchanged -->
-                GitHub
-            </a>
-            <a class="footer-btn" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer" aria-label="Go to LinkedIn profile">
-                <!-- SVG unchanged -->
-                LinkedIn
-            </a>
-        </div>
-        <div class="footer-bottom">
-            © 2025 Fábio Barbosa Everton. All rights reserved.
-        </div>
-    </footer>
-</body>
-</html>
 
 
