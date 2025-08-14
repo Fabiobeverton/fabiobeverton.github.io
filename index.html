@@ -64,7 +64,7 @@
             position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; border-radius: 6px;
         }
 
-        /* Professional Summary */
+        /* Panels & Cards */
         .summary-panel {
             background: var(--panel); border: 1px solid var(--border); padding: 2.5rem; border-radius: 14px;
             margin-bottom: 3rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -80,7 +80,6 @@
         }
         .badge-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
 
-        /* Technical Skills & Product Skills */
         .skills-grid, .product-grid {
             display: grid; gap: 1.5rem; margin-top: 1.5rem;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -98,19 +97,7 @@
             margin: 0 0 1rem; font-size: 1.2rem; text-align: center; font-weight: 700;
             color: var(--accent-2);
         }
-        .chip {
-            display: inline-block; background: #242a41; color: var(--muted);
-            padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.85rem;
-            margin: 0.25rem; font-family: var(--font-mono);
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        .chip:hover {
-            background: var(--accent); color: var(--text);
-        }
-        .skill-list {
-            display: flex; flex-wrap: wrap; justify-content: center; margin: 0; padding: 0;
-        }
-        .product-card p { font-size: 0.95rem; color: var(--muted); margin: 0.5rem 0 1rem; }
+
         .bullet-list { list-style: none; margin: 0; padding: 0; }
         .bullet-list li {
             position: relative; padding-left: 28px; margin: 0.6rem 0; color: var(--muted);
@@ -121,18 +108,12 @@
             position: absolute; left: 0;
         }
 
-        /* Research & Education */
-        .research-grid {
-            display: grid; gap: 1.5rem; margin-top: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        }
-        .research-card h4 { color: #8ab4ff; }
         .education-panel {
             background: var(--panel); border: 1px solid var(--border); padding: 2rem; border-radius: 14px;
-            text-align: center; margin-top: 3rem;
+            text-align: left; margin-top: 3rem;
         }
-        .education-panel h3 { font-size: 1.5rem; margin: 0; }
-        .education-panel p { font-size: 1rem; margin: 0.5rem 0 0; color: var(--muted); }
+        .education-panel h3 { font-size: 1.5rem; margin: 0 0 0.4rem; }
+        .education-panel p { font-size: 1rem; margin: 0.35rem 0; color: var(--muted); }
         .education-panel em { color: var(--accent-2); }
 
         /* Footer */
@@ -176,10 +157,11 @@
         </header>
 
         <main>
+            <!-- Professional Summary -->
             <section class="summary-panel">
                 <h2 class="section-title">Professional Summary</h2>
                 <p>
-                    AI Governance & DevSecOps Engineer focused on architecting secure AI systems in compliance with the most up-to-date regulatory standards. My expertise lies in integrating <strong>traceability, explainability, and security</strong> into LLM and RAG pipelines. I leverage <strong>Policy-as-Code (OPA/Rego)</strong> and automation to ensure adherence to standards such as <strong>ISO/IEC 42001, AI Act, GDPR/LGPD</strong> and other applicable governance frameworks.
+                    Self-taught engineer building an end-to-end AI auditing SaaS platform from scratch, integrating secure architecture, governance workflows, and modern DevSecOps practices. Experienced in delivering full-stack features, deploying scalable infrastructure, and applying AI governance frameworks (<strong>ISO/IEC 42001, AI Act, GDPR/LGPD</strong>) to real-world applications. Passionate about continuous learning in neurotechnology, quantum AI, and ethical machine learning.
                 </p>
                 <div style="text-align:center; margin-top: 1.5rem;">
                     <h4 style="margin: 0 0 0.5rem; color: var(--accent-2);">Featured Portfolio:</h4>
@@ -189,98 +171,132 @@
                 </div>
             </section>
 
+            <!-- Key Achievements -->
+            <section class="summary-panel">
+                <h2 class="section-title">Key Achievements</h2>
+                <ul class="bullet-list">
+                    <li><strong>Built</strong> a production-ready AI auditing SaaS from concept to deployment, implementing multi-module governance pipelines.</li>
+                    <li><strong>Integrated</strong> security scanning (Semgrep, Trivy, Checkov) and policy-as-code compliance checks into CI/CD workflows.</li>
+                    <li><strong>Designed</strong> explainable AI modules for fairness audits and transparency in AI-driven decisions.</li>
+                    <li><strong>Deployed</strong> full-stack infrastructure with Next.js, FastAPI, and Kubernetes for scalable performance.</li>
+                    <li><strong>Applied</strong> real-world governance standards to product features, aligning with ISO, GDPR, and AI Act requirements.</li>
+                </ul>
+            </section>
+
+            <!-- Featured Project -->
+            <section class="summary-panel">
+                <h2 class="section-title">Featured Project — Brachat_SaaS</h2>
+                <p><strong>AI Auditing SaaS for Governance & Compliance</strong></p>
+                <ul class="bullet-list">
+                    <li>End-to-end platform to audit AI systems, integrating secure pipelines, explainability modules, and compliance-ready evidence trails.</li>
+                    <li>Built using <strong>Next.js, FastAPI, Docker, Kubernetes</strong>, and <strong>LangChain/LangGraph</strong> for modular AI workflows.</li>
+                    <li>Deployed cloud-native infrastructure with monitoring via <strong>Prometheus/Grafana</strong>.</li>
+                    <li>Implemented multi-tenant architecture, secure data handling, and immutable audit logs.</li>
+                </ul>
+            </section>
+
+            <!-- Product-Led Capabilities (mantido) -->
             <section style="margin-top: 3rem;">
-    <h2 class="section-title">Product-Led AI Governance Capabilities</h2>
+                <h2 class="section-title">Product-Led AI Governance Capabilities</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h4>🚀 Full-Stack AI Engineering</h4>
+                        <p>Architected full-stack systems with <strong>Next.js, FastAPI, and Spring Boot</strong>, leveraging <strong>CI/CD, Docker, and Kubernetes</strong>. Implemented end-to-end testing with <strong>Playwright/Cypress</strong> and observability using <strong>Prometheus/Grafana</strong> for scalable, production-grade applications.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>🔐 DevSecOps & AI Security</h4>
+                        <p>Engineered secure <strong>GenAI pipelines</strong> aligned with <strong>OWASP, NIST, ISO, and Zero Trust</strong>. Automated security scans with <strong>Semgrep, Trivy, Checkov</strong>, and governed infrastructure using <strong>policy-as-code (OPA/Rego)</strong> and <strong>HashiCorp Vault</strong>.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>🧭 AI Governance & Compliance</h4>
+                        <p>Designed traceable governance workflows compliant with <strong>ISO/IEC 42001, AI Act, and NIST RMF</strong>. Operationalized compliance using automated registries, <strong>Model Cards</strong>, and cross-framework checklists with <strong>policy-as-code</strong> enforcement.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>🧠 LLMs, LangChain & RAG</h4>
+                        <p>Built modular <strong>LLM pipelines</strong> using <strong>LangChain/LangGraph</strong> with advanced <strong>RAG</strong>. Implemented hybrid retrieval, agentic workflows, and observability with <strong>LangSmith</strong>. Benchmarked performance with <strong>RAGAS</strong> and conducted prompt testing with <strong>Promptfoo</strong>.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>⚖️ Ethics, Fairness & Explainability</h4>
+                        <p>Embedded ethical risk analysis and fairness audits into AI pipelines using <strong>XAI</strong> tools like <strong>SHAP and LIME</strong>. Mapped ethical risks to international standards (<strong>ISO 24028, IEEE 7000</strong>) and conducted fairness audits with <strong>Fairlearn</strong>.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>💼 Executive Strategy & Product</h4>
+                        <p>Translated <strong>GenAI capabilities</strong> into business value using frameworks like <strong>Gartner, McKinsey, and ISO 42001</strong>. Designed <strong>go-to-market strategies</strong>, product roadmaps, and commercial models with a focus on compliance and ROI clarity.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>💹 Finance & Applied AI</h4>
+                        <p>Built AI pipelines for financial forecasting and risk modeling, integrating interpretable ML for audit-ready insights. Simulated trading strategies and applied governance frameworks (<strong>MiFID II, SR11-7</strong>) to model behavior and compliance.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>🧠 AI Model Training & Custom ML</h4>
+                        <p>Trained and deployed custom AI/ML models with <strong>TensorFlow/PyTorch</strong>. Managed model lifecycle with <strong>MLflow/DVC</strong>, automated pipelines with <strong>GitHub Actions</strong>, and optimized for latency and efficiency.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>🎮 AI Auditing for Games</h4>
+                        <p>Engineered end-to-end integrity and compliance pipelines for AI-powered game systems. Designed real-time anti-cheat detection, matchmaking fairness audits, and content moderation with structured logging, explainable decisions, and compliance-ready evidence trails.</p>
+                    </div>
+                </div>
+            </section>
 
-    <div class="product-grid">
+            <!-- Research & Areas of Interest (mantido) -->
+            <section style="margin-top: 3rem;">
+                <h2 class="section-title">Research & Areas of Interest</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h4>🧠 Neurotechnology & AI Applied</h4>
+                        <p>Integrated human-computer interaction pipelines for brain-inspired AI systems. Simulated real-time mental state classification, neuro-symbolic processing, and neuroethics enforcement using structured logging and consent-aware data pipelines.</p>
+                    </div>
+                    <div class="product-card">
+                        <h4>⚙️ Quantum & Scientific AI</h4>
+                        <p>Prototyped <strong>hybrid QML</strong> systems with <strong>Qiskit/PennyLane</strong> and documented reproducible scientific pipelines for finance, NLP, and optimization use cases. Applied error mitigation strategies and benchmarked quantum expressivity against classical ML baselines.</p>
+                    </div>
+                </div>
+            </section>
 
-        <div class="product-card">
-            <h4>🚀 Full-Stack AI Engineering</h4>
-            <p>Architected full-stack systems with <strong>Next.js, FastAPI, and Spring Boot</strong>, leveraging <strong>CI/CD, Docker, and Kubernetes</strong>. Implemented end-to-end testing with <strong>Playwright/Cypress</strong> and observability using <strong>Prometheus/Grafana</strong> for scalable, production-grade applications.</p>
-        </div>
+            <!-- Additional Professional Experience -->
+            <section class="summary-panel">
+                <h2 class="section-title">Additional Professional Experience</h2>
+                <p><strong>Founder & Project Director — Construction & Office Fit-Out (Turn Key)</strong></p>
+                <ul class="bullet-list">
+                    <li>Delivered <strong>turn key</strong> corporate office projects from core &amp; shell to fully operational workspaces, including IT infrastructure, data centers (CPD), furniture, and employee-ready setups.</li>
+                    <li>Managed cross-functional teams of engineers, architects, IT specialists, and contractors to deliver high-quality results on time and within budget.</li>
+                    <li>Oversaw the construction of multiple residential properties, coordinating all phases from design to final delivery.</li>
+                    <li>Built expertise in vendor negotiation, compliance with regulatory standards, and risk management in complex, high-value projects.</li>
+                </ul>
+            </section>
 
-        <div class="product-card">
-            <h4>🔐 DevSecOps & AI Security</h4>
-            <p>Engineered secure <strong>GenAI pipelines</strong> aligned with <strong>OWASP, NIST, ISO, and Zero Trust</strong>. Automated security scans with <strong>Semgrep, Trivy, Checkov</strong>, and governed infrastructure using <strong>policy-as-code (OPA/Rego)</strong> and <strong>HashiCorp Vault</strong>.</p>
-        </div>
+            <!-- Technical Skills -->
+            <section class="summary-panel">
+                <h2 class="section-title">Technical Skills</h2>
+                <ul class="bullet-list">
+                    <li><strong>Languages &amp; Frameworks:</strong> Python, JavaScript, TypeScript, Next.js, FastAPI, Spring Boot, LangChain, LangGraph</li>
+                    <li><strong>Cloud &amp; DevOps:</strong> Docker, Kubernetes, GitHub Actions, Prometheus, Grafana, OPA/Rego, HashiCorp Vault</li>
+                    <li><strong>Security &amp; Compliance:</strong> Semgrep, Trivy, Checkov, ISO/IEC 42001, GDPR/LGPD, AI Act compliance workflows</li>
+                    <li><strong>Data &amp; AI Tools:</strong> MLflow, DVC, RAGAS, SHAP, LIME, Fairlearn</li>
+                </ul>
+            </section>
 
-        <div class="product-card">
-            <h4>🧭 AI Governance & Compliance</h4>
-            <p>Designed traceable governance workflows compliant with <strong>ISO/IEC 42001, AI Act, and NIST RMF</strong>. Operationalized compliance using automated registries, <strong>Model Cards</strong>, and cross-framework checklists with <strong>policy-as-code</strong> enforcement.</p>
-        </div>
+            <!-- Education & Continuous Learning -->
+            <section class="education-panel">
+                <h3>Education &amp; Continuous Learning</h3>
+                <p><strong>Master of Science in Financial Engineering (MScFE)</strong> — <em>WorldQuant University</em> <span style="color:#8ab4ff;">(Expected completion: 2027)</span></p>
+                <p>Two-year, fully accredited online program integrating advanced mathematics, statistics, computer science, and finance theory. Coursework includes Financial Econometrics, Derivative Pricing, Stochastic Modeling, Machine Learning in Finance, Deep Learning for Finance, Portfolio Management, and Risk Management. Includes a capstone focused on applied quantitative modeling.</p>
+                <p><strong>Continuous Learning:</strong> Ongoing self-directed study in AI Governance, DevSecOps, Neurotechnology, and Quantum AI. Project-based learning through building and scaling <em>Brachat_SaaS</em>.</p>
+            </section>
 
-        <div class="product-card">
-            <h4>🧠 LLMs, LangChain & RAG</h4>
-            <p>Built modular <strong>LLM pipelines</strong> using <strong>LangChain/LangGraph</strong> with advanced <strong>RAG</strong>. Implemented hybrid retrieval, agentic workflows, and observability with <strong>LangSmith</strong>. Benchmarked performance with <strong>RAGAS</strong> and conducted prompt testing with <strong>Promptfoo</strong>.</p>
-        </div>
-
-        <div class="product-card">
-            <h4>⚖️ Ethics, Fairness & Explainability</h4>
-            <p>Embedded ethical risk analysis and fairness audits into AI pipelines using <strong>XAI</strong> tools like <strong>SHAP and LIME</strong>. Mapped ethical risks to international standards (<strong>ISO 24028, IEEE 7000</strong>) and conducted fairness audits with <strong>Fairlearn</strong>.</p>
-        </div>
-
-        <div class="product-card">
-            <h4>💼 Executive Strategy & Product</h4>
-            <p>Translated <strong>GenAI capabilities into business value</strong> using frameworks like <strong>Gartner, McKinsey, and ISO 42001</strong>. Designed <strong>go-to-market strategies</strong>, product roadmaps, and commercial models with a focus on compliance and ROI clarity.</p>
-        </div>
-
-        <div class="product-card">
-            <h4>💹 Finance & Applied AI</h4>
-            <p>Built AI pipelines for financial forecasting and risk modeling, integrating interpretable ML for audit-ready insights. Simulated trading strategies and applied governance frameworks (<strong>MiFID II, SR11-7</strong>) to model behavior and compliance.</p>
-        </div>
-
-        <div class="product-card">
-            <h4>🧠 AI Model Training & Custom ML</h4>
-            <p>Trained and deployed custom AI/ML models with <strong>TensorFlow/PyTorch</strong>. Managed model lifecycle with <strong>MLflow/DVC</strong>, automated pipelines with <strong>GitHub Actions</strong>, and optimized for latency and efficiency.</p>
-        </div>
-
-        <div class="product-card">
-            <h4>🎮 AI Auditing for Games</h4>
-            <p>Engineered end-to-end integrity and compliance pipelines for AI-powered game systems. Designed real-time anti-cheat detection, matchmaking fairness audits, and content moderation with structured logging, explainable decisions, and compliance-ready evidence trails.</p>
-        </div>
-
+        </main>
     </div>
-</section>
 
-<section style="margin-top: 3rem;">
-    <h2 class="section-title">Research & Areas of Interest</h2>
-
-    <div class="product-grid">
-
-        <div class="product-card">
-            <h4>🧠 Neurotechnology & AI Applied</h4>
-            <p>Integrated human-computer interaction pipelines for brain-inspired AI systems. Simulated real-time mental state classification, neuro-symbolic processing, and neuroethics enforcement using structured logging and consent-aware data pipelines.</p>
+    <footer class="footer-minimal">
+        <div class="footer-button-group">
+            <a class="footer-btn" href="mailto:fabio@brachat.com.br" aria-label="Send an email">Email</a>
+            <a class="footer-btn" href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer" aria-label="Go to GitHub profile">GitHub</a>
+            <a class="footer-btn" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer" aria-label="Go to LinkedIn profile">LinkedIn</a>
         </div>
-
-        <div class="product-card">
-            <h4>⚙️ Quantum & Scientific AI</h4>
-            <p>Prototyped <strong>hybrid QML</strong> systems with <strong>Qiskit/PennyLane</strong> and documented reproducible scientific pipelines for finance, NLP, and optimization use cases. Applied error mitigation strategies and benchmarked quantum expressivity against classical ML baselines.</p>
+        <div class="footer-bottom">
+            © 2025 Fábio Barbosa Everton. All rights reserved.
         </div>
-
-    </div>
-</section>
-
-</main>
-</div>
-
-<footer class="footer-minimal">
-    <div class="footer-button-group">
-        <a class="footer-btn" href="mailto:fabio@brachat.com.br" aria-label="Send an email">
-            <!-- SVG unchanged -->
-            Email
-        </a>
-        <a class="footer-btn" href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer" aria-label="Go to GitHub profile">
-            <!-- SVG unchanged -->
-            GitHub
-        </a>
-        <a class="footer-btn" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer" aria-label="Go to LinkedIn profile">
-            <!-- SVG unchanged -->
-            LinkedIn
-        </a>
-    </div>
-    <div class="footer-bottom">
-        © 2025 Fábio Barbosa Everton. All rights reserved.
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
+
