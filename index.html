@@ -1,274 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fábio Barbosa Everton | AI Governance & DevSecOps Executive</title>
- <!-- Cache busting -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230099ff'%3E%3Cpath d='M12 2C8.686 2 6 4.686 6 8a5.952 5.952 0 0 0 1.5 3.99A5.952 5.952 0 0 0 6 16a5.952 5.952 0 0 0-1.5 3.99A2 2 0 0 0 4.5 22h15a2 2 0 0 0-1.5-2.01A5.952 5.952 0 0 0 18 16a5.952 5.952 0 0 0 1.5-3.99A5.952 5.952 0 0 0 18 8c0-3.314-2.686-6-6-6zm0 14a4 4 0 0 1 4 4h-8a4 4 0 0 1 4-4z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábio Barbosa Everton - Resume</title>
     <style>
-        :root {
-            --bg-color: #0c1021;
-            --panel: #11152a;
-            --panel-2: #1a1f33;
-            --border: #2a3045;
-            --text: #f0f0f0;
-            --muted: #a0a0a0;
-            --accent: #0066cc;
-            --accent-2: #0099ff;
-            --brand: #1e3a8a;
-            --ok: #22c55e;
-            --chip: #2a3045;
-            --font-lato: 'Lato', sans-serif;
-            --font-mono: 'Roboto Mono', monospace;
-        }
-
-        * { box-sizing: border-box; }
         body {
-            margin: 0;
-            font-family: var(--font-lato);
-            background: var(--bg-color);
-            color: var(--text);
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-        h1, h2, h3, h4 { font-family: var(--font-lato); }
-
-        /* Header & Contact */
-        .profile-header {
+        .header {
             text-align: center;
-            padding: 4rem 1rem 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 1;
-            border-radius: 16px;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), transparent);
-            border: 1px solid var(--border);
+            margin-bottom: 20px;
         }
-        .profile-header h1 { font-size: 3.2rem; font-weight: 900; margin: 0 0 0.4rem; }
-        .profile-header h2 { font-size: 1.35rem; font-weight: 900; color: var(--text); margin: 0 0 0.25rem; letter-spacing: .3px;}
-        .profile-header h3 { font-size: 1.1rem; font-weight: 700; color: var(--muted); margin: 0 0 1rem; }
-        .contact-info { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; color: var(--muted); }
-        .contact-info a { color: var(--accent-2); text-decoration: none; transition: color 0.3s ease; }
-        .contact-info a:hover { color: var(--accent); }
-
-        /* Section Title */
-        .section-title {
-            font-size: 2rem; font-weight: 900; text-align: center; margin: 0 0 2rem; position: relative;
-            padding-bottom: 15px;
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
         }
-        .section-title::after {
-            content: ""; width: 90px; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2));
-            position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; border-radius: 6px;
+        .header h2 {
+            margin: 5px 0;
+            font-size: 1.2em;
+            color: #555;
         }
-
-        /* Panels & Cards */
-        .summary-panel {
-            background: var(--panel); border: 1px solid var(--border); padding: 2.2rem; border-radius: 14px;
-            margin-bottom: 3rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        .header p {
+            margin: 5px 0;
         }
-        .summary-panel p { font-size: 1.08rem; color: var(--text); margin: 0; text-align: justify; }
-        .highlight { font-weight: 700; color: var(--accent-2); }
-        .badge-link {
-            display: inline-block; padding: 0.65rem 1.25rem; border-radius: 999px; text-decoration: none;
-            background: linear-gradient(90deg, var(--accent), var(--brand));
-            color: #fff; font-weight: 800; letter-spacing: 0.2px; font-size: 0.95rem;
-            margin-top: 1.25rem; transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        .header a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 5px;
         }
-        .badge-link:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); }
-
-        .skills-grid, .product-grid {
-            display: grid; gap: 1.5rem; margin-top: 1.5rem;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        .section {
+            margin-bottom: 30px;
         }
-        .skill-card, .product-card {
-            background: var(--panel-2); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .section h3 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
-        .skill-card:hover, .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        ul {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
         }
-        .skill-card h3, .product-card h4 {
-            margin: 0 0 1rem; font-size: 1.2rem; text-align: center; font-weight: 700;
-            color: var(--accent-2);
+        li {
+            margin-bottom: 10px;
         }
-
-        .bullet-list { list-style: none; margin: 0; padding: 0; }
-        .bullet-list li {
-            position: relative; padding-left: 28px; margin: 0.6rem 0; color: var(--muted);
-            font-size: 0.95rem;
+        strong {
+            font-weight: bold;
         }
-        .bullet-list li::before {
-            content: "✓"; color: var(--ok); font-weight: 700;
-            position: absolute; left: 0;
-        }
-
-        .education-panel {
-            background: var(--panel); border: 1px solid var(--border); padding: 2rem; border-radius: 14px;
-            text-align: left; margin-top: 3rem;
-        }
-        .education-panel h3 { font-size: 1.5rem; margin: 0 0 0.4rem; }
-        .education-panel p { font-size: 1rem; margin: 0.35rem 0; color: var(--muted); }
-        .education-panel em { color: var(--accent-2); }
-
-        .footer-minimal {
-            text-align: center; padding: 2rem 1rem; margin-top: 3rem;
-            border-top: 2px solid var(--border); color: var(--muted);
-        }
-        .footer-button-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
-        .footer-btn {
-            display: flex; align-items: center; justify-content: center;
-            background: var(--brand); color: #fff; padding: 0.7rem 1.4rem; border-radius: 999px;
-            text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .footer-btn svg { width: 1.1em; height: 1.1em; margin-right: 8px; fill: currentColor; }
-        .footer-btn:hover { background: var(--accent-2); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
-
-        @media (max-width: 768px) {
-            .profile-header { padding: 2.5rem 1rem 1.5rem; }
-            .profile-header h1 { font-size: 2.2rem; }
-            .profile-header h2 { font-size: 1.05rem; }
-            .profile-header h3 { font-size: 0.95rem; }
-            .section-title { font-size: 1.6rem; }
-            .container { padding: 1.5rem 1rem; }
-            .summary-panel, .education-panel { padding: 1.5rem; }
-            .badge-link { font-size: 0.85rem; padding: 0.6rem 1rem; }
+        .summary p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="profile-header">
-            <h1>Fábio Barbosa Everton</h1>
-            <h2>CTO • AI Governance & DevSecOps Executive</h2>
-            <h3>Builder of Compliance-Driven AI Systems</h3>
-            <div class="contact-info">
-                <span>+55 61 99913-6880</span> |
-                <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a> |
-                <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer">LinkedIn</a> |
-                <a href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer">GitHub</a> |
-                <a href="https://brachat_saas_.com/" target="_blank" rel="noreferrer">Showcase</a>
-        </div>
-        </header>
 
-        <main>
-            <!-- Executive Summary -->
-        <section class="summary-panel">
-  <h2 class="section-title">Executive Summary</h2>
-  <p>
-    Hands-on <strong>Technical CTO</strong> specialized in building secure, scalable AI platforms.  
-    I design and code end-to-end systems using <strong>Next.js, FastAPI, Docker/Kubernetes</strong>,  
-    and integrate <strong>DevSecOps practices</strong> (CI/CD, policy-as-code, automated auditing).  
-    <br/><br/>
-    My focus is on <strong>AI Governance & Reliability</strong> — coding pipelines where  
-    compliance (ISO/IEC 42001, AI Act, GDPR/LGPD) and explainability are embedded by default.  
-    <br/><br/>
-    My projects on <a href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer">GitHub</a>  
-    showcase this approach: turning complex governance concepts into working, production-ready solutions.
-  </p>
-  <div style="text-align:center;">
-    <a href="https://brachat_saas_.com/" class="badge-link" target="_blank" rel="noreferrer">SHOWCASE</a>
-  </div>
-</section>
-
-
-
-            <!-- Key Achievements (no repetition) -->
-            <section class="summary-panel">
-                <h2 class="section-title">Key Achievements</h2>
-                <ul class="bullet-list">
-                    <li><strong>Designed & led</strong> an AI auditing SaaS with governance pipelines and explainability-by-default.</li>
-                    <li><strong>Operationalized compliance</strong> (ISO/IEC 42001, AI Act, GDPR/LGPD) with policy-as-code and traceable evidence.</li>
-                    <li><strong>Automated security</strong> in CI/CD using Semgrep, Trivy, Checkov; secrets & policies with OPA/Rego & Vault.</li>
-                    <li><strong>Directed</strong> construction projects exceeding <strong>R$ 30M</strong> with regulatory and contractual compliance.</li>
-                     <li><strong>Secured federal funding</strong> and delivered turnkey solutions with risk control and stakeholder alignment.</li>
-                </ul>
-            </section>
-
-            <!-- Current Projects -->
-            <section class="summary-panel">
-                <h2 class="section-title">Current Projects</h2>
-
-                <div class="product-grid">
-                    <!-- Brachat_SaaS -->
-                    <div class="product-card">
-                        <h4>Brachat_SaaS — Learning-by-Building Governance Platform</h4>
-                        <ul class="bullet-list">
-                            <li>End-to-end environment to practice <strong>governance, explainability, and audit trails</strong> for AI systems.</li>
-                            <li>Cloud-native setup with <strong>Next.js, FastAPI, Docker/Kubernetes</strong> and monitoring (<strong>Prometheus/Grafana</strong>).</li>
-                            <li>Modular LLM workflows with <strong>LangChain/LangGraph</strong>, hybrid RAG, testing (Promptfoo) and evaluation (RAGAS).</li>
-                            <li>Outcome: <strong>public repository & showcase</strong> as a living technical and product résumé.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Professional Experience (single mention of R$ 30M) -->
-            <section class="summary-panel">
-                <h2 class="section-title">Professional Experience</h2>
-                <p><strong>Founder & Project Director — Construction & Office Fit-Out (Turnkey)</strong></p>
-                <ul class="bullet-list">
-                    <li>Led cross-functional teams delivering office/residential builds totaling <strong>+R$ 30M</strong>.</li>
-                    <li>Negotiated with vendors, ensured regulatory & safety compliance, managed risk & budget.</li>
-                    <li>Executed federal-funded projects with transparent governance and measurable ROI.</li>
-                </ul>
-            </section>
-
-            <!-- Core Skills (curated, no stack repetition) -->
-            <section class="summary-panel">
-                <h2 class="section-title">Core Competencies</h2>
-                <ul class="bullet-list">
-                    <li><strong>AI Governance & Compliance:</strong> ISO/IEC 42001, AI Act, GDPR/LGPD, NIST RMF, policy-as-code, registries, model cards.</li>
-                    <li><strong>DevSecOps & Reliability:</strong> CI/CD, Kubernetes, Docker, Semgrep, Trivy, Checkov, OPA/Rego, Vault, Observability (Prometheus/Grafana).</li>
-                    <li><strong>LLMs & Explainability:</strong> LangChain/LangGraph, RAG, LangSmith, RAGAS, Prompt testing, SHAP, LIME, Fairlearn.</li>
-                    <li><strong>Leadership & Delivery:</strong> Budget oversight, risk management, stakeholder alignment, go-to-market & ROI metrics.</li>
-                </ul>
-            </section>
-
-            <!-- Education -->
-            <section class="education-panel">
-                <h2 class="section-title">Education & Continuous Learning</h2>
-                <p><strong>Master of Science in Financial Engineering (MScFE)</strong> — <em>WorldQuant University</em> <span style="color:#8ab4ff;">(Expected completion: 2027)</span></p>
-                <p>Developing applied competencies in quantitative modeling, ML/DL for finance, econometrics and risk — connecting theory to real projects.</p>
-
-                <p><strong>Law Studies</strong> — Completed 8 semesters (focus on regulation & governance)</p>
-
-                <p><strong>Applied Data Science Lab</strong> — <em>WorldQuant University</em> <span style="color:#8ab4ff;">(2025)</span></p>
-                <p><strong>Applied AI Lab (Computer Vision)</strong> — <em>WorldQuant University</em> <span style="color:#8ab4ff;">(2025)</span></p>
-
-                <p><strong>Continuous Learning:</strong> AI Governance, DevSecOps, Neurotechnology, Quantum AI, and Applied Robotics — always tied to hands-on delivery.</p>
-            </section>
-        </main>
+    <div class="header">
+        <h1>Fábio Barbosa Everton</h1>
+        <h2>AI Governance & DevSecOps Executive</h2>
+        <p>Builder of Compliance-Driven AI Systems</p>
+        <p>+55 61 99913-6880 | <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a></p>
+        <p>
+            | <a href="#">LinkedIn</a>
+            | <a href="#">GitHub</a>
+            | <a href="#">Showcase</a>
+        </p>
     </div>
 
-    <footer class="footer-minimal">
-        <div class="footer-button-group">
-            <a class="footer-btn" href="mailto:fabio@brachat.com.br" aria-label="Send an email">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.223V6h16zM4 18V9.755l7.927 6.177L12 16.03l.073-.098L20 9.755V18H4z"></path></svg>
-                Email
-            </a>
-            <a class="footer-btn" href="https://github.com/Fabiobeverton" target="_blank" rel="noreferrer" aria-label="Go to GitHub profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.304.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.61.8.576 4.765-1.589 8.204-6.086 8.204-11.387C24 5.373 18.627 0 12 0z"></path></svg>
-                GitHub
-            </a>
-            <a class="footer-btn" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" rel="noreferrer" aria-label="Go to LinkedIn profile">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                LinkedIn
-            </a>
-        </div>
-        <div class="footer-bottom">
-            © 2025 Fábio Barbosa Everton. All rights reserved.
-        </div>
-    </footer>
+    <div class="section summary">
+        <h3>Executive Summary</h3>
+        <p>Strategic technology leader specialized in architecting and deploying secure, scalable AI platforms. I lead the design and implementation of end-to-end systems, with a focus on integrating comprehensive <strong>DevSecOps</strong> practices and embedding <strong>AI Governance</strong> by default. My background includes managing complex projects with government bodies and a strong foundation in financial compliance. My work, showcased on GitHub, demonstrates the ability to translate complex compliance frameworks (ISO/IEC 42001, AI Act) into working, production-ready solutions.</p>
+    </div>
+
+    <div class="section">
+        <h3>SHOWCASE</h3>
+        <h4>Key Achievements</h4>
+        <ul>
+            <li>Spearheaded the development of a complex AI auditing SaaS with governance pipelines and built-in explainability.</li>
+            <li>Operationalized compliance (ISO/IEC 42001, AI Act, GDPR/LGPD) using policy-as-code and traceable evidence for auditing.</li>
+            <li>Automated security in CI/CD pipelines using <strong>Semgrep</strong>, <strong>Trivy</strong>, and <strong>Checkov</strong>; managed secrets and policies with <strong>OPA/Rego</strong> and <strong>Vault</strong>.</li>
+            <li>Directed construction projects exceeding <strong>R$ 30M</strong>, ensuring regulatory and contractual compliance.</li>
+            <li>Directed public and private sector projects, collaborating with government leaders and securing federal funding for turnkey solutions with robust risk control and stakeholder alignment.</li>
+        </ul>
+        <h4>Current Projects</h4>
+        <p><strong>Brachat_SaaS — Learning-by-Building Governance Platform</strong></p>
+        <p>An end-to-end environment for practicing governance, explainability, and audit trails for AI systems.</p>
+        <ul>
+            <li>Cloud-native setup with <strong>Next.js</strong>, <strong>FastAPI</strong>, and <strong>Docker/Kubernetes</strong>, along with observability via <strong>Prometheus/Grafana</strong>.</li>
+            <li>Developed modular LLM workflows with <strong>LangChain/LangGraph</strong>, <strong>hybrid RAG</strong>, and testing (<strong>Promptfoo</strong>) and evaluation (<strong>RAGAS</strong>).</li>
+            <li><strong>Outcome:</strong> A public repository and showcase serving as a living technical and product résumé.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Professional Experience</h3>
+        <h4>Founder & Director, Technology & Project Solutions</h4>
+        <ul>
+            <li>Led the design and delivery of large-scale, compliance-driven projects, totaling <strong>+R$ 30M</strong>.</li>
+            <li>Oversaw all phases of projects, from vendor negotiation to delivery, while ensuring regulatory and safety compliance.</li>
+            <li>Directed capital projects with full P&L responsibility, implementing rigorous governance frameworks and risk mitigation strategies to ensure measurable ROI.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Core Competencies</h3>
+        <ul>
+            <li><strong>AI Governance & Compliance:</strong> ISO/IEC 42001, AI Act, GDPR/LGPD, NIST RMF, policy-as-code, model registries, model cards, financial & regulatory compliance.</li>
+            <li><strong>DevSecOps & Reliability:</strong> CI/CD, Kubernetes, Docker, Semgrep, Trivy, Checkov, OPA/Rego, Vault, Observability (Prometheus/Grafana).</li>
+            <li><strong>LLMs & Explainability:</strong> LangChain/LangGraph, RAG, LangSmith, RAGAS, Prompt testing, SHAP, LIME, Fairlearn.</li>
+            <li><strong>Leadership & Delivery:</strong> Budget oversight, risk management, stakeholder alignment, go-to-market strategy, and ROI metrics.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Education & Continuous Learning</h3>
+        <ul>
+            <li><strong>Notarial Services Degree</strong> — Graduated</li>
+            <li><strong>Law Studies</strong> — Completed 8 semesters (focus on regulation & governance)</li>
+            <li><strong>Master of Science in Financial Engineering (MScFE)</strong> — WorldQuant University (Expected completion: 2027)</li>
+            <li><strong>Applied Data Science Lab</strong> — WorldQuant University (2025)</li>
+            <li><strong>Applied AI Lab (Computer Vision)</strong> — WorldQuant University (2025)</li>
+            <li><strong>Continuous Learning:</strong> AI Governance, DevSecOps, Neurotechnology, Quantum AI, and Applied Robotics—always tied to hands-on delivery.</li>
+        </ul>
+    </div>
+
 </body>
 </html>
