@@ -29,15 +29,27 @@
         .header p {
             margin: 5px 0;
         }
-        .header a {
-            color: #007BFF;
-            text-decoration: none;
+        .contact-links {
+            margin-top: 15px;
+        }
+        .contact-links .btn {
+            display: inline-block;
+            padding: 8px 16px;
             margin: 0 5px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-links .btn:hover {
+            background-color: #0056b3;
         }
         .section {
             margin-bottom: 30px;
         }
-        .section h3 {
+        .section h3, .section h4 {
+            text-align: center;
             border-bottom: 2px solid #007BFF;
             padding-bottom: 5px;
             margin-bottom: 15px;
@@ -53,9 +65,6 @@
         strong {
             font-weight: bold;
         }
-        .summary p {
-            margin: 0;
-        }
     </style>
 </head>
 <body>
@@ -64,15 +73,15 @@
         <h1>Fábio Barbosa Everton</h1>
         <h2>AI Governance & DevSecOps Executive</h2>
         <p>Builder of Compliance-Driven AI Systems</p>
-        <p>+55 61 99913-6880 | <a href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a></p>
-        <p>
-            | <a href="#">LinkedIn</a>
-            | <a href="#">GitHub</a>
-            | <a href="#">Showcase</a>
-        </p>
+        <div class="contact-links">
+            <a href="mailto:fabio@brachat.com.br" class="btn">fabio@brachat.com.br</a>
+            <a href="#" class="btn">LinkedIn</a>
+            <a href="#" class="btn">GitHub</a>
+            <a href="#" class="btn">Showcase</a>
+        </div>
     </div>
 
-    <div class="section summary">
+    <div class="section">
         <h3>Executive Summary</h3>
         <p>Strategic technology leader specialized in architecting and deploying secure, scalable AI platforms. I lead the design and implementation of end-to-end systems, with a focus on integrating comprehensive <strong>DevSecOps</strong> practices and embedding <strong>AI Governance</strong> by default. My background includes managing complex projects with government bodies and a strong foundation in financial compliance. My work, showcased on GitHub, demonstrates the ability to translate complex compliance frameworks (ISO/IEC 42001, AI Act) into working, production-ready solutions.</p>
     </div>
