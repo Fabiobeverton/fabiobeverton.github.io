@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fábio Barbosa Everton - Resume</title>
-    <meta http-equiv="refresh" content="5">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +12,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0; /* Fundo cinza claro */
+            background-color: #f0f0f0;
         }
         .header {
             text-align: center;
@@ -30,6 +29,13 @@
         }
         .header p {
             margin: 5px 0;
+        }
+        .header a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .header a:hover {
+            opacity: 0.8;
         }
         .contact-links {
             margin-top: 15px;
@@ -56,6 +62,19 @@
             padding-bottom: 5px;
             margin-bottom: 15px;
         }
+        .btn-showcase {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-showcase:hover {
+            background-color: #111111;
+        }
         ul {
             list-style-type: disc;
             margin: 0;
@@ -72,8 +91,10 @@
 <body>
 
     <div class="header">
-        <h1>Fábio Barbosa Everton</h1>
-        <h2>AI Governance & DevSecOps Executive</h2>
+        <a href="#">
+            <h1>Fábio Barbosa Everton</h1>
+            <h2>AI Governance & DevSecOps Executive</h2>
+        </a>
         <p>Builder of Compliance-Driven AI Systems</p>
         <div class="contact-links">
             <a href="mailto:fabio@brachat.com.br" class="btn">fabio@brachat.com.br</a>
@@ -89,10 +110,9 @@
     </div>
 
     <div class="section">
-    <h3>
-        <a href="#" class="btn-showcase-header">SHOWCASE</a>
-    </h3>
-    </div>
+        <h3>
+            <a href="#" class="btn-showcase">SHOWCASE</a>
+        </h3>
         <h4>Key Achievements</h4>
         <ul>
             <li>Spearheaded the development of a complex AI auditing SaaS with governance pipelines and built-in explainability.</li>
