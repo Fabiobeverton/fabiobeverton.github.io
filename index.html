@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fábio Barbosa Everton – Resume</title>
   <meta http-equiv="refresh" content="300">
-  <meta name="description" content="AI Governance & DevSecOps Executive. Builder of compliance‑driven AI systems with secure, scalable architectures and hands‑on delivery." />
+  <meta name="description" content="AI Governance & DevSecOps Executive. Builder of compliance-driven AI systems with secure, scalable architectures and hands-on delivery." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
     /* Global reset & base */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { height: 100%; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
@@ -155,7 +156,7 @@
     .showcase-wrap { text-align: center; }
 
     .btn-showcase { 
-      composes: btn;
+      composes: btn; /* harmless in plain CSS; ignored if unsupported */
     }
 
     /* Lists */
@@ -194,6 +195,33 @@
       background: linear-gradient(180deg, #fff, #f9fafb);
     }
 
+    /* Showcase grid (added) */
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .repo-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: left;
+      box-shadow: 0 3px 8px rgba(0,0,0,.05);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .repo-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,.08);
+    }
+    .repo-card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .repo-card p { margin: 0 0 8px; font-size: .9rem; color: var(--muted); }
+    .repo-meta { font-size: .8rem; color: var(--muted); margin-bottom: 8px; }
+    .repo-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .repo-actions a { font-size: .85rem; }
+    .status { margin-top: 10px; color: var(--muted); font-size:.9rem; }
+
     /* Print styles */
     @media print {
       body { background: #fff; padding: 0; }
@@ -210,30 +238,31 @@
       <header class="hero">
         <h1 class="name">Fábio Barbosa Everton</h1>
         <p class="role">AI Governance &amp; DevSecOps Executive</p>
-        <p class="tagline">Builder of compliance‑driven AI systems. I architect and deploy secure, scalable platforms with end‑to‑end governance and auditability by default.</p>
+        <p class="tagline">Builder of compliance-driven AI systems. I architect and deploy secure, scalable platforms with end-to-end governance and auditability by default.</p>
 
         <nav class="contact" aria-label="Contact Links">
           <a class="btn" href="mailto:fabio@brachat.com.br" aria-label="Email Fábio">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 0 8 6 8-6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             fabio@brachat.com.br
           </a>
-         <a class="btn btn--light" 
-   href="https://linkedin.com/in/fabio-everton-3b62b1129/" 
-   target="_blank" 
-   rel="noopener" 
-   aria-label="LinkedIn profile">
-   LinkedIn
-</a>
+          <a class="btn btn--light" 
+            href="https://linkedin.com/in/fabio-everton-3b62b1129/" 
+            target="_blank" 
+            rel="noopener" 
+            aria-label="LinkedIn profile">
+            LinkedIn
+          </a>
 
-         <a class="btn btn--light" 
-   href="https://github.com/Fabiobeverton" 
-   target="_blank" 
-   rel="noopener" 
-   aria-label="GitHub profile">
-   GitHub
-</a>
+          <a class="btn btn--light" 
+            href="https://github.com/Fabiobeverton" 
+            target="_blank" 
+            rel="noopener" 
+            aria-label="GitHub profile">
+            GitHub
+          </a>
 
-          <a class="btn btn--accent" href="#" target="_blank" rel="noopener" aria-label="Project showcase">Showcase</a>
+          <!-- Showcase button now scrolls to the section below -->
+          <a class="btn btn--accent" href="#showcase" aria-label="Project showcase">Showcase</a>
         </nav>
       </header>
 
@@ -241,20 +270,19 @@
         <span class="section-title">Executive Summary</span>
         <div class="card-soft">
           <p class="muted" style="margin:0">
-            Strategic technology leader specialized in architecting and deploying secure, scalable AI platforms. I lead the design and implementation of end‑to‑end systems, with a focus on integrating comprehensive <strong>DevSecOps</strong> practices and embedding <strong>AI Governance</strong> by default. My background includes managing complex projects with government bodies and a strong foundation in financial compliance. My work, showcased on GitHub, demonstrates the ability to translate complex compliance frameworks (ISO/IEC 42001, AI Act) into working, production‑ready solutions.
+            Strategic technology leader specialized in architecting and deploying secure, scalable AI platforms. I lead the design and implementation of end-to-end systems, with a focus on integrating comprehensive <strong>DevSecOps</strong> practices and embedding <strong>AI Governance</strong> by default. My background includes managing complex projects with government bodies and a strong foundation in financial compliance. My work, showcased on GitHub, demonstrates the ability to translate complex compliance frameworks (ISO/IEC 42001, AI Act) into working, production-ready solutions.
           </p>
         </div>
       </section>
 
       <section>
-        
         <br />
         <div class="grid-2">
           <div class="card-soft">
             <span class="section-title">Key Achievements</span>
             <ul>
-              <li>Spearheaded the development of a complex AI auditing SaaS with governance pipelines and built‑in explainability.</li>
-              <li>Operationalized compliance (ISO/IEC 42001, AI Act, GDPR/LGPD) using policy‑as‑code and traceable evidence for auditing.</li>
+              <li>Spearheaded the development of a complex AI auditing SaaS with governance pipelines and built-in explainability.</li>
+              <li>Operationalized compliance (ISO/IEC 42001, AI Act, GDPR/LGPD) using policy-as-code and traceable evidence for auditing.</li>
               <li>Automated security in CI/CD pipelines using <strong>Semgrep</strong>, <strong>Trivy</strong>, and <strong>Checkov</strong>; managed secrets and policies with <strong>OPA/Rego</strong> and <strong>Vault</strong>.</li>
               <li>Directed construction projects exceeding <strong>R$ 30M</strong>, ensuring regulatory and contractual compliance.</li>
               <li>Directed public and private sector projects, collaborating with government leaders and securing federal funding for turnkey solutions with robust risk control and stakeholder alignment.</li>
@@ -263,10 +291,10 @@
 
           <div class="card-soft">
             <span class="section-title">Current Projects</span>
-            <p><strong>Brachat_SaaS — Learning‑by‑Building Governance Platform</strong></p>
-            <p>An end‑to‑end environment for practicing governance, explainability, and audit trails for AI systems.</p>
+            <p><strong>Brachat_SaaS — Learning-by-Building Governance Platform</strong></p>
+            <p>An end-to-end environment for practicing governance, explainability, and audit trails for AI systems.</p>
             <ul>
-              <li>Cloud‑native setup with <strong>Next.js</strong>, <strong>FastAPI</strong>, and <strong>Docker/Kubernetes</strong>, along with observability via <strong>Prometheus/Grafana</strong>.</li>
+              <li>Cloud-native setup with <strong>Next.js</strong>, <strong>FastAPI</strong>, and <strong>Docker/Kubernetes</strong>, along with observability via <strong>Prometheus/Grafana</strong>.</li>
               <li>Developed modular LLM workflows with <strong>LangChain/LangGraph</strong>, <strong>hybrid RAG</strong>, and testing (<strong>Promptfoo</strong>) and evaluation (<strong>RAGAS</strong>).</li>
               <li><strong>Outcome:</strong> A public repository and showcase serving as a living technical and product résumé.</li>
             </ul>
@@ -279,7 +307,7 @@
         <div class="card-soft">
           <h3 style="margin: 0 0 6px;">Founder &amp; Director, Technology &amp; Project Solutions</h3>
           <ul>
-            <li>Led the design and delivery of large‑scale, compliance‑driven projects, totaling <strong>+R$ 30M</strong>.</li>
+            <li>Led the design and delivery of large-scale, compliance-driven projects, totaling <strong>+R$ 30M</strong>.</li>
             <li>Oversaw all phases of projects, from vendor negotiation to delivery, while ensuring regulatory and safety compliance.</li>
             <li>Directed capital projects with full P&amp;L responsibility, implementing rigorous governance frameworks and risk mitigation strategies to ensure measurable ROI.</li>
           </ul>
@@ -290,10 +318,10 @@
         <span class="section-title">Core Competencies</span>
         <div class="card-soft">
           <ul>
-            <li><strong>AI Governance &amp; Compliance:</strong> ISO/IEC 42001, AI Act, GDPR/LGPD, NIST RMF, policy‑as‑code, model registries, model cards, financial &amp; regulatory compliance.</li>
+            <li><strong>AI Governance &amp; Compliance:</strong> ISO/IEC 42001, AI Act, GDPR/LGPD, NIST RMF, policy-as-code, model registries, model cards, financial &amp; regulatory compliance.</li>
             <li><strong>DevSecOps &amp; Reliability:</strong> CI/CD, Kubernetes, Docker, Semgrep, Trivy, Checkov, OPA/Rego, Vault, Observability (Prometheus/Grafana).</li>
             <li><strong>LLMs &amp; Explainability:</strong> LangChain/LangGraph, RAG, LangSmith, RAGAS, Prompt testing, SHAP, LIME, Fairlearn.</li>
-            <li><strong>Leadership &amp; Delivery:</strong> Budget oversight, risk management, stakeholder alignment, go‑to‑market strategy, and ROI metrics.</li>
+            <li><strong>Leadership &amp; Delivery:</strong> Budget oversight, risk management, stakeholder alignment, go-to-market strategy, and ROI metrics.</li>
           </ul>
         </div>
       </section>
@@ -307,8 +335,18 @@
             <li><strong>Master of Science in Financial Engineering (MScFE)</strong> — WorldQuant University (Expected completion: 2027)</li>
             <li><strong>Applied Data Science Lab</strong> — WorldQuant University (2025)</li>
             <li><strong>Applied AI Lab (Computer Vision)</strong> — WorldQuant University (2025)</li>
-            <li><strong>Continuous Learning:</strong> AI Governance, DevSecOps, Neurotechnology, Quantum AI, and Applied Robotics—always tied to hands‑on delivery.</li>
+            <li><strong>Continuous Learning:</strong> AI Governance, DevSecOps, Neurotechnology, Quantum AI, and Applied Robotics—always tied to hands-on delivery.</li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Showcase Section (added) -->
+      <section id="showcase">
+        <span class="section-title">Showcase</span>
+        <div class="card-soft showcase-wrap">
+          <p class="muted">Repositories and projects from my personal profile and my organization <strong>BrachatTech</strong>.</p>
+          <div id="repoGrid" class="repo-grid" role="list"></div>
+          <div id="showcaseStatus" class="status" aria-live="polite"></div>
         </div>
       </section>
 
@@ -327,9 +365,101 @@
     "name": "Fábio Barbosa Everton",
     "jobTitle": "AI Governance & DevSecOps Executive",
     "email": "mailto:fabio@brachat.com.br",
-    "sameAs": ["#", "#", "#"],
+    "sameAs": ["https://github.com/Fabiobeverton", "https://linkedin.com/in/fabio-everton-3b62b1129/"],
     "description": "Builder of compliance-driven AI systems with secure, scalable architectures and auditability by default."
   }
+  </script>
+
+  <!-- Showcase logic (loads repos from GitHub) -->
+  <script>
+  (function(){
+    const USER = "Fabiobeverton";
+    const ORG  = "brachattech";
+    // Pin key repos to appear first (owner/name)
+    const PINNED = [
+      "brachattech/Ezra_Orchestrator",
+      "brachattech/Brachat_SaaS",
+      "Fabiobeverton/fabiobeverton.github.io"
+    ];
+
+    let loaded = false;
+    const grid = document.getElementById("repoGrid");
+    const statusEl = document.getElementById("showcaseStatus");
+
+    async function fetchAll(){
+      const urls = [
+        `https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=updated`,
+        `https://api.github.com/orgs/${ORG}/repos?per_page=100&type=public&sort=updated`
+      ];
+      const resps = await Promise.all(urls.map(u => fetch(u)));
+      for (const r of resps) if (!r.ok) throw new Error("GitHub API error: " + r.status);
+      const [uRepos, oRepos] = await Promise.all(resps.map(r => r.json()));
+      return [...uRepos, ...oRepos];
+    }
+
+    function normalize(list){
+      const clean = list
+        .filter(r => !r.fork && !r.archived)
+        .map(r => ({
+          id: r.id,
+          full: r.full_name,
+          name: r.name,
+          owner: r.owner?.login || "",
+          url: r.html_url,
+          desc: r.description || "",
+          lang: r.language || "",
+          stars: r.stargazers_count || 0,
+          homepage: r.homepage || ""
+        }));
+
+      clean.sort((a,b)=>{
+        const ai = PINNED.indexOf(a.owner + "/" + a.name);
+        const bi = PINNED.indexOf(b.owner + "/" + b.name);
+        if (ai !== -1 || bi !== -1) return (ai === -1 ? 1 : ai) - (bi === -1 ? 1 : bi);
+        if (b.stars !== a.stars) return b.stars - a.stars;
+        return 0;
+      });
+
+      return clean;
+    }
+
+    function card(r){
+      const orgBadge = r.owner.toLowerCase() === ORG ? "by BrachatTech" : "personal";
+      const liveBtn  = r.homepage ? `<a class="btn btn--accent" href="${r.homepage}" target="_blank" rel="noopener">Live Demo</a>` : "";
+      return `
+        <div class="repo-card" role="listitem">
+          <h3>${r.name}</h3>
+          <p>${r.desc || "No description yet."}</p>
+          <div class="repo-meta">${orgBadge} • ${r.lang || "Unknown"} • ★${r.stars}</div>
+          <div class="repo-actions">
+            ${liveBtn}
+            <a class="btn btn--light" href="${r.url}" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      `;
+    }
+
+    async function render(){
+      if (loaded) return;
+      loaded = true;
+      statusEl.textContent = "Loading repositories…";
+      try {
+        const repos = normalize(await fetchAll());
+        const toShow = repos.slice(0, 12);
+        grid.innerHTML = toShow.map(card).join("");
+        statusEl.textContent = toShow.length ? "" : "No repositories found.";
+      } catch (e) {
+        console.error(e);
+        statusEl.innerHTML = `Couldn’t load from GitHub. <a href="https://github.com/${USER}?tab=repositories" target="_blank" rel="noopener">See all on GitHub</a>.`;
+      }
+    }
+
+    // Load when the Showcase section scrolls into view
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) { render(); io.disconnect(); }
+    }, { rootMargin: "150px" });
+    io.observe(document.getElementById("showcase"));
+  })();
   </script>
 </body>
 </html>
