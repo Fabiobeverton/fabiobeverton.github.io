@@ -10,19 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* --- STYLES FROM YOUR ORIGINAL CODE --- */
     :root {
-      --bg: #eceff1;              /* gray background */
-      --card: #ffffff;            /* card base */
-      --fg: #0f172a;              /* slate-900 */
-      --muted: #475569;           /* slate-600 */
-      --border: #e5e7eb;          /* gray-200 */
-      --accent: #6366f1;          /* indigo-500 */
-      --accent-2: #8b5cf6;        /* violet-500 */
+      --bg: #eceff1;
+      --card: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --border: #e5e7eb;
+      --accent: #6366f1;
+      --accent-2: #8b5cf6;
       --shadow: 0 10px 25px rgba(2, 6, 23, 0.12), 0 2px 8px rgba(2, 6, 23, 0.06);
       --radius-xl: 22px;
     }
-
-    /* Global reset & base */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { height: 100%; }
     html { scroll-behavior: smooth; }
@@ -34,13 +33,9 @@
                   radial-gradient(1200px 400px at 110% 10%, #f7f7f8 20%, transparent 60%),
                   linear-gradient(180deg, #f6f7f8, var(--bg));
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       padding: 48px 20px;
     }
-
     .container { max-width: 960px; margin: 0 auto; }
-
     .resume {
       background: var(--card);
       border: 1px solid var(--border);
@@ -48,188 +43,26 @@
       box-shadow: var(--shadow);
       overflow: hidden;
     }
-
-    /* Header / Hero */
-    header.hero {
-      text-align: center;
-      padding: 40px 28px 28px;
-      border-bottom: 1px solid var(--border);
-      background:
-        radial-gradient(90% 120% at 50% -10%, rgba(99,102,241,0.09), rgba(99,102,241,0) 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9));
-    }
-
-    .name {
-      margin: 0 0 6px;
-      font-size: clamp(28px, 4.2vw, 40px);
-      font-weight: 800;
-      letter-spacing: 0.2px;
-      line-height: 1.15;
-      background: linear-gradient(90deg, var(--fg), #1f2937);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .role {  
-      margin: 0;
-      font-size: clamp(16px, 2.2vw, 18px);
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.4px;
-    }
-
-    .tagline { 
-      margin: 10px auto 0; 
-      max-width: 720px; 
-      color: #334155; 
-    }
-
-    /* Contact buttons */
-    .contact {
-      margin-top: 18px;
-      display: flex; 
-      flex-wrap: wrap; 
-      justify-content: center; 
-      gap: 10px;
-    }
-
-    .btn {
-      --btn-bg: linear-gradient(180deg, #222, #111);
-      --btn-text: #fff;
-      --btn-border: rgba(255,255,255,0.08);
-      display: inline-flex;
-      align-items: center; 
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      text-decoration: none; 
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.2px;
-      color: var(--btn-text);
-      background: var(--btn-bg);
-      border: 1px solid var(--btn-border);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-    }
-    .btn:hover { 
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
-      filter: brightness(1.03);
-    }
-    .btn:active { transform: translateY(0) scale(.99); }
-    .btn:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(99,102,241,.35); }
-
-    .btn--light {
-      --btn-bg: #f8fafc;
-      --btn-text: #0f172a;
-      --btn-border: #e2e8f0;
-      box-shadow: 0 6px 12px rgba(15, 23, 42, 0.08);
-    }
-
-    .btn--accent {
-      --btn-bg: linear-gradient(90deg, var(--accent), var(--accent-2));
-      --btn-border: transparent;
-    }
-
-    .btn svg { width: 18px; height: 18px; }
-
-    /* Sections */
-    section {
-      padding: 26px clamp(22px, 4vw, 36px);
-    }
-
-    .section-title {
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #334155;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .showcase-wrap { text-align: center; }
-
-    .btn-showcase { 
-      composes: btn; /* harmless in plain CSS; ignored if unsupported */
-    }
-
-    /* Lists */
-    ul { list-style: none; padding-left: 0; margin: 14px 0 0; }
-    li { position: relative; padding-left: 1.25rem; margin: 10px 0; }
-    li::before {
-      content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 8px; border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #fff, #fff 35%, var(--accent) 36%, var(--accent-2) 100%);
-      box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-    }
-
-    .grid-2 { 
-      display: grid; 
-      gap: 18px; 
-      grid-template-columns: 1fr; 
-    }
-    @media (min-width: 880px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
-
-    .card-soft {
-      background: linear-gradient(180deg, #fff, #fbfbfd);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 18px;
-      box-shadow: 0 1px 0 rgba(2,6,23,0.04);
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .card-soft:hover { transform: translateY(-2px); box-shadow: 0 10px 18px rgba(2,6,23,0.08); }
-
-    .muted { color: var(--muted); }
-
-    /* Footer callouts */
-    .cta {
-      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; 
-      padding: 26px clamp(22px, 4vw, 36px);
-      border-top: 1px solid var(--border);
-      background: linear-gradient(180deg, #fff, #f9fafb);
-    }
-
-    /* Showcase grid (added) */
-    .repo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
-    .repo-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
-      text-align: left;
-      box-shadow: 0 3px 8px rgba(0,0,0,.05);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .repo-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0,0,0,.08);
-    }
-    .repo-card h3 { margin: 0 0 6px; font-size: 1.05rem; }
-    .repo-card p { margin: 0 0 8px; font-size: .9rem; color: var(--muted); }
-    .repo-meta { font-size: .8rem; color: var(--muted); margin-bottom: 8px; }
-    .repo-actions { display: flex; flex-wrap: wrap; gap: 8px; }
-    .repo-actions a { font-size: .85rem; }
-    .status { margin-top: 10px; color: var(--muted); font-size:.9rem; }
-
-    /* Print styles */
-    @media print {
-      body { background: #fff; padding: 0; }
-      .resume { border: none; box-shadow: none; }
-      .cta, nav, .btn, .print-note { display: none !important; }
-      a { color: inherit; text-decoration: none; }
-      section { page-break-inside: avoid; }
-    }
+    header.hero { text-align: center; padding: 40px 28px 28px; border-bottom: 1px solid var(--border); }
+    .name { margin:0 0 6px; font-size: clamp(28px,4.2vw,40px); font-weight:800; line-height:1.15; background:linear-gradient(90deg,var(--fg),#1f2937); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .role { margin:0; font-size:clamp(16px,2.2vw,18px); color:var(--muted); font-weight:600;}
+    .tagline { margin:10px auto 0; max-width:720px; color:#334155; }
+    .contact { margin-top:18px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:600; font-size:14px; color:#fff; background:linear-gradient(180deg,#222,#111); border:1px solid rgba(255,255,255,0.08); transition: transform .18s ease; }
+    .btn:hover { transform: translateY(-1px) scale(1.01);}
+    .btn--light { background:#f8fafc; color:#0f172a; border:1px solid #e2e8f0; }
+    .btn--accent { background:linear-gradient(90deg,var(--accent),var(--accent-2)); border:none;}
+    section { padding:26px clamp(22px,4vw,36px); }
+    .section-title { display:inline-flex; gap:10px; align-items:center; font-size:14px; font-weight:800; text-transform:uppercase; color:#334155; padding-bottom:10px; border-bottom:2px solid var(--border);}
+    ul { list-style:none; padding-left:0; margin:14px 0 0;}
+    li { position:relative; padding-left:1.25rem; margin:10px 0;}
+    li::before { content:""; position:absolute; left:0; top:0.7em; width:8px; height:8px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #fff, #fff 35%, var(--accent) 36%, var(--accent-2) 100%);}
+    .grid-2 { display:grid; gap:18px; grid-template-columns:1fr;}
+    @media (min-width:880px) { .grid-2 { grid-template-columns:1fr 1fr; } }
+    .card-soft { background:linear-gradient(180deg,#fff,#fbfbfd); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:0 1px 0 rgba(2,6,23,0.04);}
+    .card-soft:hover { transform:translateY(-2px); box-shadow:0 10px 18px rgba(2,6,23,0.08);}
+    .muted { color:var(--muted);}
+    .cta { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; padding:26px clamp(22px,4vw,36px); border-top:1px solid var(--border); background:linear-gradient(180deg,#fff,#f9fafb);}
   </style>
 </head>
 <body>
@@ -237,10 +70,112 @@
   <article class="resume" aria-label="Resume of Fábio Barbosa Everton">
     <header class="hero">
       <h1 class="name">Fábio Barbosa Everton</h1>
-      <p class="role">AI Governance &amp; DevSecOps Executive</p>
-      <p class="tagline">Builder of compliance-driven AI systems. Architect and deploy secure, scalable platforms with embedded governance and auditability by default.</p>
+      <p class="role">AI Governance & DevSecOps Executive</p>
+      <p class="tagline">Builder of compliance-driven AI systems. I architect and deploy secure, scalable platforms with end-to-end governance and auditability by default.</p>
 
       <nav class="contact" aria-label="Contact Links">
-        <a class="btn" href="mailto:fabio@brachat.com.br" aria-label="Email Fábio">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-
+        <a class="btn" href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a>
+        <a class="btn btn--light" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank">LinkedIn</a>
+        <a class="btn btn--light" href="https://github.com/Fabiobeverton" target="_blank">GitHub</a>
+        <a class="btn btn--accent" href="https://github.com/brachattech" target="_blank">Showcase</a>
+      </nav>
+    </header>
 
+    <section>
+      <span class="section-title">Executive Summary</span>
+      <div class="card-soft">
+        <p class="muted">
+          Strategic technology leader with a proven track record of designing and deploying secure, scalable AI platforms. I lead the implementation of end-to-end systems, integrating comprehensive <strong>DevSecOps</strong> practices and embedding <strong>AI Governance by default</strong>. My experience includes managing large-scale projects, including <strong>turnkey offices with integrated IT infrastructure</strong>, and a strong background in <strong>financial and regulatory compliance</strong>, developed during my time at <strong>Banco do Brasil</strong>. My portfolio, available on GitHub, demonstrates my ability to translate complex frameworks like <strong>ISO/IEC 42001</strong> and the <strong>AI Act</strong> into robust, production-ready solutions.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid-2">
+        <div class="card-soft">
+          <span class="section-title">Key Achievements</span>
+          <ul>
+            <li>Spearheaded the development of a complex AI auditing SaaS with governance pipelines and built-in explainability.</li>
+            <li>Operationalized compliance (ISO/IEC 42001, AI Act, GDPR/LGPD) using policy-as-code and traceable evidence for auditing.</li>
+            <li>Automated security in CI/CD pipelines using <strong>Semgrep</strong>, <strong>Trivy</strong>, and <strong>Checkov</strong>; managed secrets and policies with <strong>OPA/Rego</strong> and <strong>Vault</strong>.</li>
+            <li>Directed capital projects exceeding <strong>R$ 30M</strong>, implementing rigorous governance frameworks and risk mitigation strategies that are now applied to technology and AI initiatives.</li>
+            <li>Led high-stakes projects for public and private sectors, securing federal funding and ensuring stakeholder alignment for turnkey solutions with robust risk control.</li>
+          </ul>
+        </div>
+
+        <div class="card-soft">
+          <span class="section-title">Current Projects</span>
+          <p><strong>Brachat_SaaS — Learning-by-Building Governance Platform</strong></p>
+          <p>An end-to-end environment for practicing governance, explainability, and audit trails for AI systems.</p>
+          <ul>
+            <li>Cloud-native setup with <strong>Next.js</strong>, <strong>FastAPI</strong>, and <strong>Docker/Kubernetes</strong>, along with observability via <strong>Prometheus/Grafana</strong>.</li>
+            <li>Developed modular LLM workflows with <strong>LangChain/LangGraph</strong>, <strong>hybrid RAG</strong>, and testing (<strong>Promptfoo</strong>) and evaluation (<strong>RAGAS</strong>).</li>
+            <li><strong>Outcome:</strong> A public repository and showcase serving as a living technical and product résumé.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-title">Professional Experience</span>
+      <div class="card-soft">
+        <h3>Founder & Director, Technology & Project Solutions</h3>
+        <p><em>Since 2011</em></p>
+        <ul>
+          <li>Led conception and delivery of large-scale projects totaling +R$30M, including turnkey office spaces.</li>
+          <li>Managed multidisciplinary teams; oversaw all project phases ensuring regulatory compliance.</li>
+          <li>Executed critical office infrastructure implementations, including Data Centers, structured cabling, racks, electrical systems.</li>
+          <li>Directed projects with full P&L accountability, implementing governance frameworks and risk mitigation.</li>
+        </ul>
+      </div>
+      <div class="card-soft">
+        <h3>Compliance Analyst, Banco do Brasil</h3>
+        <p><em>(Period of employment)</em></p>
+        <ul>
+          <li>Performed compliance activities in back-office operations, reinforcing understanding of financial regulations, risk mitigation, and governance frameworks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-title">Core Competencies</span>
+      <div class="card-soft">
+        <ul>
+          <li><strong>AI Governance & Compliance:</strong> ISO/IEC 42001, AI Act, GDPR/LGPD, NIST RMF, policy-as-code, model registries, model cards.</li>
+          <li><strong>DevSecOps & Reliability:</strong> CI/CD, Kubernetes, Docker, Semgrep, Trivy, Checkov, OPA/Rego, Vault, Observability, IT Infrastructure (Data Centers, cabling, racks, switches).</li>
+          <li><strong>LLMs & Explainability:</strong> LangChain/LangGraph, RAG, LangSmith, RAGAS, Prompt testing, SHAP, LIME, Fairlearn.</li>
+          <li><strong>Leadership & Delivery:</strong> Budget oversight, team management, risk management, stakeholder alignment, go-to-market strategy, ROI metrics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-title">Education</span>
+      <div class="card-soft">
+        <ul>
+          <li><strong>Notarial Services Degree</strong> — Graduated</li>
+          <li><strong>Law Studies</strong> — Completed 8 semesters (focus on regulation & governance)</li>
+          <li><strong>Master of Science in Financial Engineering (MScFE)</strong> — WorldQuant University (Expected completion: 2027)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-title">Continuous Learning</span>
+      <div class="card-soft">
+        <ul>
+          <li><strong>Applied Data Science Lab</strong> — WorldQuant University (2025)</li>
+          <li><strong>Applied AI Lab (Computer Vision)</strong> — WorldQuant University (2025)</li>
+          <li><strong>Ongoing Development:</strong> AI Governance, DevSecOps, Neurotechnology, Quantum AI, Applied Robotics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="cta">
+      <button class="btn btn--light" onclick="window.print()">Print / Save as PDF</button>
+      <a class="btn" href="#top">Back to top</a>
+    </div>
+  </article>
+</main>
+</body>
+</html>
