@@ -1,152 +1,163 @@
-# 🧠 AI Compliance Learning Journey — Fábio Everton
+# 🧠 AI Compliance Learning Journey — Fábio Everton  
 
-> **Strategic AI Engineering Pathway: Focused on Security, Governance & Regulatory Compliance**
+> **Strategic AI Engineering Pathway: Security, Governance & Hands-On Compliance Builds**  
 
-This repository serves as my **central hub for AI, Security, and Governance projects**, as well as a **living technical roadmap** — tracking my immersion in 44 strategically selected certifications and courses. The goal is to master applied AI engineering with emphasis on **secure-by-design architectures, compliance alignment, explainability, DevSecOps pipelines, and audit-ready systems**.
+This repository is my **central hub for AI, Security, and Governance experiments**. It works as a **living roadmap** — documenting my immersion across **44 strategically selected domains**, with a focus on **hands-on labs, technical builds, and compliance-ready AI pipelines**.  
 
----
-
-## 🎯 Why This Journey?
-
-In a rapidly evolving AI landscape, the demand for **secure, ethical, and auditable systems** is non-negotiable. This journey targets advanced, production-ready skills across:
-
-* **🔐 Security & DevSecOps for AI** — Evidence-based, Zero Trust principles across LLM and ML pipelines.
-* **🧠 LLMOps & Agent Engineering** — LangChain, RAG pipelines, autonomous agent orchestration.
-* **🧭 AI Governance & Global Compliance** — ISO/IEC 42001, NIST AI RMF, GDPR, and aligned risk controls.
-* **⚖️ Responsible AI & Trust** — Explainability (XAI), bias mitigation, ethical frameworks, reproducibility.
-* **🔒 Post-Quantum Cryptography & Data Resilience** — Future-proofing AI systems with PQC.
-* **📊 Observability & Automated AI Workflows** — Secure, observable, and maintainable AI pipelines.
+The mission: to master **applied AI engineering** by building **secure-by-design architectures, governance mappings, DevSecOps pipelines, and auditable systems**.  
 
 ---
 
-## 🧭 Study Focus & Technical Domains
+## 🎯 Why This Journey?  
 
-Below are the **strategic knowledge domains** I’m actively exploring in AI, security and compliance. Each area contains curated learning paths, technical experiments, and implementation logs. You can click through the folders to access what's been studied, developed, or documented so far.
+In today’s AI landscape, systems must be **secure, ethical, and auditable by default**. This journey is designed to build **practical, production-ready expertise** in:  
 
-> ⚠️ *This journey does not claim course completion. Instead, it reflects my evolving mastery through hands-on builds, compliance mappings, and exploratory R&D.*
-
----
-
-## 📚 Knowledge Domains & Active Tracks
-
-### 🔐 Security & DevSecOps (10)
-1. OWASP Top 10 LLM – owasp.org  
-2. LLM Security Patterns – Microsoft Threat Matrix  
-3. GitHub Actions + Semgrep/Trivy/Checkov  
-4. Secure MLOps – Udacity/DeepLearning.ai  
-5. GitHub Advanced Security + CodeQL + Dependabot  
-6. OWASP DevSecOps Maturity Model (DSOMM)  
-7. Post-Quantum Cryptography for AI Pipelines  
-8. Zero Trust Architecture for AI Inference  
-9. MIT – AI Strategy for Executives  
-10. CIPP/E – IAPP  
-
-### 🧭 Governance & Compliance (11)
-1. AI Compliance – GDPR + ISO/IEC 42001  
-2. ISO/IEC 42001 + 27701 – Technical Audit  
-3. NIST AI RMF + SP 800-53  
-4. ICA – AI for Compliance Professionals  
-5. ISACA AIGP – AI Governance  
-6. IAPP AIGP – Governance Professional  
-7. COBIT 2019 Foundation  
-8. ITIL 4 Foundation  
-9. GNAI – National AI Governance (Oxford + GovAI)  
-10. MIT AI Policy for Leaders – CSAIL + Sloan  
-11. AI Policy for Leaders – CSAIL + Sloan  
-
-### 🧠 LLMs, LangChain & RAG (7)
-1. IBM Generative AI Engineering – Coursera  
-2. IBM – AI Enterprise Workflow V1 ✅  
-3. LangChain Full Stack – Firebase/Vercel  
-4. RAG & LangChain – DeepLearning.ai  
-5. Prompt Engineering – DeepLearning.ai  
-6. Multi-document RAG Pipelines  
-7. AI for Quantitative Finance – WQU  
-
-### ⚖️ Ethics, Fairness & Explainability (10)
-1. Explainable AI (XAI) – Google Cloud  
-2. Responsible AI – Microsoft Learn  
-3. Responsible AI in Finance – FCA + ISO 24028  
-4. AI Ethics & Governance – DeepLearning.ai  
-5. IBM AI Ethics + Google Responsible AI  
-6. OECD/UNESCO – Ethical AI Principles  
-7. FHCA – Stanford HAI  
-8. DeepMind – Safety & Alignment Bootcamp  
-9. AI Trust, Safety & Governance – DeepLearning.ai  
-10. Scientific Paper Publication – arXiv / SSRN  
-
-### 💼 Executive Strategy & Product (3)
-1. MIT – AI Strategy for Executives  
-2. Y Combinator – Startup School  
-3. WorldQuant AI + Finance – WQU  
-
-### 📉 Quantum & Scientific AI (6)
-1. Quantum Machine Learning – edX (UWashington)  
-2. IBM Quantum Introduction – Qiskit  
-3. Introduction to PennyLane – Xanadu  
-4. TensorFlow Quantum – Google  
-5. Quantum Machine Learning Book – Xanadu  
-6. Classiq Quantum Curriculum  
-
-### 🧠 Neurotechnology & AI Applied (10)
-1. Fundamentals of Neuroscience – HarvardX (edX)  
-2. Computational Neuroscience – UW (Coursera)  
-3. Introduction to Neurohacking – JHU (Coursera)  
-4. Neural Engineering & BCI – Udemy  
-5. Brain Imaging – MICCAI/Kaggle  
-6. Neurotech Spec. – IEEE/FutureLearn  
-7. Brain Signal Processing – NeurotechX  
-8. Neuromorphic Computing – TU Delft  
-9. Neuroethics – FutureLearn/UNESCO  
-10. IBM AI Engineering – Neuro BCI/fMRI  
-
-### 💹 Finance & Applied AI (3)
-1. AI for Quantitative Finance – WQU  
-2. WorldQuant AI + Finance – WQU  
-3. Revenue Forecasting – Explainable Models  
+* **🔐 Security & DevSecOps for AI** — Zero Trust pipelines, threat modeling, evidence-based controls.  
+* **🧠 LLMOps & Agent Engineering** — LangChain, RAG, orchestration, and evaluation of autonomous agents.  
+* **🧭 AI Governance & Global Compliance** — ISO/IEC 42001, NIST AI RMF, GDPR mappings, audit frameworks.  
+* **⚖️ Responsible AI & Trust** — Explainability, bias mitigation, reproducibility, and ethical safeguards.  
+* **🔒 Post-Quantum Cryptography & Data Resilience** — Securing AI systems against next-gen threats.  
+* **📊 Observability & Automated AI Workflows** — From logging to monitoring, traceability by design.  
 
 ---
 
-## 📁 Repository Structure
+## 🧭 Study Focus & Technical Domains  
 
-Each folder includes:
+This roadmap covers **strategic knowledge domains** where I am building **hands-on labs, compliance mappings, and exploratory R&D**.  
 
+> ⚠️ *This journey is not about collecting certificates. It’s about building and documenting evidence through code, experiments, and technical execution.*  
+
+---
+
+## 📚 Knowledge Domains & Tracks  
+
+### 🔐 Security & DevSecOps (10)  
+- OWASP Top 10 LLM – owasp.org  
+- LLM Security Patterns – Microsoft Threat Matrix  
+- GitHub Actions + Semgrep/Trivy/Checkov  
+- Secure MLOps – Udacity/DeepLearning.ai  
+- GitHub Advanced Security + CodeQL + Dependabot  
+- OWASP DevSecOps Maturity Model (DSOMM)  
+- Post-Quantum Cryptography for AI Pipelines  
+- Zero Trust Architecture for AI Inference  
+- MIT – AI Strategy for Executives  
+- CIPP/E – IAPP  
+
+### 🧭 Governance & Compliance (11)  
+- GDPR + ISO/IEC 42001 mappings  
+- ISO/IEC 42001 + 27701 – Technical Audit  
+- NIST AI RMF + SP 800-53  
+- ICA – AI for Compliance Professionals  
+- ISACA AIGP – AI Governance  
+- IAPP AIGP – Governance Professional  
+- COBIT 2019 Foundation  
+- ITIL 4 Foundation  
+- GNAI – National AI Governance (Oxford + GovAI)  
+- MIT AI Policy for Leaders – CSAIL + Sloan  
+- AI Policy for Leaders – CSAIL + Sloan  
+
+### 🧠 LLMs, LangChain & RAG (7)  
+- IBM Generative AI Engineering – Coursera  
+- IBM – AI Enterprise Workflow V1 ✅  
+- LangChain Full Stack – Firebase/Vercel  
+- RAG & LangChain – DeepLearning.ai  
+- Prompt Engineering – DeepLearning.ai  
+- Multi-document RAG Pipelines  
+- AI for Quantitative Finance – WQU  
+
+### ⚖️ Ethics, Fairness & Explainability (10)  
+- Explainable AI (XAI) – Google Cloud  
+- Responsible AI – Microsoft Learn  
+- Responsible AI in Finance – FCA + ISO 24028  
+- AI Ethics & Governance – DeepLearning.ai  
+- IBM AI Ethics + Google Responsible AI  
+- OECD/UNESCO – Ethical AI Principles  
+- FHCA – Stanford HAI  
+- DeepMind – Safety & Alignment Bootcamp  
+- AI Trust, Safety & Governance – DeepLearning.ai  
+- Scientific Paper Publication – arXiv / SSRN  
+
+### 💼 Executive Strategy & Product (3)  
+- MIT – AI Strategy for Executives  
+- Y Combinator – Startup School  
+- WorldQuant AI + Finance – WQU  
+
+### 📉 Quantum & Scientific AI (6)  
+- Quantum Machine Learning – edX (UWashington)  
+- IBM Quantum Introduction – Qiskit  
+- Introduction to PennyLane – Xanadu  
+- TensorFlow Quantum – Google  
+- Quantum Machine Learning Book – Xanadu  
+- Classiq Quantum Curriculum  
+
+### 🧠 Neurotechnology & AI Applied (10)  
+- Fundamentals of Neuroscience – HarvardX (edX)  
+- Computational Neuroscience – UW (Coursera)  
+- Introduction to Neurohacking – JHU (Coursera)  
+- Neural Engineering & BCI – Udemy  
+- Brain Imaging – MICCAI/Kaggle  
+- Neurotech Spec. – IEEE/FutureLearn  
+- Brain Signal Processing – NeurotechX  
+- Neuromorphic Computing – TU Delft  
+- Neuroethics – FutureLearn/UNESCO  
+- IBM AI Engineering – Neuro BCI/fMRI  
+
+### 💹 Data Science & Applied AI (3)  
+- Data Science lab – WQU  
+- Computer Vision lab – WQU  
+- Revenue Forecasting – Explainable Models  
+
+---
+
+## 📁 Repository Structure  
+
+Each folder includes:  
 - Source notes, compliance mappings, code samples  
 - Jupyter notebooks or LangChain pipelines  
 - Audit logs, reports, and SBOMs  
-- Git-based evidence of technical execution
+- Git-based evidence of technical execution  
 
 Examples:  
-- [`llmops/ibm-generative-ai-engineering`](https://github.com/fabiobeverton/ai-compliance-learning-journey/tree/main/llmops/ibm-generative-ai-engineering)  
-- [`security/github-actions-semgrep-trivy-checkov`](https://github.com/fabiobeverton/ai-compliance-learning-journey/tree/main/security/github-actions-semgrep-trivy-checkov)  
-- [`governance/nist-ai-rmf`](https://github.com/fabiobeverton/ai-compliance-learning-journey/tree/main/governance/nist-ai-rmf)  
-- [`explainability/xai-google`](https://github.com/fabiobeverton/ai-compliance-learning-journey/tree/main/explainability/xai-google)  
+- [`llmops/ibm-generative-ai-engineering`](./llmops/ibm-generative-ai-engineering)  
+- [`security/github-actions-semgrep-trivy-checkov`](./security/github-actions-semgrep-trivy-checkov)  
+- [`governance/nist-ai-rmf`](./governance/nist-ai-rmf)  
+- [`explainability/xai-google`](./explainability/xai-google)  
 
 ---
 
-## 👤 About Me
+## 🚀 Milestones  
+
+- [x] Initial roadmap design  
+- [x] First labs published (IBM AI Workflow, GitHub Actions Security)  
+- [ ] Expand LLMOps with multi-document RAG pipelines  
+- [ ] Map ISO/IEC 42001 controls to real AI projects  
+- [ ] Build Post-Quantum pipeline demo  
+- [ ] Publish compliance-ready AI reference architecture  
+
+---
+
+## 👤 About Me  
 
 **Fábio Everton**  
-Founder @BRACHAT | AI Security Engineer in Progress | MSc Financial Engineering (WQU)
+Founder @BRACHAT | AI Security Engineer in Progress  
 
-I bring 10+ years of experience as an executive in operations, now fully focused on **AI Security, LLMOps, and Strategic Governance**. My goal is to build **traceable, secure, and scalable AI systems**, combining technical execution with regulatory foresight.
+I bring 10+ years of experience as an executive in operations, now fully focused on **AI Security, LLMOps, and Strategic Governance**. My goal is to build **traceable, secure, and scalable AI systems**, combining technical execution with regulatory foresight.  
 
-> *“Audit-first, AI-driven execution. Traceable, secure, and built to scale.”*
+> *“Audit-first, AI-driven execution. Traceable, secure, and built to scale.”*  
 
 ---
 
-## 🔗 Useful Links
+## 🔗 Useful Links  
 
-- 🔗 [GitHub Repository with Certifications](https://github.com/Fabiobeverton/Fabiobeverton-ai-compliance-learning-journey)  
+- 📂 [This Repository](https://github.com/Fabiobeverton/ai-compliance-learning-journey)  
 - 🧠 [Live Showcase Page](https://fabiobeverton.github.io/everton-showcase/)  
 - 💼 [LinkedIn: Fabio Everton](https://www.linkedin.com/in/fabio-everton-3b62b1129/)  
-- 📧 [fabio@brachat.com.br](mailto:fabio@brachat.com.br)
+- 📧 [fabio@brachat.com.br](mailto:fabio@brachat.com.br)  
 
 ---
 
-## ⚖️ Legal Notice
+## ⚖️ Legal Notice  
 
 © 2025 **Fábio Everton**. All rights reserved.  
-This repository and its contents are protected by copyright and may not be reproduced, distributed, or transmitted in any form without explicit written permission from the author.
-
+This repository and its contents are protected by copyright and may not be reproduced, distributed, or transmitted in any form without explicit written permission from the author.  
 
