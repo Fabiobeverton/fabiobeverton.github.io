@@ -1,243 +1,626 @@
 <!DOCTYPE html>
-<!-- Declares the document type and version of HTML being used. -->
-<html lang="en">
-<!-- Root HTML element with language set to English. -->
-
+<html lang="pt-BR">
 <head>
-  <!-- Head section containing metadata, title, and styles -->
-  <meta charset="UTF-8" />
-  <!-- Sets the character encoding for the document to UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Ensures responsive layout on all devices -->
-  <title>Fábio Barbosa Everton – Resume</title>
-  <!-- Sets the title of the page displayed on browser tabs -->
-  <meta http-equiv="refresh" content="300">
-  <!-- Optional: auto-refresh every 5 minutes -->
-  <meta name="description" content="Founder & CTO | AI Platforms, Fullstack Architecture & Governance. Building applied AI and SaaS solutions with DevSecOps, LLMOps, and multi-agent orchestration." />
-  <!-- Meta description for SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fábio Barbosa Everton – Currículo</title>
+    <meta name="description" content="Executivo de Governança de IA & DevSecOps. Construtor de sistemas de IA orientados por conformidade com arquiteturas seguras e escaláveis." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --success: #10b981;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 25px rgba(2, 6, 23, 0.12), 0 2px 8px rgba(2, 6, 23, 0.06);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
 
-  <!-- Preconnect to Google Fonts to optimize loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Link to Inter font from Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        .dark-mode {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #8b5cf6;
+            --dark: #f8fafc;
+            --dark-light: #cbd5e1;
+            --light: #0f172a;
+            --gray: #94a3b8;
+            --gray-light: #1e293b;
+            --success: #34d399;
+            --card-bg: #1e293b;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
 
-  <!-- Embedded CSS -->
-  <style>
-    /* Root CSS variables for colors, shadows, and border-radius */
-    :root {
-      --bg: #eceff1;
-      --card: #ffffff;
-      --fg: #0f172a;
-      --muted: #475569;
-      --border: #e5e7eb;
-      --accent: #6366f1;
-      --accent-2: #8b5cf6;
-      --shadow: 0 10px 25px rgba(2, 6, 23, 0.12), 0 2px 8px rgba(2, 6, 23, 0.06);
-      --radius-xl: 22px;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Reset box-sizing for all elements */
-    *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 20px;
+            transition: var(--transition);
+        }
 
-    /* Full height for html and body */
-    html, body { height: 100%; }
+        .dark-mode body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
 
-    /* Smooth scrolling behavior */
-    html { scroll-behavior: smooth; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    /* Body styling: font, background, spacing */
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color: var(--fg);
-      background: radial-gradient(1200px 400px at 10% -10%, #f7f7f8 20%, transparent 60%),
-                  radial-gradient(1200px 400px at 110% 10%, #f7f7f8 20%, transparent 60%),
-                  linear-gradient(180deg, #f6f7f8, var(--bg));
-      line-height: 1.6;
-      padding: 48px 20px;
-    }
+        .resume {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
 
-    /* Container to center content and restrict width */
-    .container { max-width: 960px; margin: 0 auto; }
+        header.hero {
+            background: linear-gradient(120deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
 
-    /* Resume card styling */
-    .resume {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
 
-    /* Header hero section */
-    header.hero {
-      text-align: center;
-      padding: 40px 28px 28px;
-      border-bottom: 1px solid var(--border);
-    }
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+        }
 
-    /* Name styling */
-    .name {
-      margin:0 0 6px;
-      font-size: clamp(28px,4.2vw,40px);
-      font-weight:800;
-      line-height:1.15;
-      background:linear-gradient(90deg,var(--fg),#1f2937);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-    }
+        .name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
 
-    /* Role / title styling */
-    .role {
-      margin:0;
-      font-size:clamp(16px,2.2vw,18px);
-      color:var(--muted);
-      font-weight:600;
-    }
+        .role {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
 
-    /* Short tagline or summary under role */
-    .tagline {
-      margin:10px auto 0;
-      max-width:720px;
-      color:#334155;
-    }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
 
-    /* Contact button group styling */
-    .contact {
-      margin-top:18px;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:10px;
-    }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
 
-    /* Button styling */
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:14px;
-      color:#fff;
-      background:linear-gradient(180deg,#222,#111);
-      border:1px solid rgba(255,255,255,0.08);
-      transition: transform .18s ease;
-    }
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
 
-    /* Button hover effect */
-    .btn:hover { transform: translateY(-1px) scale(1.01); }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
 
-    /* Light variant button */
-    .btn--light { background:#f8fafc; color:#0f172a; border:1px solid #e2e8f0; }
+        .btn-primary {
+            background: var(--dark);
+            color: white;
+        }
 
-    /* Accent colored button */
-    .btn--accent { background:linear-gradient(90deg,var(--accent),var(--accent-2)); border:none;}
+        .btn-primary:hover {
+            background: var(--dark-light);
+            transform: translateY(-2px);
+        }
 
-    /* Sections padding */
-    section { padding:26px clamp(22px,4vw,36px); }
+        .btn-light {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-dark);
+        }
 
-    /* Section title styling */
-    .section-title {
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      font-size:14px;
-      font-weight:800;
-      text-transform:uppercase;
-      color:#334155;
-      padding-bottom:10px;
-      border-bottom:2px solid var(--border);
-    }
+        .btn-light:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
 
-    /* Unordered list reset */
-    ul { list-style:none; padding-left:0; margin:14px 0 0; }
+        .btn-accent {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+        }
 
-    /* List item style with custom bullet */
-    li {
-      position:relative;
-      padding-left:1.25rem;
-      margin:10px 0;
-    }
-    li::before {
-      content:"";
-      position:absolute;
-      left:0;
-      top:0.7em;
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:radial-gradient(circle at 30% 30%, #fff, #fff 35%, var(--accent) 36%, var(--accent-2) 100%);
-    }
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+        }
 
-    /* 2-column grid for responsive layout */
-    .grid-2 { display:grid; gap:18px; grid-template-columns:1fr; }
-    @media (min-width:880px) { .grid-2 { grid-template-columns:1fr 1fr; } }
+        section {
+            padding: 30px;
+            border-bottom: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
 
-    /* Card soft background styling */
-    .card-soft {
-      background:linear-gradient(180deg,#fff,#fbfbfd);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 1px 0 rgba(2,6,23,0.04);
-    }
-    .card-soft:hover { transform:translateY(-2px); box-shadow:0 10px 18px rgba(2,6,23,0.08); }
+        .dark-mode section {
+            border-bottom: 1px solid var(--gray-light);
+        }
 
-    .muted { color:var(--muted); }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
 
-    /* Call-to-action buttons section */
-    .cta {
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-      padding:26px clamp(22px,4vw,36px);
-      border-top:1px solid var(--border);
-      background:linear-gradient(180deg,#fff,#f9fafb);
-    }
+        .section-title i {
+            font-size: 1.2rem;
+        }
 
-    /* Portfolio section styling */
-    .portfolio-section {
-      background:linear-gradient(135deg,#f8fafc,#f1f5f9);
-      border-left:4px solid var(--accent);
-      padding:24px 28px;
-      border-radius:16px;
-      margin:32px 0;
-      font-size:16px;
-      line-height:1.7;
-      color:#0f172a;
-    }
-    .portfolio-section h3 { margin-top: 0; color: #1e40af; font-size: 18px; }
-    .portfolio-section ul { margin-top: 12px; }
-    .portfolio-section li::before { background: radial-gradient(circle at 30% 30%, #fff, #fff 35%, #1e40af 36%, #3730a3 100%); }
-    .portfolio-section a { color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 1px dashed var(--accent); }
-    .portfolio-section a:hover { border-bottom-color: var(--accent-2); }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
 
-  </style>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--gray-light);
+        }
+
+        .dark-mode .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.7em;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .grid-2 {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .name {
+                font-size: 3rem;
+            }
+        }
+
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .competency-category {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .competency-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .competency-category {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--gray-light);
+        }
+
+        .competency-category h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--gray-light);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin: 0 5px 8px 0;
+            transition: var(--transition);
+        }
+
+        .dark-mode .tag {
+            background: var(--dark-light);
+            color: var(--light);
+        }
+
+        .tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .portfolio {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .dark-mode .portfolio {
+            background: linear-gradient(135deg, #1e293b 0%, #1e293b 100%);
+            border-left: 4px solid var(--primary);
+        }
+
+        .portfolio h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+
+        .print-only {
+            display: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+            
+            .resume {
+                box-shadow: none;
+            }
+            
+            .theme-toggle, .btn {
+                display: none;
+            }
+            
+            .print-only {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                font-size: 0.9rem;
+                color: var(--gray);
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            background: var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .dark-mode footer {
+            background: var(--dark-light);
+            color: var(--gray);
+        }
+    </style>
 </head>
-
 <body>
-<main class="container">
-  <!-- Main content container -->
-  <article class="resume" aria-label="Resume of Fábio Barbosa Everton">
-    <!-- Resume card -->
-    <header class="hero">
-      <!-- Header section with name, title, summary -->
-      <h1 class="name">Fábio Barbosa Everton</h1>
-      <p class="role">Founder & CTO | AI Platforms, Fullstack Architecture & Governance</p>
-      <p class="tagline">
-        Founder of <strong>Brachat</strong>, a B2B venture builder specialized in SaaS and Applied AI. I structure and manage an ecosystem of modular, integrated solutions using cutting-edge technologies such as <strong>RAG pipelines, LLMOps, AI Governance, DevSecOps, multi-agent orchestration, and advanced AI agents</strong>.
-        My work combines strategic vision with hands-on execution, translating regulatory and market challenges into secure, scalable, end-to-end audit-ready systems.
-      </p>
+    <div class="container">
+        <article class="resume">
+            <header class="hero">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo claro/escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hero-content">
+                    <h1 class="name">Fábio Barbosa Everton</h1>
+                    <p class="role">Founder @ Brachat | AI Platforms, Fullstack Architecture & Governance</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>fabio@brachat.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-link"></i>
+                            <span>LinkedIn | Portfolio GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-      <!-- Contact buttons -->
-      <nav class="contact" aria-label="Contact Links">
-        <a class="btn" href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a>
-        <a class="btn btn--light" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank">LinkedIn</a>
-        <a class="btn btn--accent" href="https://github.com
+            <section>
+                <h2 class="section-title"><i class="fas fa-user"></i> Resumo Executivo</h2>
+                <div class="card">
+                    <p>Founder of Brachat, a B2B venture builder specialized in SaaS and Applied Artificial Intelligence. I structured and manage an ecosystem of modular, integrated solutions, operating with cutting-edge technologies such as RAG pipelines, LLMOps, AI Governance, DevSecOps, multi-agent orchestration, and advanced AI agents. My work combines strategic vision with hands-on execution, translating regulatory and market challenges into secure, scalable, end-to-end audit-ready systems.</p>
+                </div>
+            </section>
 
+            <section>
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+                <div class="card">
+                    <h3>Founder & CTO — Brachat</h3>
+                    <span class="date">2024–Present</span>
+                    <ul>
+                        <li>Structured and lead an ecosystem of specialized SaaS platforms, operating as a "Nest" hub that integrates adaptable modules for multiple sectors (health, education, legal, and others)</li>
+                        <li>Hands-on development of products integrating AI Governance, compliance, DevSecOps, LLMOps, RAG pipelines, explainability, fullstack architecture, and multi-agent orchestration, with scalability for emergent agents and advanced AI systems</li>
+                        <li>Implement end-to-end systems, from cloud-native architecture (Docker, Kubernetes, Next.js, FastAPI) to observability, secure CI/CD, and automated ML pipelines</li>
+                        <li>Lead multidisciplinary teams, translating complex regulatory requirements (AI Act, GDPR/LGPD, ISO/IEC 42001, NIST RMF) into applicable and auditable solutions</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Entrepreneur — Construction Industry</h3>
+                    <span class="date">2011–2024</span>
+                    <ul>
+                        <li>Managed approximately BRL 30 million in projects, from residential buildings to turnkey office deployments</li>
+                        <li>Responsible for planning, execution, financial control, and delivery of complex projects</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Compliance Analyst — Banco do Brasil</h3>
+                    <span class="date">2007</span>
+                    <ul>
+                        <li>Executed compliance operations, building a solid foundation in regulation, governance, and risk mitigation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title"><i class="fas fa-code"></i> Competências Técnicas</h2>
+                <div class="competencies">
+                    <div class="competency-category">
+                        <h3><i class="fas fa-robot"></i> AI Governance & Compliance</h3>
+                        <div>
+                            <span class="tag">ISO/IEC 42001</span>
+                            <span class="tag">AI Act</span>
+                            <span class="tag">GDPR/LGPD</span>
+                            <span class="tag">NIST RMF</span>
+                            <span class="tag">Policy-as-code</span>
+                            <span class="tag">Model registries</span>
+                            <span class="tag">Model cards</span>
+                        </div>
+                    </div>
+
+                    <div class="competency-category">
+                        <h3><i class="fas fa-shield-alt"></i> DevSecOps & Reliability</h3>
+                        <div>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">Semgrep</span>
+                            <span class="tag">Trivy</span>
+                            <span class="tag">Checkov</span>
+                            <span class="tag">OPA/Rego</span>
+                            <span class="tag">Vault</span>
+                            <span class="tag">Observability</span>
+                            <span class="tag">Automated testing</span>
+                            <span class="tag">Infrastructure as Code</span>
+                        </div>
+                    </div>
+
+                    <div class="competency-category">
+                        <h3><i class="fas fa-brain"></i> LLMOps & AI Orchestration</h3>
+                        <div>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">RAG pipelines</span>
+                            <span class="tag">Hybrid fine-tuning</span>
+                            <span class="tag">Explainability (SHAP, LIME)</span>
+                            <span class="tag">Prompt testing</span>
+                            <span class="tag">Emergent agent evaluation</span>
+                        </div>
+                    </div>
+
+                    <div class="competency-category">
+                        <h3><i class="fas fa-layer-group"></i> Fullstack Architecture & Advanced Agents</h3>
+                        <div>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">SQL/NoSQL integration</span>
+                            <span class="tag">Multi-agent orchestration</span>
+                            <span class="tag">Advanced AI agents</span>
+                            <span class="tag">Non-deterministic system evaluation</span>
+                        </div>
+                    </div>
+
+                    <div class="competency-category">
+                        <h3><i class="fas fa-chart-line"></i> Leadership & Execution</h3>
+                        <div>
+                            <span class="tag">Multi-SaaS management</span>
+                            <span class="tag">Hands-on product development</span>
+                            <span class="tag">Strategic resource allocation</span>
+                            <span class="tag">Roadmap execution</span>
+                            <span class="tag">Applied systems engineering</span>
+                            <span class="tag">End-to-end product delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Educação e Desenvolvimento Contínuo</h2>
+                <div class="card">
+                    <ul>
+                        <li><strong>Applied Data Science Lab</strong> — WorldQuant University (2025)</li>
+                        <li><strong>Applied AI Lab (Computer Vision)</strong> — WorldQuant University (2025)</li>
+                        <li><strong>Notarial Services Degree</strong> — Graduated</li>
+                        <li><strong>Law Studies</strong> — 8 semesters completed (focus on regulation & governance)</li>
+                        <li><strong>Continuous learning:</strong> Hands-on SaaS, AI Governance, DevSecOps, LLMOps, RAG pipelines, Neurotechnology, Quantum AI, Applied Robotics</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title"><i class="fas fa-folder-open"></i> Portfólio de Sistemas Aplicados</h2>
+                <div class="portfolio">
+                    <h3>GitHub: github.com/brachattech/portifolio</h3>
+                    <p>Projects include AI Governance SaaS, RAG pipelines, LLM workflows, fullstack orchestration, advanced AI agent evaluation, and end-to-end ML pipelines. Each project documented with ADRs, ASCII diagrams, evaluation checklists, tests, and applied governance.</p>
+                </div>
+            </section>
+
+            <div class="actions no-print">
+                <a href="mailto:fabio@brachat.com.br" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Enviar Email
+                </a>
+                <a href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank" class="btn btn-light">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/brachattech/portifolio" target="_blank" class="btn btn-accent">
+                    <i class="fab fa-github"></i> Ver Portfólio
+                </a>
+                <button onclick="window.print()" class="btn btn-light">
+                    <i class="fas fa-print"></i> Imprimir / PDF
+                </button>
+            </div>
+
+            <div class="print-only">
+                <p>Currículo atualizado em: <span id="current-date"></span></p>
+            </div>
+
+            <footer>
+                <p>Fábio Barbosa Everton • Founder @ Brachat • AI Governance & DevSecOps Executive</p>
+            </footer>
+        </article>
+    </div>
+
+    <script>
+        // Toggle dark/light mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Set current date for print
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR');
+    </script>
+</body>
+</html>
