@@ -1,15 +1,30 @@
 <!DOCTYPE html>
+<!-- Declares the document type and version of HTML being used. -->
 <html lang="en">
+<!-- Root HTML element with language set to English. -->
+
 <head>
+  <!-- Head section containing metadata, title, and styles -->
   <meta charset="UTF-8" />
+  <!-- Sets the character encoding for the document to UTF-8 -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Ensures responsive layout on all devices -->
   <title>Fábio Barbosa Everton – Resume</title>
+  <!-- Sets the title of the page displayed on browser tabs -->
   <meta http-equiv="refresh" content="300">
-  <meta name="description" content="AI Governance & DevSecOps Executive. Builder of compliance-driven AI systems with secure, scalable architectures and hands-on delivery." />
+  <!-- Optional: auto-refresh every 5 minutes -->
+  <meta name="description" content="Founder & CTO | AI Platforms, Fullstack Architecture & Governance. Building applied AI and SaaS solutions with DevSecOps, LLMOps, and multi-agent orchestration." />
+  <!-- Meta description for SEO -->
+
+  <!-- Preconnect to Google Fonts to optimize loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Link to Inter font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Embedded CSS -->
   <style>
+    /* Root CSS variables for colors, shadows, and border-radius */
     :root {
       --bg: #eceff1;
       --card: #ffffff;
@@ -21,9 +36,17 @@
       --shadow: 0 10px 25px rgba(2, 6, 23, 0.12), 0 2px 8px rgba(2, 6, 23, 0.06);
       --radius-xl: 22px;
     }
+
+    /* Reset box-sizing for all elements */
     *, *::before, *::after { box-sizing: border-box; }
+
+    /* Full height for html and body */
     html, body { height: 100%; }
+
+    /* Smooth scrolling behavior */
     html { scroll-behavior: smooth; }
+
+    /* Body styling: font, background, spacing */
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
@@ -34,7 +57,11 @@
       line-height: 1.6;
       padding: 48px 20px;
     }
+
+    /* Container to center content and restrict width */
     .container { max-width: 960px; margin: 0 auto; }
+
+    /* Resume card styling */
     .resume {
       background: var(--card);
       border: 1px solid var(--border);
@@ -42,156 +69,175 @@
       box-shadow: var(--shadow);
       overflow: hidden;
     }
-    header.hero { text-align: center; padding: 40px 28px 28px; border-bottom: 1px solid var(--border); }
-    .name { margin:0 0 6px; font-size: clamp(28px,4.2vw,40px); font-weight:800; line-height:1.15; background:linear-gradient(90deg,var(--fg),#1f2937); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .role { margin:0; font-size:clamp(16px,2.2vw,18px); color:var(--muted); font-weight:600;}
-    .tagline { margin:10px auto 0; max-width:720px; color:#334155; }
-    .contact { margin-top:18px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
-    .btn { display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:600; font-size:14px; color:#fff; background:linear-gradient(180deg,#222,#111); border:1px solid rgba(255,255,255,0.08); transition: transform .18s ease; }
-    .btn:hover { transform: translateY(-1px) scale(1.01);}
+
+    /* Header hero section */
+    header.hero {
+      text-align: center;
+      padding: 40px 28px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Name styling */
+    .name {
+      margin:0 0 6px;
+      font-size: clamp(28px,4.2vw,40px);
+      font-weight:800;
+      line-height:1.15;
+      background:linear-gradient(90deg,var(--fg),#1f2937);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    /* Role / title styling */
+    .role {
+      margin:0;
+      font-size:clamp(16px,2.2vw,18px);
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* Short tagline or summary under role */
+    .tagline {
+      margin:10px auto 0;
+      max-width:720px;
+      color:#334155;
+    }
+
+    /* Contact button group styling */
+    .contact {
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+    }
+
+    /* Button styling */
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      color:#fff;
+      background:linear-gradient(180deg,#222,#111);
+      border:1px solid rgba(255,255,255,0.08);
+      transition: transform .18s ease;
+    }
+
+    /* Button hover effect */
+    .btn:hover { transform: translateY(-1px) scale(1.01); }
+
+    /* Light variant button */
     .btn--light { background:#f8fafc; color:#0f172a; border:1px solid #e2e8f0; }
+
+    /* Accent colored button */
     .btn--accent { background:linear-gradient(90deg,var(--accent),var(--accent-2)); border:none;}
+
+    /* Sections padding */
     section { padding:26px clamp(22px,4vw,36px); }
-    .section-title { display:inline-flex; gap:10px; align-items:center; font-size:14px; font-weight:800; text-transform:uppercase; color:#334155; padding-bottom:10px; border-bottom:2px solid var(--border);}
-    ul { list-style:none; padding-left:0; margin:14px 0 0;}
-    li { position:relative; padding-left:1.25rem; margin:10px 0;}
-    li::before { content:""; position:absolute; left:0; top:0.7em; width:8px; height:8px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #fff, #fff 35%, var(--accent) 36%, var(--accent-2) 100%);}
-    .grid-2 { display:grid; gap:18px; grid-template-columns:1fr;}
+
+    /* Section title styling */
+    .section-title {
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      font-size:14px;
+      font-weight:800;
+      text-transform:uppercase;
+      color:#334155;
+      padding-bottom:10px;
+      border-bottom:2px solid var(--border);
+    }
+
+    /* Unordered list reset */
+    ul { list-style:none; padding-left:0; margin:14px 0 0; }
+
+    /* List item style with custom bullet */
+    li {
+      position:relative;
+      padding-left:1.25rem;
+      margin:10px 0;
+    }
+    li::before {
+      content:"";
+      position:absolute;
+      left:0;
+      top:0.7em;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, #fff, #fff 35%, var(--accent) 36%, var(--accent-2) 100%);
+    }
+
+    /* 2-column grid for responsive layout */
+    .grid-2 { display:grid; gap:18px; grid-template-columns:1fr; }
     @media (min-width:880px) { .grid-2 { grid-template-columns:1fr 1fr; } }
-    .card-soft { background:linear-gradient(180deg,#fff,#fbfbfd); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:0 1px 0 rgba(2,6,23,0.04);}
-    .card-soft:hover { transform:translateY(-2px); box-shadow:0 10px 18px rgba(2,6,23,0.08);}
-    .muted { color:var(--muted);}
-    .cta { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; padding:26px clamp(22px,4vw,36px); border-top:1px solid var(--border); background:linear-gradient(180deg,#fff,#f9fafb);}
-    .portfolio-section { background:linear-gradient(135deg,#f8fafc,#f1f5f9); border-left:4px solid var(--accent); padding:24px 28px; border-radius:16px; margin:32px 0; font-size:16px; line-height:1.7; color:#0f172a; }
+
+    /* Card soft background styling */
+    .card-soft {
+      background:linear-gradient(180deg,#fff,#fbfbfd);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 1px 0 rgba(2,6,23,0.04);
+    }
+    .card-soft:hover { transform:translateY(-2px); box-shadow:0 10px 18px rgba(2,6,23,0.08); }
+
+    .muted { color:var(--muted); }
+
+    /* Call-to-action buttons section */
+    .cta {
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      padding:26px clamp(22px,4vw,36px);
+      border-top:1px solid var(--border);
+      background:linear-gradient(180deg,#fff,#f9fafb);
+    }
+
+    /* Portfolio section styling */
+    .portfolio-section {
+      background:linear-gradient(135deg,#f8fafc,#f1f5f9);
+      border-left:4px solid var(--accent);
+      padding:24px 28px;
+      border-radius:16px;
+      margin:32px 0;
+      font-size:16px;
+      line-height:1.7;
+      color:#0f172a;
+    }
     .portfolio-section h3 { margin-top: 0; color: #1e40af; font-size: 18px; }
     .portfolio-section ul { margin-top: 12px; }
     .portfolio-section li::before { background: radial-gradient(circle at 30% 30%, #fff, #fff 35%, #1e40af 36%, #3730a3 100%); }
     .portfolio-section a { color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 1px dashed var(--accent); }
     .portfolio-section a:hover { border-bottom-color: var(--accent-2); }
+
   </style>
 </head>
+
 <body>
 <main class="container">
+  <!-- Main content container -->
   <article class="resume" aria-label="Resume of Fábio Barbosa Everton">
+    <!-- Resume card -->
     <header class="hero">
+      <!-- Header section with name, title, summary -->
       <h1 class="name">Fábio Barbosa Everton</h1>
-      <p class="role">AI Governance & DevSecOps Executive | Founder @ Brachat</p>
+      <p class="role">Founder & CTO | AI Platforms, Fullstack Architecture & Governance</p>
       <p class="tagline">
-        Founder of <strong>Brachat</strong>, an incubator for multiple SaaS products including AI auditing, RAG pipelines, AI creation & fine-tuning, and intelligent medical records (Dr. Fellow). I architect and deploy <strong>secure, scalable cloud-native platforms</strong>, executing hands-on <strong>DevSecOps, LLMOps, RAG workflows, and AI Governance</strong> while translating sector-specific challenges into applied solutions.
+        Founder of <strong>Brachat</strong>, a B2B venture builder specialized in SaaS and Applied AI. I structure and manage an ecosystem of modular, integrated solutions using cutting-edge technologies such as <strong>RAG pipelines, LLMOps, AI Governance, DevSecOps, multi-agent orchestration, and advanced AI agents</strong>.
+        My work combines strategic vision with hands-on execution, translating regulatory and market challenges into secure, scalable, end-to-end audit-ready systems.
       </p>
 
+      <!-- Contact buttons -->
       <nav class="contact" aria-label="Contact Links">
         <a class="btn" href="mailto:fabio@brachat.com.br">fabio@brachat.com.br</a>
         <a class="btn btn--light" href="https://linkedin.com/in/fabio-everton-3b62b1129/" target="_blank">LinkedIn</a>
-        <a class="btn btn--accent" href="https://github.com/brachattech/portifolio" target="_blank">Portfolio</a>
-      </nav>
-    </header>
-
-    <section>
-      <span class="section-title">Executive Summary</span>
-      <div class="card-soft">
-        <p class="muted">
-          Strategic technology leader and founder of <strong>Brachat</strong>, coordinating multiple SaaS initiatives. I build products hands-on, integrating <strong>AI Governance, compliance, DevSecOps, LLMOps, RAG pipelines, explainability, and applied AI</strong>.  
-          My work focuses on end-to-end systems, team leadership, and transforming complex regulatory frameworks into production-ready solutions.
-        </p>
-      </div>
-    </section>
-
-    <section class="portfolio-section">
-      <h3>Portfolio of Applied Systems</h3>
-      <p>Technical leadership in architecting and delivering SaaS platforms, AI solutions, governance frameworks, and ML systems. All projects are developed under an automated governance framework with transparent documentation.</p>
-      <ul>
-        <li>Hands-on development of end-to-end ML pipelines and SaaS platforms</li>
-        <li>Implementation of AI Governance and policy-as-code frameworks</li>
-        <li>Integration of cloud, DevOps, observability, and reproducibility practices</li>
-        <li>Public repositories demonstrate applied skills and operational systems</li>
-      </ul>
-      <p>The complete portfolio is available for verification at: <a href="https://github.com/brachattech/portifolio" target="_blank">github.com/brachattech/portifolio</a></p>
-    </section>
-
-    <section>
-      <div class="grid-2">
-        <div class="card-soft">
-          <span class="section-title">Key Achievements</span>
-          <ul>
-            <li>Founded and developed multiple SaaS including AI auditing, RAG pipelines, AI creation/fine-tuning, and intelligent EHR systems</li>
-            <li>Operationalized compliance frameworks using policy-as-code and traceable audit pipelines</li>
-            <li>Automated CI/CD security pipelines and managed secrets, enabling reproducible and secure deployments</li>
-            <li>Directed high-value projects applying end-to-end operational governance</li>
-          </ul>
-        </div>
-        <div class="card-soft">
-          <span class="section-title">Current Projects</span>
-          <ul>
-            <li><strong>Brachat_SaaS — Multi-Product Governance Platform</strong>: Hands-on platform for practicing AI Governance, explainability, audit trails, and sector-specific SaaS execution.</li>
-            <li>Cloud-native setup with <strong>Dockerized services, Kubernetes orchestration, Next.js, FastAPI</strong>, and observability via <strong>Prometheus/Grafana</strong>.</li>
-            <li>LLM workflows with <strong>LangChain/LangGraph</strong>, hybrid RAG pipelines, testing (<strong>Promptfoo</strong>) and evaluation (<strong>RAGAS</strong>).</li>
-            <li><strong>Outcome:</strong> Public repositories and showcases demonstrating applied systems engineering and hands-on SaaS development.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <span class="section-title">Professional Experience</span>
-      <div class="card-soft">
-        <h3>Founder & Director, Technology & Project Solutions</h3>
-        <p><em>Since 2011</em></p>
-        <ul>
-          <li>Founded and coordinate <strong>Brachat</strong>, delivering multiple SaaS projects and hands-on AI systems.</li>
-          <li>Led conception and execution of large-scale projects including enterprise platforms.</li>
-          <li>Managed multidisciplinary teams applying governance and compliance frameworks.</li>
-          <li>Oversaw P&L, risk management, and stakeholder alignment in high-value initiatives.</li>
-        </ul>
-      </div>
-      <div class="card-soft">
-        <h3>Compliance Analyst, Banco do Brasil</h3>
-        <p><em>2007</em></p>
-        <ul>
-          <li>Performed back-office compliance operations, gaining foundational knowledge in regulatory frameworks, risk mitigation, and governance.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <span class="section-title">Core Competencies</span>
-      <div class="card-soft">
-        <ul>
-          <li><strong>AI Governance & Compliance:</strong> ISO/IEC 42001, AI Act, GDPR/LGPD, NIST RMF, policy-as-code, model registries, model cards.</li>
-          <li><strong>DevSecOps & Reliability:</strong> Docker/Kubernetes, CI/CD pipelines, Semgrep, Trivy, Checkov, OPA/Rego, Vault, Observability, Infrastructure as Code.</li>
-          <li><strong>LLMOps & RAG:</strong> LangChain, LangGraph, RAG pipelines, hybrid fine-tuning, Prompt testing, SHAP, LIME, Explainability.</li>
-          <li><strong>Leadership & Execution:</strong> Multi-SaaS management, hands-on product development, stakeholder engagement, roadmap execution, applied systems engineering.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <span class="section-title">Education</span>
-      <div class="card-soft">
-        <ul>
-          <li><strong>Notarial Services Degree</strong> — Graduated</li>
-          <li><strong>Law Studies</strong> — Completed 8 semesters (focus on regulation & governance)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <span class="section-title">Continuous Learning</span>
-      <div class="card-soft">
-        <ul>
-          <li><strong>Applied Data Science Lab</strong> — WorldQuant University (2025)</li>
-          <li><strong>Applied AI Lab (Computer Vision)</strong> — WorldQuant University (2025)</li>
-          <li><strong>Ongoing Development:</strong> Hands-on SaaS building, AI Governance, DevSecOps, LLMOps, RAG pipelines, Neurotechnology, Quantum AI, Applied Robotics.</li>
-        </ul>
-      </div>
-    </section>
-
-    <div class="cta">
-      <button class="btn btn--light" onclick="window.print()">Print / Save as PDF</button>
-      <a class="btn" href="#top">Back to top</a>
-    </div>
-  </article>
-</main>
-</body>
-</html>
+        <a class="btn btn--accent" href="https://github.com
 
